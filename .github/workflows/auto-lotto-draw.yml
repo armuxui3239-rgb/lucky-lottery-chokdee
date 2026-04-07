@@ -1,0 +1,17 @@
+name: Auto Lotto Draw
+on:
+  schedule:
+    # วันที่ 1 และ 16 เวลา 09:00 UTC (16:00 น. ไทย)
+    - cron: '0 9 1,16 * *'
+  workflow_dispatch:  # กดรันด้วยมือได้
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Auto Draw
+        run: |
+          curl -X POST \
+            https://qitdcchnszvlvszzdajy.supabase.co/functions/v1/auto-lotto-draw \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -H "Content-Type: application/json"

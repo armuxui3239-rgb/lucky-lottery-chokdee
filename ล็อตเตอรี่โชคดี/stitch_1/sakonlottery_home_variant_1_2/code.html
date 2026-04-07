@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SakonLottery - ตะกร้าสินค้า</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "primary-dark": "#c40f18",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                        "gold": "#FFD700",
+                    },
+                    fontFamily: {
+                        "display": ["Kanit", "sans-serif"],
+                        "body": ["Kanit", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Kanit', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .ios-bottom-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center">
+<div class="relative w-full max-w-md mx-auto bg-white dark:bg-[#1a0b0c] min-h-screen shadow-2xl flex flex-col overflow-hidden">
+<header class="sticky top-0 z-50 bg-primary dark:bg-primary-dark text-white shadow-md">
+<div class="h-10 w-full"></div>
+<div class="flex items-center px-4 pb-4">
+<button class="w-10 h-10 -ml-2 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<div class="flex-1 text-center">
+<h1 class="font-display font-bold text-lg">ตะกร้าของฉัน</h1>
+</div>
+<button class="w-10 h-10 -mr-2 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">delete_sweep</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-48">
+<div class="p-4 flex flex-col gap-3">
+<div class="bg-white dark:bg-[#2a1516] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-white/5 flex items-center gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-gold text-red-900 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wide">ชุด 5 ใบ</span>
+</div>
+<p class="text-2xl font-black text-primary dark:text-red-500 tracking-widest font-display">118 999</p>
+<p class="text-gray-600 dark:text-gray-400 font-bold text-sm mt-1">500 ฿</p>
+</div>
+<div class="flex flex-col items-end gap-3">
+<button class="text-gray-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<div class="flex items-center bg-gray-50 dark:bg-white/5 rounded-full p-1 border border-gray-100 dark:border-white/10">
+<button class="w-8 h-8 flex items-center justify-center rounded-full text-primary hover:bg-red-50 dark:hover:bg-red-900/20">
+<span class="material-symbols-outlined text-sm font-bold">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-sm text-gray-800 dark:text-white">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#2a1516] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-white/5 flex items-center gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wide">ชุด 2 ใบ</span>
+</div>
+<p class="text-2xl font-black text-primary dark:text-red-500 tracking-widest font-display">593 284</p>
+<p class="text-gray-600 dark:text-gray-400 font-bold text-sm mt-1">200 ฿</p>
+</div>
+<div class="flex flex-col items-end gap-3">
+<button class="text-gray-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<div class="flex items-center bg-gray-50 dark:bg-white/5 rounded-full p-1 border border-gray-100 dark:border-white/10">
+<button class="w-8 h-8 flex items-center justify-center rounded-full text-primary hover:bg-red-50 dark:hover:bg-red-900/20">
+<span class="material-symbols-outlined text-sm font-bold">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-sm text-gray-800 dark:text-white">1</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#2a1516] rounded-xl p-4 shadow-sm border border-gray-100 dark:border-white/5 flex items-center gap-4">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wide">ใบเดี่ยว</span>
+</div>
+<p class="text-2xl font-black text-primary dark:text-red-500 tracking-widest font-display">442 108</p>
+<p class="text-gray-600 dark:text-gray-400 font-bold text-sm mt-1">80 ฿</p>
+</div>
+<div class="flex flex-col items-end gap-3">
+<button class="text-gray-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+<div class="flex items-center bg-gray-50 dark:bg-white/5 rounded-full p-1 border border-gray-100 dark:border-white/10">
+<button class="w-8 h-8 flex items-center justify-center rounded-full text-primary hover:bg-red-50 dark:hover:bg-red-900/20">
+<span class="material-symbols-outlined text-sm font-bold">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-sm text-gray-800 dark:text-white">2</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-4 p-4 rounded-xl border-2 border-dashed border-gray-200 dark:border-white/10 flex flex-col items-center justify-center text-center py-8">
+<span class="material-symbols-outlined text-gray-300 text-4xl mb-2">add_circle</span>
+<p class="text-gray-500 dark:text-gray-400 font-medium text-sm">ต้องการเลือกเลขเพิ่มไหม?</p>
+<button class="mt-2 text-primary font-bold text-sm hover:underline">เลือกสลากเพิ่มเติม</button>
+</div>
+</div>
+</main>
+<footer class="absolute bottom-0 left-0 right-0 bg-white/80 dark:bg-[#1a0b0c]/80 ios-bottom-blur border-t border-gray-100 dark:border-white/5 z-50">
+<div class="px-6 pt-4 pb-2">
+<div class="flex justify-between items-center mb-1">
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium">จำนวนทั้งหมด (4)</span>
+<span class="text-gray-900 dark:text-white font-medium">860 ฿</span>
+</div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-gray-800 dark:text-white font-bold">ยอดรวมสุทธิ</span>
+<div class="text-right">
+<span class="text-2xl font-black text-primary dark:text-red-400">860 ฿</span>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white rounded-full py-4 px-6 font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+                    ไปที่หน้าชำระเงิน
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="h-8 w-full"></div>
+</footer>
+</div>
+
+</body></html>

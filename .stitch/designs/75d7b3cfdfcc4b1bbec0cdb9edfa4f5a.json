@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/29345c21058c431692f2f0607369afeb",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ug0IPPzsIl7U74Ok7O1I1fScGR-_vP9AweA91xGqf4TTbVPGQkrPQ_Zj0HRnIaWZLQgYPCJ8WQ4jjy2gslushKsntEwXJ0DLZ3bVgzY5gGfTmvES4zsQSyBrlvbX0q7aNuJ4Rruh-T6GMsGgEKtMjsKrQgejZqjficD6im_zsbMaTKIfvXdwhaZjkUGHFr_C3fZC0pBRRNdHpRFiYoNE5mg8CAKhoJeV1ajNwVUwPyf2NqYWk7AWYPbXUk1"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/5e3e885e25a6468aa10e8df42fa338e7",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0MjkwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "75d7b3cfdfcc4b1bbec0cdb9edfa4f5a",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "1768",
+  "title": "2. Bank Transfer Details",
+  "prompt": "Title: 1. Winning Announcement Modal\nContext: Full Prize Claiming & Winner Journey Workflow for SakonLottery.\nDescription of the screen: Step 1: Winner Announcement Modal (#prize-result-modal). A celebratory popup over the Results screen. Large gold trophy icon with confetti. Headline: 'Congratulations! You Won!'. Shows the winning ticket '118 999' and the prize amount '6,000,000 THB'. Solid red 'Claim Prize Now' button. Consistent Red/Gold/White theme. Variant 1 of 4 in Winner Workflow.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/75d7b3cfdfcc4b1bbec0cdb9edfa4f5a",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

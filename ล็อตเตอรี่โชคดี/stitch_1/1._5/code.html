@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans+Thai:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                        "gold-premium": "#d4af37",
+                        "gold-light": "#f9f1d7"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f9f1d7 50%, #b8860b 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl" id="affiliate-menu-guide">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-slate-900 p-4 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-10">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold flex-1 text-center pr-10">ระบบแนะนำเพื่อน (Affiliate)</h2>
+</div>
+<!-- Progress Indicator -->
+<div class="px-4 pt-6 pb-2">
+<div class="flex items-center justify-between mb-2">
+<span class="text-primary font-bold text-sm">ขั้นตอนที่ 1 จาก 3</span>
+<span class="text-slate-500 text-sm italic">การเข้าสู่แดชบอร์ดรายได้</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/3 rounded-full"></div>
+</div>
+</div>
+<!-- User Profile Section -->
+<div class="flex p-4 mt-2">
+<div class="flex w-full items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-16 w-16 border-2 border-gold-premium" data-alt="User profile avatar with gold border" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgY9oeOLnXHK2hMBHrEw51MOxudcklToFVj_QbaqQDGOvm0SwyniyvVWOVn5WLZhxp2TegstCoCbvjr75D-w_cH0W5Mf5AzIKpSQwdnLoXyBo-O9PERQdRLSvpXv4hyKhbgpeAAT2w2UhpAn3IJwEwg0EuP4z-QSNchThPpDZxAOxYpM7i0ReoN3eubSZu86y0EKEHxaAPHDzFRNJXaP5LHfq3icLUichcVtsZZpDU4x0Z9gmwFbcQDirVDDM1-4Ja8GV3Nx--fqk");'></div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-lg font-bold">บัญชีของฉัน</p>
+<p class="text-gold-premium text-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">stars</span>
+                        ระดับสมาชิก: Gold Member
+                    </p>
+</div>
+</div>
+</div>
+<!-- Instruction Text -->
+<div class="px-4 py-2">
+<div class="bg-primary/5 border-l-4 border-primary p-3 rounded-r-lg">
+<p class="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">
+                    เลือกเมนู <strong class="text-primary">"ระบบแนะนำเพื่อน"</strong> จากหน้าบัญชีของคุณ เพื่อตรวจสอบรายได้และค่าคอมมิชชันจากการแนะนำสมาชิกใหม่
+                </p>
+</div>
+</div>
+<!-- Revenue Summary Dashboard -->
+<div class="px-4 py-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold mb-4">สรุปรายได้ทั้งหมด</h3>
+<!-- Main Gold Card -->
+<div class="gold-gradient p-6 rounded-2xl shadow-lg relative overflow-hidden group">
+<div class="absolute -right-10 -top-10 opacity-10">
+<span class="material-symbols-outlined text-[150px] text-white">monetization_on</span>
+</div>
+<p class="text-slate-800 font-bold text-sm uppercase tracking-wider mb-1">ทองพรีเมียม (Gold Balance)</p>
+<h2 class="text-slate-900 text-4xl font-extrabold mb-6">฿15,250.00</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/40 backdrop-blur-sm p-3 rounded-xl border border-white/50">
+<p class="text-slate-700 text-xs font-semibold mb-1">ยอดเงินที่ถอนได้</p>
+<p class="text-slate-900 font-bold text-lg">฿12,400.00</p>
+</div>
+<div class="bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20">
+<p class="text-slate-700 text-xs font-semibold mb-1">ยอดรอตรวจสอบ</p>
+<p class="text-slate-900 font-bold text-lg">฿2,850.00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Stats -->
+<div class="grid grid-cols-2 gap-4 px-4 pb-20">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">group</span>
+<span class="text-slate-500 text-xs font-medium">เพื่อนทั้งหมด</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold">142 คน</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<span class="text-slate-500 text-xs font-medium">อัตราการคลิก</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-xl font-bold">5.8%</p>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[430px] p-4 z-20">
+<button class="w-full bg-primary hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl shadow-xl flex items-center justify-center gap-2 transition-all active:scale-95">
+<span>ถัดไป</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 pb-6 pt-2 z-30">
+<div class="flex gap-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">หน้าแรก</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">แทงหวย</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">โพย</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-tight">บัญชี</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

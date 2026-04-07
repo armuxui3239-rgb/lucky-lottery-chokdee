@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/33eb8f4eef7c434fadd972d0ed66bff6",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujxJzVMgxuJTFDl0j9bFRPUobKeJ4Ew5UlZaGe7wXkn_FvQ0_eRGzr-n-BFI6deRMNNppgQR1HLyPHOnWhgvXkoPcE6wvvTXJaI8WUrRUrftnfrlyANfSyoOxomWU5zUtzNvOhVVdCQSF-MB_GFSbZBwbjXSd6Fd6Rqjsa2tSX5WtxaNo3Abesjjywnee4JkTT2n5mLw0EsZiTqenOarPOa83rBF3mz0j_ZCqw9Gbrmym7YnCHeeGBKE_Mh"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/68c190c0c58f403aa2051afae93991e7",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0MjMwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "ddfacb2d8a2a49a8903b98d86efb61cf",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "1768",
+  "title": "2. Bank Transfer Details",
+  "prompt": "Title: 2. Claim Method Selection\nContext: Full Prize Claiming & Winner Journey Workflow for SakonLottery.\nDescription of the screen: Step 2: Prize Claim Method Selection. After clicking claim. Header is solid red with 'Claim Prize' title. Options: 'Direct Transfer to Wallet' (Instant) and 'Bank Transfer' (1-3 days). Displays breakdown: Prize Amount, Tax (1%), and Net Amount in red bold text. Large red 'Next' button. Consistent high-contrast theme. Variant 2 of 4 in Winner Workflow.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/ddfacb2d8a2a49a8903b98d86efb61cf",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

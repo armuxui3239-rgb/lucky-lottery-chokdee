@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Checkout &amp; QR Payment - SakonLottery</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container (Mobile Viewport) -->
+<div class="relative mx-auto min-h-screen max-w-[430px] flex flex-col bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Header Section -->
+<header class="bg-primary pt-12 pb-6 px-4 rounded-b-lg shadow-lg">
+<div class="flex items-center justify-between mb-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white/20 text-white">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="text-xl font-bold text-white tracking-tight">Payment</h1>
+<div class="w-10 h-10"></div> <!-- Spacer for symmetry -->
+</div>
+<!-- Progress Indicator -->
+<div class="flex flex-col gap-2 px-2">
+<div class="flex justify-between items-center text-white/90 text-sm font-medium">
+<span>Payment Method Selection</span>
+<span>Step 1 of 4</span>
+</div>
+<div class="w-full bg-white/30 h-1.5 rounded-full overflow-hidden">
+<div class="bg-white h-full w-1/4 rounded-full"></div>
+</div>
+</div>
+</header>
+<!-- Timer Section -->
+<div class="px-6 -mt-4">
+<div class="bg-white dark:bg-slate-800 rounded shadow-md p-4 flex items-center justify-between border border-primary/10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<p class="text-sm font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Booking Timer</p>
+</div>
+<div class="flex gap-1 items-baseline">
+<span class="text-2xl font-bold text-primary tracking-tighter">14:59</span>
+<span class="text-[10px] font-bold text-primary/60 uppercase">Min</span>
+</div>
+</div>
+</div>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-4 py-6 flex flex-col gap-6">
+<!-- Payment Method Tabs -->
+<section>
+<h3 class="text-base font-bold mb-4 px-1">Select Payment Method</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- PromptPay (Selected) -->
+<button class="flex flex-col items-center gap-2 p-4 rounded bg-primary text-white ring-2 ring-primary ring-offset-2 dark:ring-offset-background-dark">
+<span class="material-symbols-outlined text-3xl">qr_code_2</span>
+<span class="text-xs font-bold">PromptPay (QR)</span>
+</button>
+<!-- Bank Transfer -->
+<button class="flex flex-col items-center gap-2 p-4 rounded bg-white dark:bg-slate-800 text-slate-500 border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+<span class="text-xs font-bold">Bank Transfer</span>
+</button>
+</div>
+</section>
+<!-- QR Code Display Area -->
+<section class="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center gap-4 border border-slate-100 dark:border-slate-700">
+<div class="flex flex-col items-center">
+<div class="w-24 h-8 bg-slate-50 dark:bg-slate-900 rounded flex items-center justify-center mb-4">
+<span class="text-[10px] font-black italic text-blue-600 tracking-tighter">Prompt Pay</span>
+</div>
+<!-- QR Placeholder -->
+<div class="relative w-56 h-56 bg-white p-3 rounded-lg border-2 border-slate-100 mb-2">
+<img alt="QR Code for payment" class="w-full h-full object-contain" data-alt="High resolution QR code for PromptPay payment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx2aPhtd790cWGsSRMCU829x3EoAOW07UHYtnHEFEt861MjhqCfQJ1V-XGhafYGYJ3PJl-XO_-Ju2FSIxTKiL4eGKc5OKTB1-y4mH4D_2Z1iyYl731nwEqvTpuEVRO9aHoaZ-DkMaU3z09FoZsRKPjamX9r-EyV0juvBg3hgW1HWjrcf-Sq08nFcEVOchbuFcu81bLndvwCRzc5xNHmcTjdrlxstDdMqYnIXt8Eqqzic7A4UFBSbA6qgeruj--ncE2ONC1oNIXkGY"/>
+<!-- Corner Decorations -->
+<div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
+<div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-primary"></div>
+<div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-primary"></div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-primary"></div>
+</div>
+<p class="text-xs text-slate-400 dark:text-slate-500 font-medium">Scan to pay within 15 minutes</p>
+</div>
+<div class="w-full h-px bg-slate-100 dark:bg-slate-700 my-2"></div>
+<div class="w-full flex justify-between items-center">
+<div class="text-left">
+<p class="text-[10px] uppercase font-bold text-slate-400">Total Amount</p>
+<p class="text-2xl font-black text-primary">฿ 450.00</p>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-lg">download</span>
+<span class="text-xs font-bold">Save QR</span>
+</button>
+</div>
+</section>
+<!-- Instructions -->
+<section class="px-2">
+<div class="flex items-start gap-3 bg-primary/5 p-4 rounded border border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">info</span>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        After saving the QR code, open your banking app and upload the QR from your gallery to complete the transaction.
+                    </p>
+</div>
+</section>
+</main>
+<!-- Bottom Actions -->
+<footer class="p-4 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+                Verify Payment Status
+            </button>
+</footer>
+<!-- Nav Bar (BottomNavBar Template adaptation) -->
+<nav class="flex border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-8 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide uppercase">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide uppercase">My Tickets</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">trophy</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide uppercase">Results</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal tracking-wide uppercase">Profile</p>
+</a>
+</nav>
+</div>
+</body></html>

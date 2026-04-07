@@ -1,0 +1,16 @@
+# Supabase Functions Configuration
+# ตั้งค่า Cron Job สำหรับออกรางวัลอัตโนมัติ
+
+[functions]
+[functions.settle-lotto]
+verify_jwt = false
+
+[functions.auto-lotto-draw]
+verify_jwt = false
+
+# ตั้งคา Cron Job - ออกรางวัลอัตโนมัติวันที่ 1 และ 16 เวลา 16:00 น. (UTC+7)
+# Cron format: 0 9 * * 1,16 (UTC = 09:00, UTC+7 = 16:00)
+# หมายเหตุ: Supabase Cron ใช้ UTC เวลา 09:00 UTC = 16:00 น. ไทย
+[cron.auto_lotto_draw]
+schedule = "0 9 1,16 * *"
+function = "auto-lotto-draw"

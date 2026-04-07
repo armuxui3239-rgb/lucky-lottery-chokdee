@@ -1,0 +1,144 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sakon Lottery - Profile Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                        "gold": "#D4AF37",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden" id="page-profile">
+<header class="bg-primary text-white pt-12 pb-8 px-6 rounded-b-xl shadow-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-white rounded-full"></div>
+<div class="absolute top-20 -left-10 w-32 h-32 bg-white rounded-full"></div>
+</div>
+<div class="relative flex items-center justify-between mb-6">
+<button class="p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined block">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold">My Profile</h1>
+<button class="p-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined block">settings</span>
+</button>
+</div>
+<div class="relative flex flex-col items-center gap-4">
+<div class="relative">
+<div class="size-24 rounded-full border-4 border-gold shadow-xl bg-cover bg-center" data-alt="Close-up portrait of a smiling user" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3hQSqlBx33YfesmC9XP6ez9LsgsbXFQs9bD_rEFRQyhSbr7XRgW0rkSWIWClFZ_B8wZTnJawWX3LmbgPIqjLsUOqyWtmfF0qAZ4xuAaZ9VL4ytCxdO9eU392Pk9jfO067XNJwQBS-oL8tYegrfgYfADB4PO-VegPqJUwdmoCpUh9PAkzfqIEGl-RUl-oK5E_rmnCTaBvaauUe48-upVCgJsYHesjp8kcfmZDgCsRTUg4scbs-dbmwADp9xajVguDtrQkKe_0Zlpg')"></div>
+<div class="absolute bottom-0 right-0 bg-gold text-white p-1 rounded-full border-2 border-primary">
+<span class="material-symbols-outlined text-xs block">verified</span>
+</div>
+</div>
+<div class="text-center">
+<h2 class="text-2xl font-bold tracking-tight">Sakon User</h2>
+<div class="flex items-center justify-center gap-1 mt-1 text-gold">
+<span class="material-symbols-outlined text-sm font-bold">stars</span>
+<p class="text-sm font-bold uppercase tracking-widest">Gold Member</p>
+</div>
+<p class="text-white/70 text-xs mt-1">Member since Jan 2024</p>
+</div>
+</div>
+</header>
+<main class="flex-1 px-4 -mt-6 space-y-4 pb-24">
+<section class="bg-white dark:bg-slate-800 rounded-xl shadow-md p-5 border border-primary/10">
+<div class="flex items-center justify-between mb-4">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Available Balance</p>
+<h3 class="text-3xl font-bold text-primary tracking-tight">฿2,500.00</h3>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-primary/90 transition-all active:scale-95">
+                        Top-up
+                    </button>
+</div>
+<div class="flex items-center gap-2 text-xs text-slate-400 border-t border-slate-100 dark:border-slate-700 pt-3">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Last updated: Just now</span>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden border border-primary/5">
+<div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">share</span>
+</div>
+<h2 class="text-lg font-bold">Referral Program</h2>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+<div class="bg-background-light dark:bg-slate-900/50 rounded-lg p-4 flex justify-between items-center mb-4">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-1 uppercase tracking-wider">Total Earnings</p>
+<p class="text-xl font-bold text-slate-900 dark:text-slate-100">฿12,450.00</p>
+</div>
+<div class="text-right">
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-1 uppercase tracking-wider">Referred Users</p>
+<p class="text-xl font-bold text-slate-900 dark:text-slate-100">48</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="flex-1 h-16 rounded-lg bg-cover bg-center opacity-80" data-alt="Abstract red and gold color pattern gradient" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkjHP2TWaZvzcoqwVAEjczkHE5xjvy7aoJjKxfyn6fhJFr04I2AncdRtab4gqy31CIJEDMKgkUJpB-C2jfnmwCLuQBQDPb94QklhafYdK41onXd44b_iSf69c1C4h4wlFrR2GJ2_wzsNKu5ewgSOR9yJKJH6w1EBEb8Gtm_OwZAJCKSqWZLr0QUh6BVv1aav22OPHCt0P6-wnr-h3VZfPzM1reVslsgs_iM3XniPHGmIhovJVxcdDLZLoAV38KZb5bJBndPcux88o')"></div>
+<div class="flex-[2] flex flex-col justify-center">
+<p class="text-sm font-semibold">Earn ฿500 for every friend</p>
+<p class="text-xs text-slate-500">Share your link and get rewarded.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">history</span>
+<p class="text-sm font-semibold">Bet History</p>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-primary/5 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
+<p class="text-sm font-semibold">Withdraw</p>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">trophy</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Draws</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Results</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">person</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</div>
+
+```</body></html>

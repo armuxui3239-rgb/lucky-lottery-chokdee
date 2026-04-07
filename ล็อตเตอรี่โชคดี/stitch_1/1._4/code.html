@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans+Thai:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "gold": "#D4AF37",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden max-w-[430px] mx-auto shadow-2xl border-x border-slate-200 dark:border-slate-800">
+<!-- Header / TopAppBar -->
+<header class="flex items-center bg-white dark:bg-slate-900 p-4 pb-2 justify-between sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<button class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back_ios_new</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">กู้คืนรหัสผ่าน</h2>
+</header>
+<!-- Progress Section -->
+<div class="flex flex-col gap-3 p-4 bg-white dark:bg-slate-900">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">ขั้นตอนการยืนยันตัวตน (1/3)</p>
+<p class="text-primary text-sm font-bold leading-normal">กำลังดำเนินการ</p>
+</div>
+<div class="rounded-full bg-slate-100 dark:bg-slate-800 h-2 w-full overflow-hidden border border-slate-200 dark:border-slate-700">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-primary/70" style="width: 33.33%;"></div>
+</div>
+</div>
+<!-- Content Section -->
+<main class="flex-1 flex flex-col p-6 space-y-6">
+<div class="text-center space-y-3 py-4">
+<div class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-primary/20">
+<span class="material-symbols-outlined text-primary" style="font-size: 40px;">lock_reset</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl font-bold leading-tight">ลืมรหัสผ่าน?</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed">
+                    ไม่ต้องกังวล! เพียงกรอก <span class="text-primary font-bold">หมายเลขโทรศัพท์</span> ที่คุณใช้สมัครสมาชิก <br/>
+                    เพื่อรับรหัส OTP สำหรับตั้งรหัสผ่านใหม่
+                </p>
+</div>
+<!-- Form -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 space-y-6">
+<div class="flex flex-col gap-2">
+<label class="flex flex-col min-w-40 flex-1">
+<div class="flex items-center gap-2 pb-2">
+<span class="material-symbols-outlined text-primary" style="font-size: 20px;">phone_iphone</span>
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-normal">หมายเลขโทรศัพท์</p>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 rounded-xl text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-primary focus:border-primary border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 h-16 placeholder:text-slate-400 p-4 text-xl font-medium tracking-widest text-center" maxlength="10" placeholder="08X-XXX-XXXX" type="tel"/>
+</label>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-white h-14 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2 active:scale-[0.98]">
+                        ขอรหัส OTP
+                        <span class="material-symbols-outlined" style="font-size: 20px;">send</span>
+</button>
+<button class="w-full bg-transparent border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 h-14 rounded-xl font-bold text-lg transition-all hover:bg-slate-50 dark:hover:bg-slate-800">
+                        ยกเลิก
+                    </button>
+</div>
+</div>
+<!-- Support / Help -->
+<div class="mt-auto pt-10 text-center space-y-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                    มีปัญหาในการเข้าใช้งาน?
+                </p>
+<a class="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-gold/40 bg-gold/5 text-gold font-bold transition-all hover:bg-gold/10" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">support_agent</span>
+                    ติดต่อฝ่ายบริการลูกค้า
+                </a>
+<div class="pt-8 opacity-20 flex justify-center items-center gap-2">
+<div class="h-[1px] w-12 bg-slate-400"></div>
+<span class="font-bold tracking-widest text-xs uppercase">SakonLottery</span>
+<div class="h-[1px] w-12 bg-slate-400"></div>
+</div>
+</div>
+</main>
+<!-- Footer Navigation Simulation -->
+<div class="p-4 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+<div class="flex justify-around items-center h-12">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px]">หน้าหลัก</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px]">โปรไฟล์</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px]">ประวัติ</span>
+</div>
+</div>
+</div>
+</div>
+</body></html>

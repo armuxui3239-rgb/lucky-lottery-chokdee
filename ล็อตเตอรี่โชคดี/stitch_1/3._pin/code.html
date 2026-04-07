@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "gold": "#d4af37",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #ec131e 0%, #d4af37 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden mx-auto max-w-[430px] shadow-2xl">
+<!-- Top App Bar -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">ยืนยันรหัส PIN</h2>
+</div>
+<!-- Progress Stepper -->
+<div class="flex flex-col gap-3 p-4 bg-white dark:bg-background-dark">
+<div class="flex gap-6 justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600 font-bold">check_circle</span>
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-normal">บันทึกข้อมูลสำเร็จ</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">ขั้นตอน 3/3</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-800 h-2 w-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex flex-col flex-1 px-4 py-6">
+<div class="flex flex-col items-center text-center mb-8">
+<div class="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-green-600 text-4xl">verified_user</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-extrabold leading-tight mb-2">ยืนยันการเปลี่ยนแปลง</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed">กรุณากรอกรหัส PIN 6 หลักเพื่อยืนยันความปลอดภัยในการเปลี่ยนบัญชีรับเงินรางวัล</p>
+</div>
+<!-- PIN Input Fieldset -->
+<div class="flex justify-center mb-10">
+<fieldset class="relative flex gap-3">
+<input class="flex h-14 w-11 text-center [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary border-0 border-b-2 border-slate-300 dark:border-slate-700 bg-transparent text-xl font-bold text-slate-900 dark:text-slate-100" max="9" maxlength="1" type="password" value="1"/>
+<input class="flex h-14 w-11 text-center [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary border-0 border-b-2 border-slate-300 dark:border-slate-700 bg-transparent text-xl font-bold text-slate-900 dark:text-slate-100" max="9" maxlength="1" type="password" value="2"/>
+<input class="flex h-14 w-11 text-center [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary border-0 border-b-2 border-slate-300 dark:border-slate-700 bg-transparent text-xl font-bold text-slate-900 dark:text-slate-100" max="9" maxlength="1" type="password" value="3"/>
+<input class="flex h-14 w-11 text-center [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary border-0 border-b-2 border-slate-300 dark:border-slate-700 bg-transparent text-xl font-bold text-slate-900 dark:text-slate-100" max="9" maxlength="1" type="password" value=""/>
+<input class="flex h-14 w-11 text-center [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary border-0 border-b-2 border-slate-300 dark:border-slate-700 bg-transparent text-xl font-bold text-slate-900 dark:text-slate-100" max="9" maxlength="1" type="password" value=""/>
+<input class="flex h-14 w-11 text-center [appearance:textfield] focus:outline-0 focus:ring-2 focus:ring-primary border-0 border-b-2 border-slate-300 dark:border-slate-700 bg-transparent text-xl font-bold text-slate-900 dark:text-slate-100" max="9" maxlength="1" type="password" value=""/>
+</fieldset>
+</div>
+<!-- Summary Card -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">สถานะปัจจุบัน</span>
+<span class="px-3 py-1 bg-green-500/10 text-green-600 rounded-full text-xs font-bold border border-green-500/20">ยืนยันแล้ว</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold text-sm">ความสำคัญของบัญชีธนาคาร</h4>
+<p class="text-slate-600 dark:text-slate-400 text-xs mt-1 leading-normal">ใช้สำหรับรับเงินรางวัลจากการถูกสลาก SakonLottery โดยระบบจะโอนเข้าบัญชีนี้โดยอัตโนมัติภายใน 24 ชม.</p>
+</div>
+</div>
+</div>
+<!-- Virtual Keypad (Visual only) -->
+<div class="grid grid-cols-3 gap-4 mb-8">
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">1</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">2</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">3</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">4</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">5</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">6</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">7</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">8</button>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">9</button>
+<div class="h-14"></div>
+<button class="h-14 flex items-center justify-center text-xl font-bold text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">0</button>
+<button class="h-14 flex items-center justify-center text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="p-4 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800">
+<button class="w-full gold-gradient py-4 rounded-xl text-white font-extrabold text-lg shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span>กลับสู่หน้าโปรไฟล์</span>
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</body></html>

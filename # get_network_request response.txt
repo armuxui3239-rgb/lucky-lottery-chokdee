@@ -1,0 +1,28 @@
+# get_network_request response
+## Request http://localhost:5173/src/main.tsx
+Status:  [failed - 304]
+### Request Headers
+- origin:http://localhost:5173
+- sec-ch-ua-platform:"Windows"
+- referer:http://localhost:5173/index.html
+- user-agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36
+- sec-ch-ua:"Chromium";v="146", "Not-A.Brand";v="24", "Google Chrome";v="146"
+- dnt:1
+- sec-ch-ua-mobile:?0
+- accept:*/*
+- accept-encoding:gzip, deflate, br, zstd
+- accept-language:th-TH,th;q=0.9
+- connection:keep-alive
+- host:localhost:5173
+- if-none-match:W/"3be-NREplvp6R6RIpb7Z6XpVmnkN0bU"
+- sec-fetch-dest:script
+- sec-fetch-mode:cors
+- sec-fetch-site:same-origin
+### Response Headers
+- access-control-allow-origin:http://localhost:5173
+- connection:keep-alive
+- date:Wed, 01 Apr 2026 00:58:15 GMT
+- keep-alive:timeout=5
+- vary:Origin
+### Response Body
+<not available anymore>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "gold": "#D4AF37",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+        }
+        .lottery-grid {
+            background-image: radial-gradient(circle at 1px 1px, #e5e7eb 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col items-center">
+<!-- Mobile Container (iPhone aspect ratio simulation) -->
+<div class="w-full max-w-[430px] bg-white dark:bg-background-dark min-h-screen flex flex-col relative overflow-hidden shadow-2xl">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 border-b border-slate-100 dark:border-primary/10">
+<button class="text-primary flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold flex-1 text-center pr-10">คู่มือการเลือกเลขเด็ด</h2>
+</div>
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+<div class="h-2 w-2 rounded-full bg-primary/20"></div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 px-6 overflow-y-auto pb-32">
+<div class="text-center mb-8">
+<div class="inline-block p-3 rounded-full bg-primary/10 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">search_spark</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">ขั้นตอนการเลือกเลขเด็ด</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">เริ่มต้นการเป็นเศรษฐีด้วย SakonLottery</p>
+</div>
+<!-- Visualization Area -->
+<div class="relative w-full aspect-video rounded-xl border-4 border-gold/30 bg-background-light overflow-hidden mb-8 shadow-inner">
+<div class="absolute inset-0 lottery-grid opacity-20"></div>
+<!-- Mock UI Components for Guide -->
+<div class="absolute inset-0 flex flex-col p-4">
+<div class="h-8 w-full bg-white rounded shadow-sm flex items-center px-2 mb-4 border border-slate-200">
+<span class="material-symbols-outlined text-sm text-slate-400">search</span>
+<div class="ml-2 h-2 w-20 bg-slate-100 rounded"></div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="h-24 bg-white rounded-lg border-b-4 border-primary shadow-sm flex flex-col p-2 items-center justify-center relative">
+<div class="text-[10px] font-bold text-primary mb-1">สลากกินแบ่ง</div>
+<div class="text-lg font-bold tracking-widest text-slate-800">832594</div>
+<div class="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-green-500"></div>
+</div>
+<div class="h-24 bg-white rounded-lg border-b-4 border-primary shadow-sm flex flex-col p-2 items-center justify-center relative">
+<div class="text-[10px] font-bold text-primary mb-1">สลากกินแบ่ง</div>
+<div class="text-lg font-bold tracking-widest text-slate-800">110482</div>
+<div class="absolute bottom-1 right-1 h-3 w-3 rounded-full bg-green-500 opacity-50"></div>
+</div>
+</div>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="Abstract red and gold premium pattern background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8oVuKaYqLKEwBe-YWZ6lA7XKDhSOVO2Lh-0n7dG2XZjLyLYuLmwlnv3SDs05hP7qM4pve046p-_T9UyWG5cYIBKaVTSwWv5DycDJyPvhnUAD24909JWdinLkKLmISHJNtpoUtJXEsqKgdbOqzI17LRbzRN4gDkXVmBMMlDMchD0puNkyKPWBg9SVjhyTtpArMjsdDv800A68QPa30Em-mPghh1A6lbhxNfUJQc5wRE41oGBUVwF6UEmVrXZ2kPLjN-yH1jhmaXjs"/>
+</div>
+<!-- Steps -->
+<div class="space-y-6">
+<!-- Step 1 -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-primary/20">1</div>
+<div class="w-0.5 h-full bg-slate-100 dark:bg-slate-800 my-1"></div>
+</div>
+<div class="pb-6">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">เลือกเมนูหน้าหลัก</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">กดที่ปุ่มหน้าหลักเพื่อเริ่มต้นการค้นหา</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-primary/20">2</div>
+<div class="w-0.5 h-full bg-slate-100 dark:bg-slate-800 my-1"></div>
+</div>
+<div class="pb-6">
+<h4 class="font-bold text-slate-900 dark:text-slate-100">พิมพ์เลขที่ต้องการ</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">ระบุเลข 3 ตัว หรือ 6 ตัวในช่องค้นหาเพื่อกรองสลากที่ถูกใจ</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-lg shadow-primary/20">3</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">กดเลือกใบที่ถูกใจ</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">เลือกเลขจากรายการที่แสดงเพื่อใส่ลงในตะกร้าของคุณ</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer CTA -->
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white to-transparent dark:from-background-dark dark:via-background-dark pt-12">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-xl shadow-primary/30 transition-all flex items-center justify-center gap-2 group">
+                ถัดไป
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar (Visual Only) -->
+<div class="mt-auto border-t border-slate-100 dark:border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pb-8 pt-2">
+<div class="flex justify-between items-center max-w-sm mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium">หน้าหลัก</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<p class="text-[10px] font-medium">ตรวจรางวัล</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-900 dark:text-white" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">menu_book</span>
+<p class="text-[10px] font-medium">คู่มือ</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<p class="text-[10px] font-medium">ตะกร้า</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium">โปรไฟล์</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

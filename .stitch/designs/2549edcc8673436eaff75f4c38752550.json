@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/5e546398b7a34c1d85dc94dddc187132",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uj-70U5xyvUM5BoFpdV29WjbUKTecWghId1BlrJx1ZwSNQ5nOnvmxTgDxjL-E_HbYI1JoQlxeyqDPxmYSDkIzNxAEm-mH3pcvsXFhpj8ktMD3_Sbyxgpwt6aGFseFeryyzcMQQ98KyE7s-E7zUeqrmbLzXKafhCv8EV7BuhYrngGcSETVEFnsDA4hR0GTKPu2tp6VWEZyhoZuhy69OyheAaEBgRymhZUbFP7ELLbk6TGe2NWvoPRUVMNyo"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/379ab2c5e8d84cfc8b10ac12c895fe2e",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0MWIwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "2549edcc8673436eaff75f4c38752550",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "1978",
+  "title": "2. Bank Transfer Details",
+  "prompt": "Title: 4. Prize Claim Success Receipt\nContext: Full Prize Claiming & Winner Journey Workflow for SakonLottery.\nDescription of the screen: Step 4: Claim Success & Wallet Update. Festive full-screen success view. Headline: 'Claim Successful!'. Shows the Net Amount added to the wallet balance. Summary of the transaction with a 'View Wallet History' button (Solid Red) and 'Back to Home' button (Outline Red). Final step in the unified winner workflow. Variant 4 of 4 in Winner Workflow.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/2549edcc8673436eaff75f4c38752550",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

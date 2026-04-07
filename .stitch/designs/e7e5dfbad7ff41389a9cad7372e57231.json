@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/9aa6df7107454336b2ed5f1db433a2f1",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ujT6GF2siMhr65LdVydknagxBJ7VCOdjP9x6bSAYPAOegBURm39DITEFp1zk74YqUs3MfRQ26rkLviCw_pPs2ndqwS8nyrnG6gWr8NfQ-MXXwz3ADuHMGAGSCws9KbzPoHQS-pK5JeLiH_nzoD0zV2CgMMAONwhvr1LItqjK40SNuf_OFzju0VP1Vx_IPPtjZmf3a0w87Z42zLnPKnbuqKdBM-Ga_lXolKmlsvxGEiH4pTivOTocChmDDo"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/49b46928d3c740379b72c9b49c29671c",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2UzZjUwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "e7e5dfbad7ff41389a9cad7372e57231",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "1768",
+  "title": "SakonLottery Home Variant 1",
+  "prompt": "Title: 2. Ticket Selection Modal\nContext: Core Shopping Workflow: Searching to Adding to Cart for SakonLottery.\nDescription of the screen: Step 2: Number Detail & Quantity Modal. When a user taps a ticket card (e.g., '118 999'), a bottom sheet modal slides up. It shows the number in large bold font, price per ticket, and a quantity selector (Set of 1, 2, 5, 10). Displays 'Available: 45 sets' in green. Features a large red 'Add to Cart' button. High-contrast red/white theme. Variant 2 of 4 in Workflow.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/e7e5dfbad7ff41389a9cad7372e57231",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

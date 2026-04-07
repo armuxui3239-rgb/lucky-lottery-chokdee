@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/68e8396227c2400587df45f1afa08d83",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiAMybf8DRBZog0NCGN-EmGE5nvI_YJVIUCB7qyKULg7JSwdID7FbshDTqk4gLDAMEYcJOPsp6Fjme84-JuobbCjbhU0ddvPgVaFf3MMa0hPrQ3nzDQ0PrEBJoXLXo43Y2_1zGt7I_gjK6ZdArAOICeI1ksJ6Qx-Of2gAZD9r3doZNG-N9qNQdY1Dy_olFETf8XPIvcK6cCyjzwlVxXSJe8nyhgk6oSsRq2nkgqTte9nSw121DtwiR-HlJK"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/471522fc1c8642389d17ec2c14127a5c",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0NDUwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "ad90cba5ee4240b5918f055ed51bca8a",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "1768",
+  "title": "SakonLottery Home Variant 1",
+  "prompt": "Title: 3. Add to Cart Confirmation\nContext: Core Shopping Workflow: Searching to Adding to Cart for SakonLottery.\nDescription of the screen: Step 3: Add to Cart Success Animation. A celebratory screen overlaying the home feed. Features a large red circular checkmark with a bounce effect. Text says 'Added to Cart!'. Shows a summary: 'Number 118 999 (Set of 5)'. Two buttons: 'Continue Shopping' (white with red border) and 'Go to Cart' (solid red). High-contrast theme. Variant 3 of 4 in Workflow.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/ad90cba5ee4240b5918f055ed51bca8a",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

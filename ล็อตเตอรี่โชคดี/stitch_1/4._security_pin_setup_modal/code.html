@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Security PIN Setup - SakonLottery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Spline Sans", sans-serif;
+        }
+        .numpad-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display flex items-center justify-center min-h-screen">
+<!-- Modal Overlay -->
+<div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" id="modal-overlay">
+<!-- Modal Content -->
+<div class="bg-white dark:bg-slate-900 w-full max-w-md rounded-t-lg sm:rounded-lg overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+<!-- Header Component (Modified TopAppBar) -->
+<div class="flex items-center bg-white dark:bg-slate-900 p-4 border-b border-slate-100 dark:border-slate-800 justify-between">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Security PIN</h2>
+</div>
+<!-- Progress Indicator -->
+<div class="px-6 pt-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-primary text-xs font-bold uppercase tracking-wider">Step 4 of 4</span>
+<span class="text-slate-400 text-xs font-medium">PIN Setup</span>
+</div>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full"></div>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto px-6 py-8 flex flex-col items-center">
+<div class="bg-primary/10 p-4 rounded-full mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">lock</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight text-center pb-2">Enter Current PIN</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed px-4 text-center mb-8">
+                    Please enter your current 6-digit security PIN to proceed with setting a new one.
+                </p>
+<!-- PIN Input Fieldset -->
+<div class="flex justify-center mb-10">
+<fieldset class="relative flex gap-3">
+<input class="flex h-12 w-10 text-center bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded focus:border-primary focus:ring-0 text-xl font-bold text-slate-900 dark:text-slate-100" maxlength="1" readonly="" type="password" value="•"/>
+<input class="flex h-12 w-10 text-center bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded focus:border-primary focus:ring-0 text-xl font-bold text-slate-900 dark:text-slate-100" maxlength="1" readonly="" type="password" value="•"/>
+<input class="flex h-12 w-10 text-center bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded focus:border-primary focus:ring-0 text-xl font-bold text-slate-900 dark:text-slate-100" maxlength="1" readonly="" type="password" value="•"/>
+<input class="flex h-12 w-10 text-center bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded border-primary ring-1 ring-primary text-xl font-bold text-slate-900 dark:text-slate-100" maxlength="1" readonly="" type="password" value=""/>
+<input class="flex h-12 w-10 text-center bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded focus:border-primary focus:ring-0 text-xl font-bold text-slate-900 dark:text-slate-100" maxlength="1" readonly="" type="password" value=""/>
+<input class="flex h-12 w-10 text-center bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded focus:border-primary focus:ring-0 text-xl font-bold text-slate-900 dark:text-slate-100" maxlength="1" readonly="" type="password" value=""/>
+</fieldset>
+</div>
+<!-- Custom Numeric Keypad -->
+<div class="numpad-grid w-full max-w-[280px]">
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">1</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">2</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">3</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">4</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">5</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">6</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">7</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">8</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">9</button>
+<div class="h-16"></div>
+<button class="flex items-center justify-center h-16 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-2xl font-semibold hover:bg-primary/10 hover:text-primary active:scale-95 transition-all">0</button>
+<button class="flex items-center justify-center h-16 rounded-xl bg-primary/5 text-primary text-2xl font-semibold hover:bg-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+<button class="w-full bg-primary text-white py-4 rounded-full font-bold text-base shadow-lg shadow-primary/25 hover:bg-primary/90 transition-colors">
+                    Continue to New PIN
+                </button>
+<button class="w-full mt-3 text-slate-500 dark:text-slate-400 py-2 font-medium text-sm hover:text-primary transition-colors">
+                    Forgot Current PIN?
+                </button>
+</div>
+</div>
+</div>
+<!-- Background Content Emulation (Blurred behind modal) -->
+<div class="fixed inset-0 -z-10 p-6 flex flex-col gap-6 opacity-20 pointer-events-none">
+<div class="w-full aspect-video bg-primary/20 rounded-lg" data-alt="Abstract red pattern background"></div>
+<div class="h-12 w-3/4 bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-full bg-slate-200 rounded"></div>
+<div class="h-4 w-1/2 bg-slate-200 rounded"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-slate-200 rounded-lg"></div>
+<div class="aspect-square bg-slate-200 rounded-lg"></div>
+</div>
+</div>
+</body></html>

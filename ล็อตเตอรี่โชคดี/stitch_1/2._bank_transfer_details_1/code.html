@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "gold": "#FFD700",
+                        "gold-dark": "#B8860B",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1a0809",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --wheel-border: #FFD700;
+            --glow-color: rgba(255, 215, 0, 0.6);
+        }
+        .lucky-wheel {
+            background: conic-gradient(
+                #ec131e 0deg 45deg, 
+                #ffffff 45deg 90deg, 
+                #ec131e 90deg 135deg, 
+                #ffffff 135deg 180deg, 
+                #ec131e 180deg 225deg, 
+                #ffffff 225deg 270deg, 
+                #ec131e 270deg 315deg, 
+                #ffffff 315deg 360deg
+            );
+            border: 10px solid var(--wheel-border);
+            box-shadow: 0 0 50px rgba(236, 19, 30, 0.3), inset 0 0 30px rgba(0,0,0,0.3);filter: contrast(1.1);
+        }
+        .wheel-segment-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0% 0%;
+            width: 140px;
+            text-align: right;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 8px;
+            padding-right: 20px;
+        }
+        .spin-glow {
+            box-shadow: 0 0 25px var(--glow-color), 0 0 50px var(--glow-color);
+        }
+        .motion-blur-layer {
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.1), transparent);
+            pointer-events: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-slate-100 antialiased overflow-hidden">
+<div class="relative flex h-screen w-full flex-col bg-background-dark max-w-md mx-auto overflow-hidden">
+<div class="flex items-center justify-between p-6 z-10">
+<div class="flex flex-col">
+<span class="text-gold font-bold text-xs uppercase tracking-[0.2em]">SakonLottery Engagement</span>
+<h1 class="text-2xl font-black text-white italic">LUCKY WHEEL</h1>
+</div>
+<div class="flex gap-2">
+<button class="size-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-gold text-xl">info</span>
+</button>
+<button class="size-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-white">close</span>
+</button>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center px-6 relative">
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-10 left-10 size-32 bg-primary/10 blur-[60px] rounded-full"></div>
+<div class="absolute bottom-20 right-10 size-40 bg-gold/5 blur-[80px] rounded-full"></div>
+</div>
+<div class="mb-6 flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+<span class="material-symbols-outlined text-gold text-lg">military_tech</span>
+<span class="text-xs font-bold text-white tracking-wide">PRIZES &amp; ODDS</span>
+<span class="material-symbols-outlined text-slate-400 text-xs">help_outline</span>
+</div>
+<div class="text-center mb-10">
+<p class="text-white text-xl font-black uppercase tracking-tight italic">Spin to win!</p>
+<div class="flex items-center justify-center gap-1.5 mt-1">
+<span class="size-1.5 bg-green-500 rounded-full animate-pulse"></span>
+<p class="text-slate-400 text-xs font-medium">1 Free Spin Available</p>
+</div>
+</div>
+<div class="relative w-80 h-80 flex items-center justify-center scale-110">
+<div class="absolute -top-5 left-1/2 -translate-x-1/2 z-40 filter drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">
+<div class="w-10 h-12 bg-gradient-to-b from-gold to-gold-dark clip-path-polygon-[50%_100%,0%_0%,100%_0%] flex items-start justify-center pt-1" style="clip-path: polygon(50% 100%, 0% 0%, 100% 0%);">
+<div class="w-3 h-3 rounded-full bg-white border-2 border-primary"></div>
+</div>
+</div>
+<div class="lucky-wheel w-full h-full rounded-full relative flex items-center justify-center overflow-hidden">
+<div class="motion-blur-layer"></div>
+<div class="wheel-segment-content text-white" style="transform: rotate(-22.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">100<br/>TICKETS</span>
+<span class="material-symbols-outlined text-xl">confirmation_number</span>
+</div>
+<div class="wheel-segment-content text-primary" style="transform: rotate(22.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">฿500<br/>CREDIT</span>
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+<div class="wheel-segment-content text-white" style="transform: rotate(67.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">฿50<br/>CREDIT</span>
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div class="wheel-segment-content text-primary" style="transform: rotate(112.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">FREE<br/>TICKET</span>
+<span class="material-symbols-outlined text-xl">local_activity</span>
+</div>
+<div class="wheel-segment-content text-white" style="transform: rotate(157.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">NEXT<br/>TIME</span>
+<span class="material-symbols-outlined text-xl">sentiment_dissatisfied</span>
+</div>
+<div class="wheel-segment-content text-primary" style="transform: rotate(202.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">GOLD<br/>BAR</span>
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+</div>
+<div class="wheel-segment-content text-white" style="transform: rotate(247.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">20<br/>SPINS</span>
+<span class="material-symbols-outlined text-xl">autorenew</span>
+</div>
+<div class="wheel-segment-content text-primary" style="transform: rotate(292.5deg) translate(0, -50%);">
+<span class="text-[10px] font-black leading-tight">฿100<br/>CREDIT</span>
+<span class="material-symbols-outlined text-xl">savings</span>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center z-30">
+<div class="relative group">
+<div class="absolute inset-0 spin-glow rounded-full scale-110 opacity-70"></div>
+<button class="size-24 bg-gradient-to-b from-gold via-gold to-gold-dark rounded-full border-[6px] border-white shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center active:scale-95 transition-all">
+<span class="text-black font-black text-lg tracking-tighter drop-shadow-sm">SPIN</span>
+<div class="h-1 w-8 bg-black/10 rounded-full mt-1"></div>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-16 w-full space-y-3">
+<div class="flex items-center justify-between px-2 mb-2">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Admin Picked Prizes</span>
+<span class="text-[10px] font-bold text-gold uppercase tracking-widest">Live Updates</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3">
+<div class="bg-primary/20 p-2 rounded-xl">
+<span class="material-symbols-outlined text-primary text-2xl">confirmation_number</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 font-bold uppercase">Mega</span>
+<span class="text-sm font-black text-white">100 Tickets</span>
+</div>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-3">
+<div class="bg-gold/20 p-2 rounded-xl">
+<span class="material-symbols-outlined text-gold text-2xl">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-slate-400 font-bold uppercase">Daily</span>
+<span class="text-sm font-black text-white">฿500 Credit</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-8 text-center bg-gradient-to-t from-black via-black/80 to-transparent">
+<p class="text-slate-500 text-[10px] mb-6 uppercase tracking-widest">Terms Apply • Valid for today only</p>
+<button class="flex items-center justify-center gap-2 text-gold mx-auto hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg">history</span>
+<span class="text-xs font-black uppercase tracking-[0.15em]">Spin History</span>
+</button>
+</div>
+<div class="flex w-full flex-row items-center justify-center gap-2 pb-6">
+<div class="h-1.5 w-10 rounded-full bg-primary shadow-[0_0_10px_rgba(236,19,30,0.5)]"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+</div>
+</div>
+
+</body></html>

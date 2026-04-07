@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/89c5b214717b41f589f6ec62dd3b41cb",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugOdkZl4J5b3aFHhSUR-tEQMBqHudNpN5VI_6OUtizfNgk3WW5nAWcjqcq74_vq6YAbt8v6aGtxT3m62uOF8skIMPhH3hrpHO9bfEbTI_WBytovrg5kkkBt5zakD7UJhLqdzBeUOvHs-Jl0MMCWtHdKvVctMt1jpcwPCkObfClk9qf5UTmrBUB4Q4PyhWUxs3gQpPSKE9MxFQ4Iw7OtvlgIhLFsxG6rbSS3pnTN9YaGC4-tJEBZz5N-_JY"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/8db152c1fbf840a1bb8bd263d4ce1750",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0YWIwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "46d73bb5007c45319bd12c87ec7511eb",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "2084",
+  "title": "SakonLottery Home Variant 1",
+  "prompt": "Title: 1. หน้าหลัก SakonLottery (เวอร์ชันปรับปรุง)\nContext: การปรับปรุงหน้าจอหลัก (Home) ของ SakonLottery ให้เป็นภาษาไทยและมีโทนสีแดง-ทอง-ขาวที่สมบูรณ์แบบตามภาพอ้างอิง\nEdit request: แก้ไขหน้าหลัก (Home Screen) ให้เป็นภาษาไทยทั้งหมด: เปลี่ยนข้อความในแบนเนอร์เป็น 'หวยชุดใหญ่ ถูกทุกเลข!', เปลี่ยนปุ่มค้นหาเป็น 'ค้นหา', เปลี่ยนชื่อหมวดหมู่เป็น '10 เลขเด็ด', 'เลขมงคล', 'ชุดมังกร'. การ์ดสลากแสดงสถานะ 'มีของ' และราคาเป็นบาท (฿). ปรับโทนสีให้เป็นสีแดงสด (Main Red), สีทองพรีเมียม (Gold), และพื้นหลังสีขาวสะอาดตา (White). ตรวจสอบฟอนต์ให้เป็นสไตล์โมเดิร์นที่อ่านง่ายและรองรับภาษาไทย 100%. เพิ่มแถบเมนูด้านล่าง (Bottom Nav) เป็นภาษาไทย: หน้าหลัก, สลากของฉัน, ตรวจรางวัล, โปรไฟล์.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/46d73bb5007c45319bd12c87ec7511eb",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

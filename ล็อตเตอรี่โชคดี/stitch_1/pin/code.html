@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                        "gold-accent": "#D4AF37",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Top Navigation -->
+<div class="flex items-center bg-white dark:bg-slate-900 p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-12">ความปลอดภัยและ PIN</h2>
+</div>
+<!-- Hero Illustration Area -->
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:py-3">
+<div class="w-full bg-gradient-to-br from-primary via-red-600 to-red-800 flex flex-col justify-center items-center overflow-hidden @[480px]:rounded-xl min-h-[240px] shadow-lg relative" data-alt="Abstract red and gold safety shield pattern background">
+<div class="absolute inset-0 opacity-10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmCZf375pl5Q2XbxO-Odhx2uDVtp2v0tqgPA33-o_ZBpSKcWDpwrEa5DSxbWdOKKyE__VbV4H0ipO8_x2maQ8AKVGjIGq7wkUneJ0UaBKFtXv8Ryx3UR33nbw9cRsEdfQfl9O2iJ_E4yRkffOD4AkAEkZ5b2aJ5e4qHxJ9K6X6KLbtkjZocF4_LvbKp-d_TGENBUtR_-uVLXlPXZ0rtB8MHyFd-3RNtd7uW0nOIUoNmQdPObB49XxmqfyaXZ-epIorODGhsdsUfp8');"></div>
+<div class="z-10 bg-white/20 p-6 rounded-full backdrop-blur-sm border border-white/30">
+<span class="material-symbols-outlined text-white text-7xl">shield_lock</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="px-6 pt-8 pb-4">
+<h2 class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-extrabold leading-tight text-center">เพื่อความปลอดภัยของบัญชีคุณ</h2>
+<p class="text-slate-500 dark:text-slate-400 text-center mt-2 text-sm">กรุณาดำเนินการตั้งค่าเพื่อปกป้องสิทธิ์และยอดเงินของคุณ</p>
+</div>
+<!-- Security Features -->
+<div class="p-4 space-y-4">
+<!-- PIN Setting Card -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-900 p-5 shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:shadow-md">
+<div class="flex flex-col gap-2 flex-[2_2_0px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">password</span>
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">ตั้งรหัส PIN 6 หลัก</p>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed">ใช้สำหรับยืนยันการถอนเงินและทำรายการสำคัญ เพื่อป้องกันการเข้าถึงจากบุคคลอื่น</p>
+</div>
+<div class="w-24 h-24 bg-red-50 dark:bg-red-900/20 rounded-xl flex items-center justify-center border border-red-100 dark:border-red-800/30">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">dialpad</span>
+</div>
+</div>
+<!-- Bank Binding Card -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-900 p-5 shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:shadow-md">
+<div class="flex flex-col gap-2 flex-[2_2_0px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">account_balance</span>
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">ผูกบัญชีธนาคาร</p>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed">รับเงินรางวัลโดยอัตโนมัติเข้าบัญชีที่คุณระบุ สะดวก รวดเร็ว และปลอดภัยสูงสุด</p>
+</div>
+<div class="w-24 h-24 bg-red-50 dark:bg-red-900/20 rounded-xl flex items-center justify-center border border-red-100 dark:border-red-800/30">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+</div>
+</div>
+<!-- Info Tip -->
+<div class="mx-4 mt-2 p-4 bg-amber-50 dark:bg-amber-950/20 rounded-xl border border-amber-100 dark:border-amber-900/30 flex gap-3">
+<span class="material-symbols-outlined text-amber-600 shrink-0">info</span>
+<p class="text-amber-800 dark:text-amber-200 text-xs leading-relaxed">
+                การตั้งค่า PIN และผูกบัญชีเป็นขั้นตอนมาตรฐานในการรักษาความปลอดภัยขั้นสูงสุดของ SakonLottery ข้อมูลของคุณจะถูกเก็บเป็นความลับ
+            </p>
+</div>
+<!-- Footer Action -->
+<div class="mt-auto p-6 pb-10">
+<button class="w-full bg-primary hover:bg-red-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-red-200 dark:shadow-none flex items-center justify-center gap-2 transition-transform active:scale-95">
+<span>ตั้งค่าความปลอดภัยตอนนี้</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full mt-4 bg-transparent text-slate-500 dark:text-slate-400 font-semibold py-2 px-6 text-sm">
+                ไว้ภายหลัง
+            </button>
+</div>
+<!-- Bottom Spacing for mobile UI -->
+<div class="h-2 bg-background-light dark:bg-background-dark"></div>
+</div>
+</body></html>

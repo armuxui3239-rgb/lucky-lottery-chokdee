@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/fd1b953ea70f463db0e004fdf37174f6",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ugWFXlD-hZNQkSlBwlwhS-Nztp8E0qKR57056eNJi3qjADcTj2jjK6VAnnLSfZc7izz-1mXkKBh3mD-0naLw1RKkNQOIgVpNbpdJ1vrBOb_9Xj-i8Mmu4W1DGMsBwCW7h5PGxwhBu8PhKJt525gmK1W_FLfx5tiBTV1GFZjpqVLPtsmr3ojtUOP0WXeIaFvl1ueULtmdpRTKsrCRLuP7xCaGshRAjfBZaAmIAScAcyYC9uSt5I9Lz0jp6I"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/4a9215f0d584474e9a0909747b88e4a7",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0M2QwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "f274b04c806c4b6ebfedccc690afb35e",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "1780",
+  "title": "SakonLottery Home Variant 1",
+  "prompt": "Title: 4. Shopping Cart Review\nContext: Core Shopping Workflow: Searching to Adding to Cart for SakonLottery.\nDescription of the screen: Step 4: My Shopping Cart Review. A full-screen list of all selected lottery tickets. Each item shows the 6-digit number, quantity adjuster, and price. Bottom section has a summary of total items and total price. A large, full-width red 'Proceed to Payment' button sits at the bottom. Consistent branding with the red header. Variant 4 of 4 in Workflow.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/f274b04c806c4b6ebfedccc690afb35e",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

@@ -1,0 +1,7 @@
+# Edge Function: settle-lotto
+
+name = "settle-lotto"
+verify_jwt = false
+
+[functions.settle-lotto]
+verify_jwt = false

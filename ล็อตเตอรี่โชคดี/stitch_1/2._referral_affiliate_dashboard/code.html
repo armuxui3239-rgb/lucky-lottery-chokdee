@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SakonLottery Referral Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec131e",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                        "gold": "#D4AF37",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Spline Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Affiliate Dashboard</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-32">
+<!-- Profile Section -->
+<div class="p-6 flex flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-28 w-28 border-4 border-gold shadow-lg" data-alt="User profile avatar with gold circular border" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCp8H_8D504uO-2JvRvi-sR7TxZAEN6BeBAZ_CjKbACtH_DKCKd2y_V-606QCTBaKmxCg2HRvZeQNjoqv4VkKSj5mh-8Tv2kdWNeSGmnhdibF7jI-Ec548D8OMTz1ItD_Hg4cleyFBUslISAIUt23Al6n57oJn49I_NkRLY97UHd9EeLXbQr7TwyX6AcF2R-I3VtUKTFaLxCtCyRVcMmHbNkW_1N1SU5JXlCCJSZvdYxgtjDMD-7VYLdGj2GzxAaSonTjowjMOT4OI");'>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-gold text-white p-1 rounded-full flex items-center justify-center border-2 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-sm fill-icon">military_tech</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<h1 class="text-2xl font-bold tracking-tight">SakonLottery Affiliate</h1>
+<div class="flex items-center justify-center gap-1 mt-1">
+<span class="material-symbols-outlined text-gold text-base fill-icon">workspace_premium</span>
+<p class="text-gold font-semibold text-sm uppercase tracking-wider">Gold Member</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Joined 3 months ago</p>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="px-4 grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/10 flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">group</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-tight">Friends Joined</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-slate-100">124</p>
+</div>
+<div class="bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/10 flex flex-col items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-gold mb-2 fill-icon">payments</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-tight">Total Commission</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-slate-100">฿14,250</p>
+</div>
+</div>
+<!-- Referral Code Box -->
+<div class="p-4 mt-4">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-3 px-1">Your Referral Code</h3>
+<div class="flex flex-col gap-4 rounded-xl border border-primary/20 bg-white dark:bg-primary/5 p-5 shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<p class="text-primary text-xl font-black tracking-widest font-mono">SAKON-777-WIN</p>
+<button class="flex items-center justify-center gap-2 rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<div class="mt-4 pt-4 border-t border-primary/10">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-gold">info</span>
+<p class="text-sm">Share this code to earn <span class="text-primary font-bold">5% commission</span> on every ticket your friends buy.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bonus Tier Info -->
+<div class="px-4 mt-2">
+<div class="bg-gold/10 border border-gold/30 rounded-xl p-4 flex items-start gap-4">
+<div class="bg-gold text-white p-2 rounded-lg">
+<span class="material-symbols-outlined fill-icon">trending_up</span>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold text-sm">Next Reward: Platinum Tier</h4>
+<p class="text-slate-600 dark:text-slate-400 text-xs mt-1">Refer 26 more friends to unlock 7% commission and exclusive weekly bonuses.</p>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full mt-3 overflow-hidden">
+<div class="bg-gold h-full w-[74%] rounded-full"></div>
+</div>
+<div class="flex justify-between mt-1">
+<p class="text-[10px] text-slate-500">74/100 Referrals</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="fixed bottom-24 left-0 right-0 p-4 max-w-md mx-auto z-40">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-xl flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined">share</span>
+                Share Referral Link
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 pb-8 pt-2 px-6 z-50">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="text-[10px] font-medium">Lottery</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-icon">groups</span>
+<span class="text-[10px] font-bold">Referral</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

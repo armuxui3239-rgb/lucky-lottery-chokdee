@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2. วิธีการกรอกข้อมูลบัญชีธนาคาร - SakonLottery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;family=Noto+Sans+Thai:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#ec131e",
+                "accent-gold": "#d4af37",
+                "background-light": "#f8f6f6",
+                "background-dark": "#221011",
+              },
+              fontFamily: {
+                "display": ["Manrope", "Noto Sans Thai", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f9f0b5 50%, #d4af37 100%);
+        }
+        .premium-shadow {
+            box-shadow: 0 4px 20px -2px rgba(236, 19, 30, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center">แก้ไขข้อมูลบัญชีธนาคาร</h2>
+<div class="size-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-gold">help</span>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-24">
+<!-- Progress Stepper -->
+<div class="flex w-full flex-row items-center justify-center gap-4 py-6">
+<div class="flex flex-col items-center gap-1">
+<div class="h-2.5 w-2.5 rounded-full bg-primary/30"></div>
+<span class="text-[10px] text-slate-400 font-medium">ขั้นตอนที่ 1</span>
+</div>
+<div class="h-[2px] w-8 bg-primary/20"></div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-3 w-3 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<span class="text-[10px] text-primary font-bold">ขั้นตอนที่ 2</span>
+</div>
+<div class="h-[2px] w-8 bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex flex-col items-center gap-1">
+<div class="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<span class="text-[10px] text-slate-400 font-medium">ขั้นตอนที่ 3</span>
+</div>
+</div>
+<!-- Header Content -->
+<div class="px-5 mb-6">
+<h1 class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight mb-2">ขั้นตอนที่ 2: กรอกข้อมูลบัญชีใหม่</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm">ระบุรายละเอียดบัญชีธนาคารที่คุณต้องการผูกเข้ากับระบบ SakonLottery โดยชื่อเจ้าของบัญชีต้องตรงกับชื่อที่ลงทะเบียนไว้เท่านั้น</p>
+</div>
+<!-- Bank Form Card -->
+<div class="mx-4 bg-white dark:bg-slate-900 rounded-2xl p-5 premium-shadow border border-primary/5" id="bank-edit-form-guide">
+<div class="space-y-5">
+<!-- Select Bank -->
+<div>
+<label class="block text-slate-700 dark:text-slate-300 text-sm font-bold mb-2">เลือกธนาคาร</label>
+<div class="relative group">
+<select class="appearance-none w-full bg-slate-50 dark:bg-slate-800 border-2 border-primary/20 rounded-xl px-4 py-3.5 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-0 transition-all cursor-pointer">
+<option value="">โปรดเลือกธนาคารจากรายชื่อ</option>
+<option value="kbank">ธนาคารกสิกรไทย (K-Bank)</option>
+<option value="scb">ธนาคารไทยพาณิชย์ (SCB)</option>
+<option value="bbl">ธนาคารกรุงเทพ (BBL)</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Account Number -->
+<div>
+<label class="block text-slate-700 dark:text-slate-300 text-sm font-bold mb-2">เลขที่บัญชี</label>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-2 border-primary/20 rounded-xl px-4 py-3.5 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-0 transition-all placeholder:text-slate-400" placeholder="ระบุเฉพาะตัวเลข 10-12 หลัก" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-primary/40">
+<span class="material-symbols-outlined">dialpad</span>
+</div>
+</div>
+<p class="mt-1.5 text-[11px] text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">info</span>
+                        ไม่ต้องใส่เครื่องหมายขีด (-) ระหว่างตัวเลข
+                    </p>
+</div>
+<!-- Account Holder Name -->
+<div>
+<label class="block text-slate-700 dark:text-slate-300 text-sm font-bold mb-2">ชื่อเจ้าของบัญชี</label>
+<div class="relative">
+<input class="w-full bg-slate-100 dark:bg-slate-800/50 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 text-slate-500 dark:text-slate-400 font-medium cursor-not-allowed" readonly="" type="text" value="สมชาย ใจดี"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">
+<span class="material-symbols-outlined">lock</span>
+</div>
+</div>
+<div class="mt-3 bg-red-50 dark:bg-primary/5 rounded-lg p-3 border border-primary/20">
+<p class="text-[12px] text-primary leading-relaxed font-medium">
+<span class="font-bold">สำคัญ:</span> ชื่อในสมุดบัญชีธนาคารจะต้องตรงกับชื่อสมาชิกที่คุณใช้สมัครสมาชิกเท่านั้น ระบบไม่รองรับบัญชีของบุคคลอื่น
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Instructional Visual -->
+<div class="mt-8 px-5">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-accent-gold">verified</span>
+                วิธีตรวจสอบความถูกต้อง
+            </h3>
+<div class="relative rounded-xl overflow-hidden border-2 border-accent-gold/30">
+<img class="w-full h-48 object-cover opacity-80" data-alt="Close up of bank book details highlighting name and account number" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJlQWPczV7PKpMliFYgOX0K0mssZ683nuwhfquC_XyjYL8DUQ-DjvD78YdNGlQq4IOxaXUdyJJ2CrK2gabIeTRIQsp2wcTgboVrrAyFuDVK-DpT_8YMANeTVlrzLrrKMRx0UhdrV9AkxiGnYuGpuPzjhc3xA3NhjH5XIVBiGVnSfMmmxNCPAOZWZ0XcbsGwUAACXqcieOYIsAKDIVHQnf-byWOa9oWRIZrLp3dJLBghgThu5zsktdyzNjYRIAfkSgTIJchHl-mfmM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+<p class="text-white text-xs leading-relaxed">กรุณาเทียบเลขบัญชีและชื่อในสมุดบัญชีจริงก่อนกดปุ่ม 'ถัดไป' เพื่อป้องกันความล่าช้าในการทำรายการ</p>
+</div>
+</div>
+</div>
+<!-- Tips Section -->
+<div class="mt-6 px-5 space-y-3">
+<div class="flex items-start gap-3 p-4 bg-white dark:bg-slate-900 rounded-xl border-l-4 border-accent-gold">
+<span class="material-symbols-outlined text-accent-gold mt-0.5">lightbulb</span>
+<div>
+<p class="text-slate-900 dark:text-slate-100 text-sm font-bold">เคล็ดลับการกรอก</p>
+<p class="text-slate-600 dark:text-slate-400 text-xs">ระวังการพิมพ์เลข '0' และเลข '8' สลับกัน และตรวจสอบชื่อ-นามสกุลให้ถูกต้องตามบัตรประชาชน</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-5 bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-transform active:scale-95">
+            ถัดไป
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center mt-3 text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest">SakonLottery Premium Service</p>
+</div>
+</body></html>

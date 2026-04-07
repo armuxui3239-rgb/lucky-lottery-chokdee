@@ -1,0 +1,52 @@
+# Supabase Configuration
+# สำหรับโปรเจค ล็อตลี่ โชคดี
+
+project_id = "your-project-id"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+api_url = "http://localhost:54321"
+
+[inbucket]
+enabled = true
+port = 54324
+smtp_port = 54325
+pop3_port = 54326
+admin_email = "admin@chokdee.com"
+sender_name = "ล็อตลี่ โชคดี"
+
+[storage]
+enabled = true
+port = 54329
+file_size_limit = "50MiB"
+
+[auth]
+enabled = true
+port = 54330
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["https://chokdee.com", "https://www.chokdee.com"]
+
+[realtime]
+enabled = true
+port = 54331
+
+[edge_runtime]
+enabled = true
+inspector_port = 54332
+
+[functions]
+[functions.settle-lotto]
+verify_jwt = false

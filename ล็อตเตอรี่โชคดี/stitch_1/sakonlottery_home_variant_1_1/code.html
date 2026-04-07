@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SakonLottery - หน้าหลัก</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&amp;family=Prompt:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF0000","primary-dark": "#CC0000",
+                        "gold": "#D4AF37","gold-light": "#F9E498",
+                        "background-light": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Kanit", "sans-serif"],
+                        "body": ["Prompt", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .safe-top {
+                padding-top: env(safe-area-inset-top);
+            }
+            .safe-bottom {
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+            .gold-gradient {
+                background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #B8860B 100%);
+            }
+            .text-gold {
+                background: linear-gradient(to bottom, #FFD700, #B8860B);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        body {
+            font-family: 'Prompt', sans-serif;
+            min-height: 100dvh;
+        }
+        h1, h2, h3, .font-kanit {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-50 flex justify-center">
+<div class="relative w-full max-w-md bg-white min-h-screen shadow-2xl flex flex-col overflow-hidden">
+<header class="sticky top-0 z-50 bg-primary text-white">
+<div class="h-10 w-full bg-primary safe-top"></div>
+<div class="flex items-center justify-between px-4 pb-4">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-primary font-bold text-2xl">confirmation_number</span>
+</div>
+<span class="font-display font-extrabold text-xl tracking-tight">SakonLottery</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="relative w-10 h-10 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2.5 h-2.5 bg-gold rounded-full border-2 border-primary"></span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col overflow-y-auto pb-24">
+<section class="relative px-4 pt-6 pb-10 bg-gradient-to-br from-primary via-primary to-primary-dark overflow-hidden">
+<div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-gold/20 rounded-full blur-2xl -ml-16 -mb-16"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="mb-6">
+<h2 class="text-white text-4xl font-extrabold leading-tight drop-shadow-md font-kanit">
+                            หวยชุดใหญ่<br/>
+<span class="text-gold-light">ถูกทุกเลข!</span>
+</h2>
+</div>
+<div class="w-full relative">
+<div class="flex items-center bg-white rounded-2xl shadow-2xl overflow-hidden p-1.5">
+<div class="pl-4 pr-2 text-gray-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex-1 border-none focus:ring-0 text-gray-800 placeholder-gray-400 font-bold text-lg p-0" placeholder="ใส่เลขนำโชคของคุณ..." type="number"/>
+<button class="bg-primary hover:bg-primary-dark text-white rounded-xl px-6 py-3 font-bold text-base transition-colors shadow-md">
+                                ค้นหา
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<div class="w-full overflow-x-auto hide-scrollbar px-4 py-6 -mt-4 relative z-20">
+<div class="flex gap-3">
+<button class="flex items-center gap-2 bg-white border border-gray-100 rounded-full px-5 py-3 shadow-md whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined text-gold text-xl font-variation-fill">stars</span>
+<span class="text-gray-900 font-bold text-sm">10 เลขเด็ด</span>
+</button>
+<button class="flex items-center gap-2 bg-white border border-gray-100 rounded-full px-5 py-3 shadow-md whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined text-primary text-xl font-variation-fill">favorite</span>
+<span class="text-gray-900 font-bold text-sm">เลขมงคล</span>
+</button>
+<button class="flex items-center gap-2 bg-white border border-gray-100 rounded-full px-5 py-3 shadow-md whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined text-orange-500 text-xl font-variation-fill">bolt</span>
+<span class="text-gray-900 font-bold text-sm">ชุดมังกร</span>
+</button>
+<button class="flex items-center gap-2 bg-white border border-gray-100 rounded-full px-5 py-3 shadow-md whitespace-nowrap active:scale-95 transition-all">
+<span class="material-symbols-outlined text-green-500 text-xl font-variation-fill">trending_up</span>
+<span class="text-gray-900 font-bold text-sm">มาแรง</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between px-5 pb-4">
+<h3 class="text-xl font-extrabold text-gray-900 font-kanit">เลขเด็ดแนะนำ</h3>
+<button class="flex items-center gap-1 text-primary text-sm font-bold">
+<span>ตัวกรอง</span>
+<span class="material-symbols-outlined text-lg">tune</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-4 px-4 pb-8">
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group">
+<div class="flex justify-between items-start mb-3">
+<span class="bg-red-50 text-primary text-[10px] font-black px-2 py-0.5 rounded border border-red-100">ชุด 2 ใบ</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-green-600 text-[10px] font-bold">มีของ</span>
+</div>
+</div>
+<div class="text-center mb-4">
+<p class="text-2xl font-black text-gray-900 tracking-[0.15em] font-display group-hover:text-primary transition-colors">593284</p>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 font-bold">ราคา</span>
+<span class="text-lg font-black text-primary">200 ฿</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group">
+<div class="flex justify-between items-start mb-3">
+<span class="bg-gold/10 text-gold text-[10px] font-black px-2 py-0.5 rounded border border-gold/20">ชุด 5 ใบ</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-green-600 text-[10px] font-bold">มีของ</span>
+</div>
+</div>
+<div class="text-center mb-4">
+<p class="text-2xl font-black text-gray-900 tracking-[0.15em] font-display group-hover:text-primary transition-colors">118999</p>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 font-bold">ราคา</span>
+<span class="text-lg font-black text-primary">500 ฿</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group">
+<div class="flex justify-between items-start mb-3">
+<span class="bg-gray-50 text-gray-500 text-[10px] font-black px-2 py-0.5 rounded border border-gray-200">ใบเดียว</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-green-600 text-[10px] font-bold">มีของ</span>
+</div>
+</div>
+<div class="text-center mb-4">
+<p class="text-2xl font-black text-gray-900 tracking-[0.15em] font-display group-hover:text-primary transition-colors">442108</p>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 font-bold">ราคา</span>
+<span class="text-lg font-black text-primary">80 ฿</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group">
+<div class="flex justify-between items-start mb-3">
+<span class="bg-red-50 text-primary text-[10px] font-black px-2 py-0.5 rounded border border-red-100">ชุด 2 ใบ</span>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+<span class="text-green-600 text-[10px] font-bold">มีของ</span>
+</div>
+</div>
+<div class="text-center mb-4">
+<p class="text-2xl font-black text-gray-900 tracking-[0.15em] font-display group-hover:text-primary transition-colors">991773</p>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 font-bold">ราคา</span>
+<span class="text-lg font-black text-primary">200 ฿</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mx-4 mb-6 p-5 bg-white rounded-3xl border border-gray-100 flex items-center gap-4 shadow-sm">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined font-variation-fill text-2xl">verified_user</span>
+</div>
+<div>
+<h4 class="text-sm font-extrabold text-gray-900 tracking-tight">SakonLottery Official</h4>
+<p class="text-xs text-gray-500">มั่นใจ ปลอดภัย จ่ายจริง 100% เชื่อถือได้โดยผู้เล่นกว่า 1 ล้านคน</p>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 w-full max-w-md bg-white/95 backdrop-blur-xl border-t border-gray-100 px-6 py-2 z-50 safe-bottom">
+<div class="flex justify-between items-center h-16">
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl font-variation-fill">home</span>
+<span class="text-[11px] font-bold">หน้าหลัก</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">confirmation_number</span>
+<span class="text-[11px] font-bold">สลากของฉัน</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">rewarded_ads</span>
+<span class="text-[11px] font-bold">ตรวจรางวัล</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<span class="text-[11px] font-bold">โปรไฟล์</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

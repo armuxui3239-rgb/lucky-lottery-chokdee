@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/18705b4e6cfe45379379646872db5be0",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uiNNYyFZPkJDHImQObcCA78fAO8yia6yytZb8zkRZ1hqLIC9mQb4QlRVQKrXC1bhoNn_YrUxSDMGovd1Bv_djbmLKzG28P9PtI9kZSrCN8IPPHH0Ft7Hy-1ywZMtEH-57YcReLIbWhRuNluIUCXo3Gcsc2fJrImawWdBImML4-jPhaA7hhF0bDtOcx4fCS_lvUzca-ENojv-zdNUGZHLp5ibVVBdt8e_5qbwmwss_e4VhGPThWnOHUAWQ8z"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/23cf1d1fb93c4a8196cd73201eeebd22",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0M2YwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "adbb19f8b82f4684ade82dbde52d9849",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "2236",
+  "title": "2. Bank Transfer Details",
+  "prompt": "Title: 3. Claim Identity Verification\nContext: Full Prize Claiming & Winner Journey Workflow for SakonLottery.\nDescription of the screen: Step 3: Identity Verification for Claim (KYC Overlay). A secure-looking modal for high-value prizes. Instructions to 'Confirm Identity'. Fields for ID Card Number and a 'Take a Selfie' button. Red accents on all action buttons. Ensures security before payout. Variant 3 of 4 in Winner Workflow.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/adbb19f8b82f4684ade82dbde52d9849",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}

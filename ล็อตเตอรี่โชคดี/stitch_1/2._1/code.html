@@ -1,0 +1,118 @@
+<html lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans+Thai:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec131e",
+            "gold": "#D4AF37",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221011",
+          },
+          fontFamily: {
+            "display": ["Manrope", "Noto Sans Thai", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Manrope', 'Noto Sans Thai', sans-serif; }
+    .gold-gradient {
+      background: linear-gradient(135deg, #D4AF37 0%, #F9E498 50%, #D4AF37 100%);
+    }
+    .wheel-shadow {
+      box-shadow: 0 0 20px rgba(236, 19, 30, 0.2);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center">
+<div class="relative flex h-full min-h-screen w-full max-w-[430px] flex-col bg-white dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- TopAppBar Section -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between border-b border-slate-100 dark:border-slate-800">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12 font-display">กติกาและการหมุนวงล้อ</h2>
+</div>
+<!-- Progress Indicator -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-5">
+<div class="h-2 w-2 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<div class="h-2 w-8 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<!-- Main Content -->
+<div class="px-6 py-4 space-y-6 flex-1">
+<div class="text-center">
+<h3 class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold leading-tight mb-2 font-display">วิธีการหมุนกงล้อและเงื่อนไข</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">ขั้นตอนที่ 2: เริ่มต้นความโชคดีของคุณที่นี่</p>
+</div>
+<!-- Game Wheel Simulator -->
+<div class="@container">
+<div class="relative w-full aspect-square max-w-[320px] mx-auto flex items-center justify-center p-4 bg-primary/5 rounded-3xl wheel-shadow border border-primary/10">
+<!-- Wheel Representation -->
+<div class="relative w-full h-full rounded-full border-8 border-gold gold-gradient flex items-center justify-center overflow-hidden rotate-12">
+<!-- Segments simplified with CSS gradients -->
+<div class="absolute inset-0 opacity-20" style="background: conic-gradient(from 0deg, #ec131e 0deg 60deg, #ffffff 60deg 120deg, #ec131e 120deg 180deg, #ffffff 180deg 240deg, #ec131e 240deg 300deg, #ffffff 300deg 360deg);"></div>
+<div class="z-10 text-primary font-bold text-xs flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-1">card_giftcard</span>
+<span>รางวัลใหญ่</span>
+</div>
+</div>
+<!-- Spin Button Center -->
+<div class="absolute z-20 size-20 rounded-full bg-primary flex flex-col items-center justify-center border-4 border-white shadow-lg cursor-pointer transform hover:scale-105 transition-transform">
+<span class="text-white font-black text-lg tracking-widest">SPIN</span>
+<div class="absolute -top-4 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[15px] border-b-primary"></div>
+</div>
+</div>
+<p class="text-center mt-4 text-slate-500 text-xs italic">จำลองหน้าเกมกงล้อ SakonLottery</p>
+</div>
+<!-- Guide Steps -->
+<div class="space-y-4 pt-4">
+<div class="flex gap-4 p-4 rounded-xl bg-background-light dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined">ads_click</span>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold font-display">กดปุ่ม 'SPIN' เพื่อเริ่ม</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">กดที่ปุ่มสีแดงตรงกลางวงล้อ เพื่อสุ่มรับรางวัลเครดิตฟรี หรือสลากดิจิทัล</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-background-light dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-gold text-slate-900">
+<span class="material-symbols-outlined">confirmation_number</span>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold font-display">เงื่อนไขการได้รับสิทธิ์</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-1">ทุกยอดการสั่งซื้อสลากดิจิทัลครบ <span class="text-primary font-bold">500 บาท</span> จะได้รับ 1 สิทธิ์หมุนกงล้อทันที</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="p-6 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all">
+<span>ถัดไป</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center mt-4 text-slate-400 text-xs font-display">Variant 2 of 3 • SakonLottery System</p>
+</div>
+<!-- Background Image Asset (Placeholder for context) -->
+<div class="hidden">
+<img data-alt="Abstract red and gold lottery wheel background pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdbtqMrIZEQkemp2r_S6ar9xe98RAwF6ly1kzzsN1BWksILz6qe1RovuHArfhYjfBeQY-fBGnvqFmcXcBAC0hbMhWgusvVdrK1HeJ7ENeCdNzhWYtxSx6MzGDQzJLnzAlMlbbdXNW0ztRx07r9YCvjQHue-ggatCrVmawTMetiFHf_vaMbIrdJ0QaE32vgvJQhX4aF0WmnLIIJ0dCnZHfJ8d0fUGUFsvRE5J5Ld1nv7v1Kcp0DH2YEANGtP2NzYsbud6quRebyI_k"/>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Kanit:wght@300;400;500;600;700;800&family=Prompt:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #FF0000; /* Professional Vibrant Red */
+  --theme-primary-hover: #CC0000;
+  --theme-secondary: #B01015;
+  --theme-gold: #D4AF37;
+  --theme-gold-light: #F9E498;
+  --theme-gold-dark: #B8860B;
+  --theme-background: #0F0F0F; /* Premium Deep Dark Background */
+  --theme-text: #FFFFFF;
+  --theme-muted: #9CA3AF;
+}
+
+@theme {
+  --color-primary: var(--theme-primary);
+  --color-primary-dark: var(--theme-secondary);
+  --color-gold: var(--theme-gold);
+  --color-gold-light: var(--theme-gold-light);
+  --font-sans: "Prompt", "Kanit", "Outfit", sans-serif;
+  --font-display: "Kanit", sans-serif;
+  --font-prompt: "Prompt", sans-serif;
+}
+
+@layer base {
+  * {
+    font-family: 'Prompt', sans-serif !important;
+  }
+  body, button, input, select, textarea {
+    @apply font-sans antialiased;
+    background-color: var(--theme-background);
+    color: var(--theme-text);
+    @apply overflow-x-hidden;
+  }
+  h1, h2, h3, h4 { 
+    @apply font-display font-black tracking-tight;
+    font-family: 'Prompt', sans-serif !important;
+  }
+}
+
+@layer components {
+  .app-container {
+    @apply w-full mx-auto relative min-h-screen bg-white border-x border-slate-100 transition-all duration-300;
+  }
+
+  /* Premium Gold Gradient Text/Icon */
+  .text-gold-gradient {
+    @apply bg-gradient-to-br from-[#D4AF37] via-[#FFD700] to-[#B8860B] bg-clip-text text-transparent;
+  }
+
+  /* Premium Red-Gold Gradient Button */
+  .btn-premium {
+    @apply bg-gradient-to-r from-[#E61C23] to-[#B01015] text-white shadow-lg shadow-red-500/20 transition-all hover:scale-[1.02] active:scale-95 border-b-2 border-red-800/50;
+  }
+
+  /* Bento Card Styles */
+  .bento-card {
+    @apply bg-white rounded-[1.5rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-100/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 ease-out hover:-translate-y-1;
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-red {
+    @apply bg-red-600/90 backdrop-blur-lg border border-white/10;
+  }
+
+  .btn-red-circle {
+    @apply w-12 h-12 rounded-full bg-gradient-to-br from-[#E61C23] to-[#B01015] flex items-center justify-center text-white shadow-lg shadow-red-500/30 transition-all active:scale-90 hover:scale-110 hover:shadow-red-500/50;
+  }
+
+  .search-pill {
+    @apply px-5 py-2.5 rounded-full border border-slate-200 bg-white shadow-sm text-sm font-medium transition-all hover:border-red-200 hover:bg-red-50/30 active:scale-95 flex items-center gap-2;
+  }
+
+  /* Premium Main Background (Red-Black Gradient) */
+  .bg-premium-main {
+    background: radial-gradient(circle at top right, #3D0000, #000000);
+    @apply min-h-screen relative;
+  }
+
+  .sparkles-overlay {
+    background-image: 
+      radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 50px 160px, #fff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 80px 120px, #fff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 110px 10px, #fff, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 150px 150px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.15;
+    animation: sparkle-move 10s linear infinite;
+  }
+}
+
+@keyframes sparkle-move {
+  from { background-position: 0 0; }
+  to { background-position: 200px 200px; }
+}
+
+/* Premium Animations */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes slow-zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-from-left {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-from-top {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s linear infinite;
+}
+
+.animate-in {
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+
+.fade-in { animation-name: fade-in; }
+.slide-in-from-left { animation-name: slide-in-from-left; }
+.slide-in-from-top { animation-name: slide-in-from-top; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F1F1F1; }
+::-webkit-scrollbar-thumb { 
+  background: linear-gradient(to bottom, #E61C23, #B01015);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: #B01015; }

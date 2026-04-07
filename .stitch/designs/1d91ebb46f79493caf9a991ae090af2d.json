@@ -1,0 +1,32 @@
+{
+  "screenshot": {
+    "name": "projects/14553324543723031748/files/c54565ab49de4ee481d471a0c40127fa",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0uhcggblgu5BaujsFyriQ57o0mO7ht7SPLF3ddyVw-Kgki4HThjvukCVZp9lvGdr7u1eHbhr3dS6Cvd0QvqUFSWZqjeNOKuS--KiAoKShuGQmtZ-hP-Kp-kKI88eJWXmPVNzbT396akhqm7qjXpZjiywnMrrAAJzJ49bOtMZgf1UC2fNUJlY45iouvFY55MBIFa8RMsJWkuXlQ_dRUjqGbh2sWPbOyhUW9ay6eFc7lepNsAeLDA1J9FFTwCA"
+  },
+  "htmlCode": {
+    "name": "projects/14553324543723031748/files/c4ec6660974c435da44216d109ddbc6d",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY0ZThlNTg0N2U0YTcwOTFmN2ZmNjFmMmQ2OWY2EgsSBxD5geikyhAYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDU1MzMyNDU0MzcyMzAzMTc0OA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "1d91ebb46f79493caf9a991ae090af2d",
+  "generatedBy": "edit_agent",
+  "width": "780",
+  "height": "1774",
+  "title": "SakonLottery Home Variant 1",
+  "prompt": "Title: 4. ตะกร้าสินค้า SakonLottery (เวอร์ชันปรับปรุง)\nContext: การปรับปรุงหน้าตะกร้าสินค้าของ SakonLottery ให้เป็นภาษาไทยและโทนสีแดง-ทอง-ขาวที่สมมบูรณ์ตามกฎเวิร์กโฟลว์\nEdit request: แก้ไขหน้าตะกร้าสินค้า (Shopping Cart Review) ให้เป็นภาษาไทยทั้งหมด: หัวข้อ 'ตะกร้าของฉัน', สรุปยอด 'จำนวนทั้งหมด', 'ยอดรวมสุทธิ'. ปรับแต่งรายการสลากให้ใช้สีแดงสำหรับตัวเลขสลากและปุ่มปรับจำนวน. ปุ่มดำเนินการต่อใช้ข้อความ 'ไปที่หน้าชำระเงิน'. รักษาโทนสีแดง-ทอง-ขาวให้ตรงกับหน้าหลักและใช้ฟอนต์ภาษาไทยที่พร้อมใช้งาน.\nPlatform: ios\nForm factor: phone",
+  "name": "projects/14553324543723031748/screens/1d91ebb46f79493caf9a991ae090af2d",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "SPLINE_SANS",
+    "roundness": "ROUND_FULL",
+    "customColor": "#ec131e",
+    "saturation": 2
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "isRemixed": true,
+    "status": "COMPLETE"
+  }
+}
