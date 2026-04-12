@@ -57,7 +57,7 @@ export const AdminAffiliate = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">ระบบ Affiliate</h2>
+          <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">ระบบ Affiliate</h2>
           <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mt-1">
             นักแนะนำ {summary.length} คน · แนะนำรวม {totalReferrals} คน
           </p>
@@ -80,7 +80,7 @@ export const AdminAffiliate = () => {
           }`}>
             <s.icon size={18} className={`mb-3 ${s.color === 'emerald' ? 'text-emerald-500' : s.color === 'amber' ? 'text-amber-500' : 'text-blue-500'}`} />
             <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{s.label}</p>
-            <p className={`text-xl font-black italic mt-1 ${s.color === 'emerald' ? 'text-emerald-400' : s.color === 'amber' ? 'text-amber-400' : 'text-blue-400'}`}>{s.value}</p>
+            <p className={`text-xl font-black  mt-1 ${s.color === 'emerald' ? 'text-emerald-400' : s.color === 'amber' ? 'text-amber-400' : 'text-blue-400'}`}>{s.value}</p>
           </div>
         ))}
       </div>
@@ -131,10 +131,10 @@ export const AdminAffiliate = () => {
                       <span className="text-white font-black">{r.total_referrals}</span>
                     </td>
                     <td className="py-4 px-4 text-center">
-                      <span className="text-emerald-400 font-black italic">฿{Number(r.total_commission).toLocaleString()}</span>
+                      <span className="text-emerald-400 font-black ">฿{Number(r.total_commission).toLocaleString()}</span>
                     </td>
                     <td className="py-4 px-4 text-center">
-                      <span className={`font-black italic ${Number(r.pending_commission) > 0 ? 'text-amber-400' : 'text-slate-600'}`}>
+                      <span className={`font-black  ${Number(r.pending_commission) > 0 ? 'text-amber-400' : 'text-slate-600'}`}>
                         ฿{Number(r.pending_commission).toLocaleString()}
                       </span>
                     </td>
@@ -191,7 +191,7 @@ export const AdminAffiliate = () => {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-emerald-400 font-black italic text-lg">฿{Number(c.amount).toLocaleString()}</span>
+                <span className="text-emerald-400 font-black  text-lg">฿{Number(c.amount).toLocaleString()}</span>
                 {c.status === 'pending' && (
                   <button onClick={() => handleApprove(c.id)} disabled={processingId === c.id}
                     className="bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 text-white px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest flex items-center gap-1.5 transition-all">
@@ -211,3 +211,4 @@ export const AdminAffiliate = () => {
     </div>
   );
 };
+

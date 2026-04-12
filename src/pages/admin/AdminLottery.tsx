@@ -70,7 +70,7 @@ export const AdminLottery = () => {
   return (
     <div className="space-y-8 animate-in fade-in duration-500">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">จัดการงวดสลาก (อัตโนมัติ)</h2>
+        <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">จัดการงวดสลาก (อัตโนมัติ)</h2>
         <button 
           onClick={() => setIsCreating(!isCreating)}
           className="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-red-900/20"
@@ -122,10 +122,10 @@ export const AdminLottery = () => {
                      <Ticket size={24} />
                   </div>
                   <div>
-                     <h4 className="font-black text-lg text-white uppercase italic tracking-tighter">{r.name}</h4>
+                     <h4 className="font-black text-lg text-white uppercase  tracking-tighter">{r.name}</h4>
                      <div className="flex items-center gap-3 mt-1">
                         <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest leading-none">วันที่ออกรางวัล: {new Date(r.draw_date).toLocaleDateString('th-TH')}</p>
-                        <span className={`px-2 py-0.5 rounded text-[8px] font-black uppercase italic ${r.status === 'open' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-slate-800 text-slate-500'}`}>
+                        <span className={`px-2 py-0.5 rounded text-[8px] font-black uppercase  ${r.status === 'open' ? 'bg-emerald-500/10 text-emerald-500' : 'bg-slate-800 text-slate-500'}`}>
                            {r.status === 'open' ? 'เปิดขาย' : 'ออกรางวัลแล้ว'}
                         </span>
                      </div>
@@ -137,7 +137,7 @@ export const AdminLottery = () => {
                      <div className="flex flex-col items-end gap-1">
                         <div className="flex items-center gap-2 bg-emerald-500/10 px-4 py-2 rounded-xl border border-emerald-500/20">
                            <CheckCircle size={14} className="text-emerald-500" />
-                           <span className="text-[10px] font-black text-emerald-500 uppercase italic tracking-widest leading-none">รางวัลออกแล้ว: {r.lottery_results[0].result_6digit}</span>
+                           <span className="text-[10px] font-black text-emerald-500 uppercase  tracking-widest leading-none">รางวัลออกแล้ว: {r.lottery_results[0].result_6digit}</span>
                         </div>
                         <p className="text-[8px] text-slate-600 font-extrabold uppercase mr-1">ระบบทำการจ่ายรางวัลเข้า Wallet อัตโนมัติแล้ว</p>
                      </div>
@@ -167,3 +167,4 @@ export const AdminLottery = () => {
     </div>
   );
 };
+

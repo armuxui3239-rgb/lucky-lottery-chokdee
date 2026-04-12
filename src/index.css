@@ -18,8 +18,8 @@
   --color-primary-dark: var(--theme-secondary);
   --color-gold: var(--theme-gold);
   --color-gold-light: var(--theme-gold-light);
-  --font-sans: "Prompt", "Kanit", "Outfit", sans-serif;
-  --font-display: "Kanit", sans-serif;
+  --font-sans: "Prompt", sans-serif;
+  --font-display: "Prompt", sans-serif;
   --font-prompt: "Prompt", sans-serif;
 }
 
@@ -29,8 +29,8 @@
   }
   body, button, input, select, textarea {
     @apply font-sans antialiased;
-    background-color: var(--theme-background);
-    color: var(--theme-text);
+    background-color: transparent;
+    color: inherit;
     @apply overflow-x-hidden;
   }
   h1, h2, h3, h4 { 

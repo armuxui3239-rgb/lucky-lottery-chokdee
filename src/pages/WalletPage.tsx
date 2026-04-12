@@ -242,7 +242,7 @@ const WalletPage = () => {
             </button>
             <div className="flex flex-col items-center">
               <span className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">บัญชีการเงินพรีเมียม</span>
-              <h1 className="text-2xl font-display font-black uppercase italic tracking-tighter">กระเป๋าเงินพรีเมียม</h1>
+              <h1 className="text-2xl font-sans font-black uppercase  tracking-tighter">กระเป๋าเงินพรีเมียม</h1>
             </div>
             <button onClick={() => fetchData()} className="size-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-2xl backdrop-blur-xl border border-white/10 transition-all active:scale-90">
               <HistoryIcon size={20} />
@@ -252,8 +252,8 @@ const WalletPage = () => {
           <div className="text-center animate-in zoom-in duration-500">
             <p className="text-white/40 text-xs font-black uppercase tracking-[0.3em] mb-6">ยอดเงินคงเหลือทั้งหมด</p>
             <div className="flex items-baseline justify-center gap-3">
-              <span className="text-white/40 text-3xl font-black italic tracking-tighter">฿</span>
-              <span className="text-7xl md:text-8xl font-display font-black tracking-tighter italic">
+              <span className="text-white/40 text-3xl font-black  tracking-tighter">฿</span>
+              <span className="text-7xl md:text-8xl font-sans font-black tracking-tighter ">
                 {balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             </div>
@@ -275,7 +275,7 @@ const WalletPage = () => {
           <div className="size-20 bg-slate-50 text-slate-400 rounded-[2rem] flex items-center justify-center group-hover:bg-primary group-hover:text-white group-hover:shadow-xl group-hover:shadow-primary/20 transition-all duration-500">
             <Plus size={40} />
           </div>
-          <span className="font-display font-black text-sm uppercase tracking-widest text-slate-900 italic">ฝากเงินเข้าระบบ</span>
+          <span className="font-sans font-black text-sm uppercase tracking-widest text-slate-900 ">ฝากเงินเข้าระบบ</span>
         </button>
         <button 
           onClick={() => setShowWithdrawModal(true)}
@@ -284,7 +284,7 @@ const WalletPage = () => {
           <div className="size-20 bg-slate-50 text-slate-400 rounded-[2rem] flex items-center justify-center group-hover:bg-primary group-hover:text-white group-hover:shadow-xl group-hover:shadow-primary/20 transition-all duration-500">
             <Minus size={40} />
           </div>
-          <span className="font-display font-black text-sm uppercase tracking-widest text-slate-900 italic">ถอนเงินรางวัล</span>
+          <span className="font-sans font-black text-sm uppercase tracking-widest text-slate-900 ">ถอนเงินรางวัล</span>
         </button>
       </div>
 
@@ -294,7 +294,7 @@ const WalletPage = () => {
         <div className="max-w-5xl mx-auto space-y-10">
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-1">
-              <h3 className="text-2xl font-display font-black text-slate-900 uppercase italic tracking-tighter">ประวัติธุรกรรม</h3>
+              <h3 className="text-2xl font-sans font-black text-slate-900 uppercase  tracking-tighter">ประวัติธุรกรรม</h3>
               <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-none">บันทึกความเคลื่อนไหวทั้งหมด</p>
             </div>
             <div className="flex bg-slate-100 p-1.5 rounded-2xl border border-slate-200 text-[10px] font-black uppercase tracking-widest">
@@ -321,14 +321,14 @@ const WalletPage = () => {
                   {tx.type === 'deposit' ? <ArrowDownLeft size={24} /> : <ArrowUpRight size={24} />}
                 </div>
                 <div>
-                  <p className="font-display font-black text-sm text-slate-900 uppercase italic leading-none">{tx.type === 'deposit' ? 'รายการฝากเงิน' : 'รายการถอนเงิน'}</p>
+                  <p className="font-sans font-black text-sm text-slate-900 uppercase  leading-none">{tx.type === 'deposit' ? 'รายการฝากเงิน' : 'รายการถอนเงิน'}</p>
                   <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2">
                     {new Date(tx.created_at).toLocaleString('th-TH', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}
                   </p>
                 </div>
               </div>
               <div className="text-right flex flex-col items-end gap-1">
-                <p className={`font-display font-black text-xl italic ${tx.type === 'deposit' ? 'text-emerald-500 underline decoration-emerald-200 decoration-2 underline-offset-4' : 'text-primary underline decoration-red-200 decoration-2 underline-offset-4'}`}>
+                <p className={`font-sans font-black text-xl  ${tx.type === 'deposit' ? 'text-emerald-500 underline decoration-emerald-200 decoration-2 underline-offset-4' : 'text-primary underline decoration-red-200 decoration-2 underline-offset-4'}`}>
                   {tx.type === 'deposit' ? '+' : '-'} {tx.amount.toLocaleString(undefined, { minimumFractionDigits: 2 })}
                 </p>
                 <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest border ${
@@ -368,7 +368,7 @@ const WalletPage = () => {
           <div className="bg-white w-full max-w-md rounded-t-[4rem] sm:rounded-[3.5rem] p-10 max-h-[95vh] overflow-y-auto shadow-2xl border border-white/20 animate-in slide-in-from-bottom duration-500">
             <div className="flex items-center justify-between mb-10">
                <div className="flex flex-col">
-                  <h2 className="text-2xl font-display font-black text-slate-900 italic tracking-tighter uppercase leading-none">ระบุบยอดเงินที่จะฝาก</h2>
+                  <h2 className="text-2xl font-sans font-black text-slate-900  tracking-tighter uppercase leading-none">ระบุบยอดเงินที่จะฝาก</h2>
                   <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em] mt-2">ขั้นตอนที่ {depositStep} จาก 3</p>
                </div>
               <button onClick={() => setShowDepositModal(false)} className="size-11 flex items-center justify-center bg-slate-50 text-slate-300 hover:text-slate-600 rounded-2xl transition-all active:scale-90">
@@ -390,19 +390,19 @@ const WalletPage = () => {
                   ))}
                 </div>
                 <div className="relative">
-                   <span className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 font-display font-black text-xl italic pr-2 border-r border-slate-100">฿</span>
+                   <span className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 font-sans font-black text-xl  pr-2 border-r border-slate-100">฿</span>
                    <input 
                      type="number"
                      placeholder="ระบุจำนวนเงินด้วยตัวเอง"
                      value={depositAmount}
                      onChange={(e) => setDepositAmount(e.target.value)}
-                     className="w-full bg-slate-50 border-none rounded-2xl py-5 pl-16 pr-6 text-2xl font-display font-black italic focus:ring-4 focus:ring-primary/5 transition-all text-slate-900"
+                     className="w-full bg-slate-50 border-none rounded-2xl py-5 pl-16 pr-6 text-2xl font-sans font-black  focus:ring-4 focus:ring-primary/5 transition-all text-slate-900"
                    />
                 </div>
                 <button 
                   disabled={!depositAmount}
                   onClick={() => setDepositStep(2)}
-                  className="w-full h-16 bg-gradient-to-r from-primary to-rose-600 text-white rounded-3xl font-display font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 disabled:opacity-30 disabled:grayscale transition-all active:scale-95"
+                  className="w-full h-16 bg-gradient-to-r from-primary to-rose-600 text-white rounded-3xl font-sans font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 disabled:opacity-30 disabled:grayscale transition-all active:scale-95"
                 >
                   ถัดไป
                 </button>
@@ -411,7 +411,7 @@ const WalletPage = () => {
               <div className="space-y-10 text-center">
                  <div className="space-y-2">
                     <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">แสกนเพื่อโอนเงินเข้าสู่ระบบ</p>
-                    <p className="text-5xl font-display font-black text-primary italic tracking-tighter">฿{parseFloat(depositAmount).toLocaleString()}</p>
+                    <p className="text-5xl font-sans font-black text-primary  tracking-tighter">฿{parseFloat(depositAmount).toLocaleString()}</p>
                  </div>
                 
                 <div className="p-8 rounded-[3rem] bg-white border border-slate-100 shadow-2xl relative group mx-auto w-fit">
@@ -435,20 +435,20 @@ const WalletPage = () => {
 
                 <button 
                   onClick={() => setDepositStep(3)}
-                  className="w-full h-16 bg-primary text-white rounded-3xl font-display font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/30 transition-all active:scale-95"
+                  className="w-full h-16 bg-primary text-white rounded-3xl font-sans font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/30 transition-all active:scale-95"
                 >
                   โอนเงินเรียบร้อยแล้ว
                 </button>
               </div>
             ) : (
               <div className="space-y-8 text-center">
-                <h3 className="text-xl font-display font-black text-slate-900 uppercase italic tracking-tighter">อัปโหลดหลักฐานการโอน</h3>
+                <h3 className="text-xl font-sans font-black text-slate-900 uppercase  tracking-tighter">อัปโหลดหลักฐานการโอน</h3>
                 <label className="flex flex-col items-center justify-center h-60 border-4 border-dashed border-slate-100 bg-slate-50 rounded-[3rem] cursor-pointer hover:bg-slate-100 transition-all duration-500 group relative overflow-hidden">
                   <input type="file" className="hidden" accept="image/*" onChange={(e) => setFile(e.target.files?.[0] || null)} />
                   {file ? (
                     <div className="relative z-10 flex flex-col items-center gap-3">
                        <CheckCircle2 className="text-emerald-500" size={40} />
-                       <p className="font-display font-black text-xs text-slate-900 uppercase italic truncate px-8 max-w-full">{file.name}</p>
+                       <p className="font-sans font-black text-xs text-slate-900 uppercase  truncate px-8 max-w-full">{file.name}</p>
                        <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">เลือกไฟล์เรียบร้อย</p>
                     </div>
                   ) : (
@@ -466,7 +466,7 @@ const WalletPage = () => {
                    <button 
                     disabled={uploading || !file}
                     onClick={handleDeposit}
-                    className="flex-1 h-16 bg-[#FF0000] text-white rounded-3xl font-display font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 disabled:opacity-30 disabled:grayscale transition-all active:scale-95 flex items-center justify-center gap-3"
+                    className="flex-1 h-16 bg-[#FF0000] text-white rounded-3xl font-sans font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 disabled:opacity-30 disabled:grayscale transition-all active:scale-95 flex items-center justify-center gap-3"
                    >
                     {uploading ? (
                       <div className="size-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -490,7 +490,7 @@ const WalletPage = () => {
           <div className="bg-white w-full max-w-md rounded-t-[4rem] sm:rounded-[3.5rem] p-10 max-h-[95vh] overflow-y-auto shadow-2xl border border-white/20 animate-in slide-in-from-bottom duration-500">
             <div className="flex items-center justify-between mb-10">
                <div className="flex flex-col">
-                  <h2 className="text-2xl font-display font-black text-slate-900 italic tracking-tighter uppercase leading-none">
+                  <h2 className="text-2xl font-sans font-black text-slate-900  tracking-tighter uppercase leading-none">
                     {withdrawStep === 1 ? 'แจ้งถอนเงิน' : 'ยืนยันรหัสผ่าน'}
                   </h2>
                   <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.2em] mt-2">
@@ -515,7 +515,7 @@ const WalletPage = () => {
                            <CheckCircle2 size={28} />
                          </div>
                          <div>
-                           <p className="font-display font-black text-lg text-white uppercase italic tracking-tighter leading-none">{bankInfo.name}</p>
+                           <p className="font-sans font-black text-lg text-white uppercase  tracking-tighter leading-none">{bankInfo.name}</p>
                            <p className="text-[11px] font-mono text-white/40 tracking-[0.25em] mt-2">{bankInfo.account}</p>
                          </div>
                       </div>
@@ -531,18 +531,18 @@ const WalletPage = () => {
               {withdrawStep === 1 ? (
                 <div className="space-y-4">
                   <div className="relative">
-                    <span className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 font-display font-black text-xl italic pr-2 border-r border-slate-100">฿</span>
+                    <span className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 font-sans font-black text-xl  pr-2 border-r border-slate-100">฿</span>
                     <input 
                       type="number"
                       placeholder="0.00"
                       value={withdrawAmount}
                       onChange={(e) => setWithdrawAmount(e.target.value)}
-                      className="w-full bg-slate-50 border-none rounded-2xl py-5 pl-16 pr-6 text-2xl font-display font-black italic focus:ring-4 focus:ring-primary/5 transition-all text-slate-900"
+                      className="w-full bg-slate-50 border-none rounded-2xl py-5 pl-16 pr-6 text-2xl font-sans font-black  focus:ring-4 focus:ring-primary/5 transition-all text-slate-900"
                     />
                   </div>
                   <div className="flex justify-between items-center px-4">
-                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest italic">ยอดสูงสุดที่ถอนได้</span>
-                    <span className="text-sm font-black text-slate-900 italic tracking-tighter">฿{balance.toLocaleString()}</span>
+                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest ">ยอดสูงสุดที่ถอนได้</span>
+                    <span className="text-sm font-black text-slate-900  tracking-tighter">฿{balance.toLocaleString()}</span>
                   </div>
                 </div>
               ) : (
@@ -554,11 +554,11 @@ const WalletPage = () => {
                        placeholder="ระบุรหัสผ่านความปลอดภัย"
                        value={securityPasswordInput}
                        onChange={(e) => setSecurityPasswordInput(e.target.value)}
-                       className="w-full bg-slate-50 border-none rounded-2xl py-5 pl-16 pr-6 text-2xl font-display font-black italic focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 text-center"
+                       className="w-full bg-slate-50 border-none rounded-2xl py-5 pl-16 pr-6 text-2xl font-sans font-black  focus:ring-4 focus:ring-primary/5 transition-all text-slate-900 text-center"
                      />
                   </div>
                    <div className="flex justify-center px-4">
-                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest italic">ขั้นตอนการยืนยันรหัสความปลอดภัย</span>
+                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest ">ขั้นตอนการยืนยันรหัสความปลอดภัย</span>
                   </div>
                 </div>
               )}
@@ -567,7 +567,7 @@ const WalletPage = () => {
               <button 
                 disabled={submittingWithdraw || (withdrawStep === 1 && !withdrawAmount) || (withdrawStep === 2 && !securityPasswordInput) || !bankInfo.account}
                 onClick={handleWithdraw}
-                className="w-full h-16 bg-gradient-to-r from-primary to-rose-600 text-white rounded-3xl font-display font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 disabled:opacity-30 transition-all active:scale-95 flex items-center justify-center gap-3"
+                className="w-full h-16 bg-gradient-to-r from-primary to-rose-600 text-white rounded-3xl font-sans font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 disabled:opacity-30 transition-all active:scale-95 flex items-center justify-center gap-3"
               >
                 {submittingWithdraw ? (
                    <div className="size-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -590,3 +590,4 @@ const WalletPage = () => {
 };
 
 export default WalletPage;
+

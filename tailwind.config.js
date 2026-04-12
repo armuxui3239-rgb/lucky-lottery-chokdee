@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        sans: ["Prompt", "sans-serif"],
+        display: ["Prompt", "sans-serif"],
         prompt: ["Prompt", "sans-serif"],
-        kanit: ["Kanit", "sans-serif"],
-        outfit: ["Outfit", "sans-serif"],
       },
     },
   },

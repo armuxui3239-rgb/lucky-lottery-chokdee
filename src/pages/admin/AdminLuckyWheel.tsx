@@ -104,7 +104,7 @@ export const AdminLuckyWheel = () => {
             {/* Header */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                 <div>
-                    <h2 className="text-2xl font-black text-white italic uppercase tracking-tighter flex items-center gap-3">
+                    <h2 className="text-2xl font-black text-white  uppercase tracking-tighter flex items-center gap-3">
                         <Settings2 className="text-primary" /> ตั้งค่าวงล้อเสี่ยงโชค
                     </h2>
                     <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">

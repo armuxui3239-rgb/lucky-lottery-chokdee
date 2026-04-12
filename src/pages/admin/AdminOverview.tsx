@@ -22,7 +22,7 @@ export const AdminOverview: React.FC<{ dbStats: any, recentTransactions: any[], 
               </div>
               <div>
                 <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">{s.label}</p>
-                <p className="text-2xl font-black text-white italic tracking-tighter mt-1">{loading ? '...' : s.value}</p>
+                <p className="text-2xl font-black text-white  tracking-tighter mt-1">{loading ? '...' : s.value}</p>
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ export const AdminOverview: React.FC<{ dbStats: any, recentTransactions: any[], 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8">
           <div className="flex justify-between items-center mb-8">
-            <h3 className="text-lg font-black text-white uppercase italic tracking-tighter">วิเคราะห์ยอดการจอง</h3>
+            <h3 className="text-lg font-black text-white uppercase  tracking-tighter">วิเคราะห์ยอดการจอง</h3>
             <button className="text-[10px] font-black text-primary uppercase border border-primary/30 px-4 py-2 rounded-xl">View Report</button>
           </div>
           <div className="h-64 flex items-end gap-2">
@@ -45,7 +45,7 @@ export const AdminOverview: React.FC<{ dbStats: any, recentTransactions: any[], 
 
         <div className="bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8 flex flex-col justify-between">
           <div className="space-y-2">
-            <h3 className="text-lg font-black text-white uppercase italic tracking-tighter">Server Health</h3>
+            <h3 className="text-lg font-black text-white uppercase  tracking-tighter">Server Health</h3>
             <p className="text-[10px] text-slate-500 uppercase font-black tracking-widest leading-relaxed">ระบบประมวลผลอัตโนมัติทำงานปกติ 100%</p>
           </div>
           <div className="py-8">

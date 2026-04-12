@@ -89,7 +89,7 @@ const PaymentSlip: React.FC = () => {
             <button onClick={() => navigate(-1)} className="text-slate-900 flex size-10 items-center justify-center hover:bg-slate-50 rounded-full transition-all active:scale-95">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-xl font-display font-black leading-tight flex-1 text-center pr-10 italic uppercase tracking-widest text-slate-900">อัปโหลดสลิป</h1>
+            <h1 className="text-xl font-sans font-black leading-tight flex-1 text-center pr-10  uppercase tracking-widest text-slate-900">อัปโหลดสลิป</h1>
           </div>
         </header>
 
@@ -105,7 +105,7 @@ const PaymentSlip: React.FC = () => {
 
             {/* Header Content */}
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-display font-black text-slate-900 tracking-tight uppercase">ยืนยันรายการ</h2>
+              <h2 className="text-3xl font-sans font-black text-slate-900 tracking-tight uppercase">ยืนยันรายการ</h2>
               <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">อัปโหลดสลิปเพื่อแจ้งชำระเงิน</p>
             </div>
 
@@ -155,7 +155,7 @@ const PaymentSlip: React.FC = () => {
                           <div className="bg-primary p-3 rounded-xl shadow-lg shadow-red-200">
                             <Landmark className="size-5 text-white" />
                           </div>
-                          <span className="text-2xl font-display font-black text-slate-900 tracking-tighter italic">฿ {amount.toLocaleString()}.00</span>
+                          <span className="text-2xl font-sans font-black text-slate-900 tracking-tighter ">฿ {amount.toLocaleString()}.00</span>
                        </div>
                     </div>
 
@@ -164,14 +164,14 @@ const PaymentSlip: React.FC = () => {
                           <label className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em] px-2">วันที่</label>
                           <div className="bg-slate-50 p-4 rounded-2xl flex items-center gap-3">
                             <Calendar className="size-4 text-slate-400" />
-                            <input type="text" value={date} onChange={(e) => setDate(e.target.value)} className="bg-transparent border-none p-0 text-xs font-black focus:ring-0 w-full font-display" />
+                            <input type="text" value={date} onChange={(e) => setDate(e.target.value)} className="bg-transparent border-none p-0 text-xs font-black focus:ring-0 w-full font-sans" />
                           </div>
                        </div>
                        <div className="flex flex-col gap-3">
                           <label className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em] px-2">เวลา</label>
                           <div className="bg-slate-50 p-4 rounded-2xl flex items-center gap-3">
                             <Clock className="size-4 text-slate-400" />
-                            <input type="text" value={time} onChange={(e) => setTime(e.target.value)} className="bg-transparent border-none p-0 text-xs font-black focus:ring-0 w-full font-display" />
+                            <input type="text" value={time} onChange={(e) => setTime(e.target.value)} className="bg-transparent border-none p-0 text-xs font-black focus:ring-0 w-full font-sans" />
                           </div>
                        </div>
                     </div>
@@ -193,7 +193,7 @@ const PaymentSlip: React.FC = () => {
               <button
                 onClick={handleSubmit}
                 disabled={uploading || !slipFile}
-                className={`w-full h-18 font-display font-black rounded-[2rem] shadow-2xl transition-all flex items-center justify-center gap-4 active:scale-95 uppercase tracking-[0.25em] text-sm group ${uploading || !slipFile
+                className={`w-full h-18 font-sans font-black rounded-[2rem] shadow-2xl transition-all flex items-center justify-center gap-4 active:scale-95 uppercase tracking-[0.25em] text-sm group ${uploading || !slipFile
                     ? 'bg-slate-50 text-slate-200 cursor-not-allowed'
                     : 'bg-primary text-white shadow-primary/30'
                   }`}
@@ -212,3 +212,4 @@ const PaymentSlip: React.FC = () => {
 };
 
 export default PaymentSlip;
+

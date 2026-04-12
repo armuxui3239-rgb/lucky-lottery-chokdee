@@ -124,7 +124,7 @@ export const AdminLoyalty = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">ระบบ Loyalty</h2>
+          <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">ระบบ Loyalty</h2>
           <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mt-1">
             {rewards.length} ของรางวัล · {points.length} สมาชิก · {redemptions.length} รอแลก
           </p>
@@ -311,7 +311,7 @@ export const AdminLoyalty = () => {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/95 backdrop-blur-sm">
           <form onSubmit={handleSaveReward} className="bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto space-y-5 animate-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-display font-black text-white italic tracking-tighter uppercase">
+              <h3 className="text-xl font-sans font-black text-white  tracking-tighter uppercase">
                 {isCreating ? '🎁 เพิ่มของรางวัล' : '✏️ แก้ไขของรางวัล'}
               </h3>
               <button type="button" onClick={() => setEditReward(null)} className="text-slate-500 hover:text-white"><X size={20} /></button>
@@ -376,3 +376,4 @@ export const AdminLoyalty = () => {
     </div>
   );
 };
+

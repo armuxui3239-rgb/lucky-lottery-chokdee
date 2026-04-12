@@ -147,7 +147,7 @@ export const AdminUsers = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">จัดการสมาชิก</h2>
+          <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">จัดการสมาชิก</h2>
           <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mt-1">
             ทั้งหมด {stats.total.toLocaleString()} คน · Verified {stats.verified} · KYC รอ {stats.pending}
           </p>
@@ -179,7 +179,7 @@ export const AdminUsers = () => {
         ].map((s, i) => (
           <div key={i} className="bg-slate-900 border border-slate-800 rounded-2xl p-4">
             <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{s.label}</p>
-            <p className={`text-xl font-black italic mt-1 ${
+            <p className={`text-xl font-black  mt-1 ${
               s.color === 'emerald' ? 'text-emerald-400' :
               s.color === 'amber' ? 'text-amber-400' :
               s.color === 'blue' ? 'text-blue-400' : 'text-white'
@@ -237,7 +237,7 @@ export const AdminUsers = () => {
                   </td>
                   <td className="py-4 px-4 font-mono text-slate-300 text-[11px]">{u.phone || '-'}</td>
                   <td className="py-4 px-4">
-                    <span className="font-black text-white italic">฿{Number(u.balance).toLocaleString()}</span>
+                    <span className="font-black text-white ">฿{Number(u.balance).toLocaleString()}</span>
                   </td>
                   <td className="py-4 px-4">
                     <span className={`text-[9px] px-2 py-1 rounded border uppercase font-black tracking-widest ${tierColors[u.loyalty_tier] || tierColors.bronze}`}>
@@ -290,7 +290,7 @@ export const AdminUsers = () => {
                   {selectedUser.full_name?.charAt(0) || '?'}
                 </div>
                 <div>
-                  <h3 className="text-lg font-display font-black text-white italic tracking-tighter">{selectedUser.full_name}</h3>
+                  <h3 className="text-lg font-sans font-black text-white  tracking-tighter">{selectedUser.full_name}</h3>
                   <p className="text-[10px] text-slate-500 font-mono">{selectedUser.phone}</p>
                 </div>
               </div>
@@ -303,7 +303,7 @@ export const AdminUsers = () => {
             <div className="bg-gradient-to-r from-red-600/20 to-slate-900 border border-red-500/20 rounded-2xl p-4 flex items-center justify-between">
               <div>
                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">ยอดเงินในกระเป๋า</p>
-                <p className="text-2xl font-display font-black text-white italic">฿{Number(selectedUser.balance).toLocaleString()}</p>
+                <p className="text-2xl font-sans font-black text-white ">฿{Number(selectedUser.balance).toLocaleString()}</p>
               </div>
               <Wallet size={28} className="text-red-500 opacity-60" />
             </div>
@@ -390,7 +390,7 @@ export const AdminUsers = () => {
                         <p className="text-[10px] font-black text-white capitalize">{tx.type}</p>
                         <p className="text-[8px] text-slate-600 font-mono">{new Date(tx.created_at).toLocaleDateString('th-TH')}</p>
                       </div>
-                      <p className={`text-[11px] font-black italic ${tx.type === 'deposit' || tx.type === 'win' || tx.type === 'bonus' ? 'text-emerald-400' : 'text-red-400'}`}>
+                      <p className={`text-[11px] font-black  ${tx.type === 'deposit' || tx.type === 'win' || tx.type === 'bonus' ? 'text-emerald-400' : 'text-red-400'}`}>
                         {tx.type === 'deposit' || tx.type === 'win' || tx.type === 'bonus' ? '+' : '-'}฿{Number(tx.amount).toLocaleString()}
                       </p>
                     </div>
@@ -490,3 +490,4 @@ export const AdminUsers = () => {
     </div>
   );
 };
+

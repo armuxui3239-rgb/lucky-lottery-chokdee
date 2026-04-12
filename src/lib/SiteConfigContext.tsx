@@ -109,3 +109,4 @@ export function SiteConfigProvider({ children }: { children: ReactNode }) {
     </SiteConfigContext.Provider>
   );
 };
+

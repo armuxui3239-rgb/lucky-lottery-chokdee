@@ -103,7 +103,7 @@ const Register: React.FC = () => {
                    <UserPlus size={40} className="text-white" strokeWidth={1.5} />
                 </div>
              </div>
-             <h1 className="text-3xl font-display font-black text-slate-900 italic tracking-tighter uppercase leading-none">
+             <h1 className="text-3xl font-sans font-black text-slate-900  tracking-tighter uppercase leading-none">
                สมัครสมาชิก <span className="text-primary">ใหม่</span>
              </h1>
           </div>
@@ -127,7 +127,7 @@ const Register: React.FC = () => {
                 {currentStep === 1 && (
                   <div className="space-y-8 animate-in fade-in slide-in-from-right-8 duration-500">
                     <div className="space-y-4">
-                       <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] px-4 italic leading-none text-center block">ระบุตัวตนสมาชิกใหม่</label>
+                       <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] px-4  leading-none text-center block">ระบุตัวตนสมาชิกใหม่</label>
                        <div className="grid gap-4">
                           <div className="relative group">
                              <User className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-300 group-focus-within:text-primary transition-colors" size={18} />
@@ -163,7 +163,7 @@ const Register: React.FC = () => {
                         if (phone.length < 10) { toast.error('เบอร์โทรศัพท์ต้องมี 10 หลัก'); return; }
                         setCurrentStep(2);
                       }}
-                      className="w-full h-18 bg-primary text-white rounded-[2rem] font-display font-black text-sm uppercase italic tracking-[0.3em] flex items-center justify-center gap-4 shadow-2xl shadow-primary/30 active:scale-95 transition-all group overflow-hidden relative"
+                      className="w-full h-18 bg-primary text-white rounded-[2rem] font-sans font-black text-sm uppercase  tracking-[0.3em] flex items-center justify-center gap-4 shadow-2xl shadow-primary/30 active:scale-95 transition-all group overflow-hidden relative"
                     >
                       <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
                       ถัดไป: เลือกธนาคาร <Zap className="size-5 text-white fill-white animate-pulse" />
@@ -175,7 +175,7 @@ const Register: React.FC = () => {
                 {currentStep === 2 && (
                   <div className="space-y-8 animate-in fade-in slide-in-from-left-8 duration-500">
                     <div className="space-y-6">
-                       <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] px-4 italic leading-none text-center block">เลือกธนาคารหลักที่ใช้รับเงิน</label>
+                       <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] px-4  leading-none text-center block">เลือกธนาคารหลักที่ใช้รับเงิน</label>
                        
                        <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-4 p-2 max-h-[300px] overflow-y-auto no-scrollbar">
                           {banks.map((bank) => (
@@ -195,7 +195,7 @@ const Register: React.FC = () => {
                                     className="w-full h-full object-contain"
                                   />
                                </div>
-                               <span className="text-[8px] font-black uppercase tracking-tighter text-center leading-none italic relative z-10">{bank.name_th}</span>
+                               <span className="text-[8px] font-black uppercase tracking-tighter text-center leading-none  relative z-10">{bank.name_th}</span>
                                {bankCode === bank.code && (
                                  <div className="absolute top-2 right-2 size-4 bg-primary rounded-full flex items-center justify-center shadow-lg">
                                     <Zap className="size-2 text-white fill-white" />
@@ -223,7 +223,7 @@ const Register: React.FC = () => {
                     <div className="grid grid-cols-1 gap-4 pt-4">
                        <button 
                          type="submit" disabled={loading}
-                         className="w-full h-20 bg-primary text-white rounded-[2.2rem] font-display font-black text-base uppercase italic tracking-[0.25em] flex items-center justify-center gap-4 shadow-2xl shadow-primary/20 active:scale-95 transition-all group overflow-hidden relative"
+                         className="w-full h-20 bg-primary text-white rounded-[2.2rem] font-sans font-black text-base uppercase  tracking-[0.25em] flex items-center justify-center gap-4 shadow-2xl shadow-primary/20 active:scale-95 transition-all group overflow-hidden relative"
                        >
                          {loading ? (
                            <div className="size-8 border-4 border-white/20 border-t-white rounded-full animate-spin" />
@@ -236,7 +236,7 @@ const Register: React.FC = () => {
                        <button 
                          type="button" 
                          onClick={() => setCurrentStep(1)}
-                         className="w-full py-4 text-[10px] font-black text-slate-300 uppercase tracking-widest hover:text-slate-900 transition-all italic flex items-center justify-center gap-2"
+                         className="w-full py-4 text-[10px] font-black text-slate-300 uppercase tracking-widest hover:text-slate-900 transition-all  flex items-center justify-center gap-2"
                        >
                          <ChevronLeft size={14} /> ย้อนกลับไปแก้ไขข้อมูลส่วนตัว
                        </button>
@@ -247,7 +247,7 @@ const Register: React.FC = () => {
           </div>
 
           <div className="mt-6 text-center bg-white/50 backdrop-blur-xl px-10 py-6 rounded-[2.5rem] border border-slate-50/50 shadow-sm">
-             <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest italic leading-none">
+             <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest  leading-none">
                 เป็นสมาชิกอยู่แล้ว? <Link to="/login" className="text-primary hover:text-slate-900 transition-all ml-2 underline decoration-2 underline-offset-8">เข้าสู่ระบบ</Link>
              </p>
           </div>
@@ -258,3 +258,4 @@ const Register: React.FC = () => {
 };
 
 export default Register;
+

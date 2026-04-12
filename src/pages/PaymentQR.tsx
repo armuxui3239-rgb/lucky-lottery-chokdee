@@ -56,7 +56,7 @@ const PaymentQR: React.FC = () => {
             <button onClick={() => navigate(-1)} className="text-slate-900 flex size-10 items-center justify-center hover:bg-slate-50 rounded-full transition-all active:scale-95">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-xl font-display font-black leading-tight flex-1 text-center pr-10 italic uppercase tracking-widest text-slate-900">ชำระเงินผ่าน QR</h1>
+            <h1 className="text-xl font-sans font-black leading-tight flex-1 text-center pr-10  uppercase tracking-widest text-slate-900">ชำระเงินผ่าน QR</h1>
 
           </div>
         </header>
@@ -72,7 +72,7 @@ const PaymentQR: React.FC = () => {
             </div>
 
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-display font-black text-slate-900 tracking-tight uppercase">สแกนจ่ายด้วย PromptPay</h2>
+              <h2 className="text-3xl font-sans font-black text-slate-900 tracking-tight uppercase">สแกนจ่ายด้วย PromptPay</h2>
               <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">กรุณาโอนภายในเวลาที่กำหนด</p>
             </div>
 
@@ -98,7 +98,7 @@ const PaymentQR: React.FC = () => {
                   <div className="flex flex-col items-center gap-2">
                     <div className={`flex items-center gap-3 font-black transition-all ${timeLeft < 120 ? 'text-primary animate-pulse scale-110' : 'text-slate-900'}`}>
                       <Clock className="size-6" />
-                      <span className="text-4xl tracking-tighter font-display">{formatTime(timeLeft)}</span>
+                      <span className="text-4xl tracking-tighter font-sans">{formatTime(timeLeft)}</span>
                     </div>
                     <p className="text-[10px] text-slate-400 font-black uppercase tracking-[0.4em]">เวลาที่เหลือ</p>
                   </div>
@@ -107,7 +107,7 @@ const PaymentQR: React.FC = () => {
                 <div className="mt-12 border-t border-slate-50 pt-10 space-y-8">
                   <div className="flex justify-between items-center px-2">
                     <span className="text-[11px] font-black text-slate-400 uppercase tracking-[0.3em]">ยอดที่ต้องชำระ</span>
-                    <span className="text-4xl font-black text-primary tracking-tighter italic">฿ {amount.toLocaleString()}.00</span>
+                    <span className="text-4xl font-black text-primary tracking-tighter ">฿ {amount.toLocaleString()}.00</span>
                   </div>
 
                   <div className="bg-red-50/50 rounded-[2rem] p-6 flex items-start gap-4 border border-red-100">
@@ -158,7 +158,7 @@ const PaymentQR: React.FC = () => {
            <div className="max-w-4xl mx-auto px-4 flex flex-col gap-4">
               <button
                 onClick={handleNext}
-                className="w-full h-18 bg-primary hover:bg-rose-700 text-white font-display font-black rounded-[2rem] shadow-2xl shadow-primary/30 transition-all flex items-center justify-center gap-4 active:scale-95 uppercase tracking-[0.25em] text-sm group"
+                className="w-full h-18 bg-primary hover:bg-rose-700 text-white font-sans font-black rounded-[2rem] shadow-2xl shadow-primary/30 transition-all flex items-center justify-center gap-4 active:scale-95 uppercase tracking-[0.25em] text-sm group"
               >
                 <span>ดำเนินการต่อ</span>
                 <ArrowRight className="size-6 group-hover:translate-x-2 transition-transform" />
@@ -171,3 +171,4 @@ const PaymentQR: React.FC = () => {
 };
 
 export default PaymentQR;
+

@@ -165,7 +165,7 @@ export const AdminFinance = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">
+          <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">
             ระบบการเงิน
           </h2>
           {pendingCount > 0 && (
@@ -205,7 +205,7 @@ export const AdminFinance = () => {
                 s.color === 'red' ? 'text-red-500 mb-3' : 'text-amber-500 mb-3'
               } />
               <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{s.label}</p>
-              <p className={`text-xl font-black italic mt-1 ${
+              <p className={`text-xl font-black  mt-1 ${
                 s.color === 'emerald' ? 'text-emerald-400' :
                 s.color === 'red' ? 'text-red-400' : 'text-amber-400'
               }`}>฿{Number(s.value).toLocaleString()}</p>
@@ -270,7 +270,7 @@ export const AdminFinance = () => {
                       <p className="text-[9px] text-slate-600 font-mono">{(tx.profiles as any)?.phone}</p>
                     </td>
                     <td className="py-4 px-4 text-center">
-                      <span className={`text-[9px] px-3 py-1 font-black rounded-lg uppercase italic border ${
+                      <span className={`text-[9px] px-3 py-1 font-black rounded-lg uppercase  border ${
                         tx.type === 'deposit' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' :
                         tx.type === 'withdraw' ? 'bg-red-500/10 text-red-400 border-red-500/20' :
                         tx.type === 'win' ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20' :
@@ -280,7 +280,7 @@ export const AdminFinance = () => {
                       </span>
                     </td>
                     <td className="py-4 px-4">
-                      <p className="font-black text-white italic">฿{Number(tx.amount).toLocaleString()}</p>
+                      <p className="font-black text-white ">฿{Number(tx.amount).toLocaleString()}</p>
                     </td>
                     <td className="py-4 px-4 text-center">
                       <span className={`text-[9px] px-2 py-1 rounded font-black uppercase ${
@@ -369,7 +369,7 @@ export const AdminFinance = () => {
       {selectedTx && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-950/90 backdrop-blur-sm">
           <div className="bg-slate-900 border border-slate-800 rounded-[2rem] p-8 max-w-md w-full space-y-6 animate-in zoom-in-95 duration-200">
-            <h3 className="text-xl font-display font-black text-white italic tracking-tighter uppercase">
+            <h3 className="text-xl font-sans font-black text-white  tracking-tighter uppercase">
               บันทึกจากผู้ดูแล
             </h3>
             <div className="bg-slate-950 border border-slate-800 rounded-2xl p-4 text-[11px] font-black space-y-1">
@@ -404,3 +404,4 @@ export const AdminFinance = () => {
     </div>
   );
 };
+

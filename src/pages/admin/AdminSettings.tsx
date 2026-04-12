@@ -62,7 +62,7 @@ export const AdminSettings = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-black text-white italic uppercase tracking-tighter flex items-center gap-3">
+          <h2 className="text-2xl font-black text-white  uppercase tracking-tighter flex items-center gap-3">
             <Palette className="text-primary" size={28} /> 
             จัดการตั้งค่าเว็บไซต์ (CMS)
           </h2>
@@ -73,7 +73,7 @@ export const AdminSettings = () => {
         <button 
           onClick={saveAll}
           disabled={saving}
-          className="h-14 px-8 bg-primary text-white rounded-2xl flex items-center gap-3 font-black text-xs uppercase tracking-widest italic shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all disabled:opacity-50"
+          className="h-14 px-8 bg-primary text-white rounded-2xl flex items-center gap-3 font-black text-xs uppercase tracking-widest  shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all disabled:opacity-50"
         >
           {saving ? <div className="size-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <Save size={20} />}
           บันทึกทั้งหมด

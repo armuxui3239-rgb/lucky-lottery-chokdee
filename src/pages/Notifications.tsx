@@ -95,7 +95,7 @@ export default function Notifications() {
               <ArrowLeft size={22} strokeWidth={3} />
             </button>
             <div>
-              <h1 className="text-lg font-black text-white italic tracking-tighter uppercase">การแจ้งเตือน</h1>
+              <h1 className="text-lg font-black text-white  tracking-tighter uppercase">การแจ้งเตือน</h1>
               {unreadCount > 0 && (
                 <p className="text-[9px] font-black text-white/70 uppercase tracking-widest">ยังไม่อ่าน {unreadCount} รายการ</p>
               )}
@@ -188,3 +188,4 @@ export default function Notifications() {
     </div>
   );
 }
+

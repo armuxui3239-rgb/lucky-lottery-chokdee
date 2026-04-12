@@ -155,7 +155,7 @@ export const AdminDatabase = () => {
       <div className="flex-1 space-y-6">
         <div className="flex items-center justify-between gap-4">
            <div className="flex flex-col">
-              <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase whitespace-nowrap">
+              <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase whitespace-nowrap">
                  Explorer: <span className="text-primary">{selectedTable}</span>
               </h2>
               <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mt-1">
@@ -222,7 +222,7 @@ export const AdminDatabase = () => {
               </table>
            </div>
            {data.length === 0 && !loading && (
-             <div className="py-20 text-center text-slate-700 font-black uppercase italic tracking-widest text-xs">This table is currently empty</div>
+             <div className="py-20 text-center text-slate-700 font-black uppercase  tracking-widest text-xs">This table is currently empty</div>
            )}
         </div>
       </div>
@@ -232,7 +232,7 @@ export const AdminDatabase = () => {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-slate-950/90 backdrop-blur-sm">
            <form onSubmit={handleUpdate} className="bg-slate-900 border border-slate-800 rounded-[3rem] p-10 max-w-2xl w-full max-h-[80vh] overflow-y-auto space-y-8 animate-in zoom-in-95 duration-200">
               <div className="flex items-center justify-between">
-                 <h3 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">
+                 <h3 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">
                     {isCreating ? 'Create New' : 'Edit'} <span className="text-primary">{selectedTable}</span> Record
                  </h3>
                  <button type="button" onClick={() => { setIsEditing(false); setIsCreating(false); }} className="text-slate-500 hover:text-white block">Close [Esc]</button>
@@ -274,3 +274,4 @@ export const AdminDatabase = () => {
     </div>
   );
 };
+

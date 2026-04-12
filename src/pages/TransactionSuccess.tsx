@@ -71,7 +71,7 @@ const TransactionSuccess: React.FC = () => {
           </div>
 
           <div className="text-center space-y-6 mb-16">
-            <h1 className="text-5xl font-display font-black text-slate-900 uppercase tracking-tight italic leading-none">
+            <h1 className="text-5xl font-sans font-black text-slate-900 uppercase tracking-tight  leading-none">
               {content.title}
             </h1>
             <p className="text-sm font-black text-slate-400 leading-relaxed uppercase tracking-[0.3em] max-w-sm mx-auto">
@@ -93,7 +93,7 @@ const TransactionSuccess: React.FC = () => {
                <div className="flex justify-between items-start">
                    <div className="flex flex-col gap-2">
                       <span className="text-[9px] font-black text-slate-300 uppercase tracking-[0.3em]">{content.orderLabel}</span>
-                      <span className="text-lg font-black text-slate-900 font-display">{orderId}</span>
+                      <span className="text-lg font-black text-slate-900 font-sans">{orderId}</span>
                    </div>
                    <div className="flex flex-col items-end gap-2">
                       <span className="text-[9px] font-black text-slate-300 uppercase tracking-[0.3em]">วันที่และเวลาที่ทำรายการ</span>
@@ -112,7 +112,7 @@ const TransactionSuccess: React.FC = () => {
                       </div>
                    </div>
                    <div className="flex items-center gap-3 bg-green-50 px-6 py-3 rounded-2xl border border-green-100">
-                      <span className="text-[11px] font-black text-green-600 uppercase tracking-widest italic">สำเร็จ</span>
+                      <span className="text-[11px] font-black text-green-600 uppercase tracking-widest ">สำเร็จ</span>
                    </div>
                </div>
             </div>
@@ -122,7 +122,7 @@ const TransactionSuccess: React.FC = () => {
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
              <button 
                onClick={() => navigate(content.path)}
-               className="w-full bg-primary hover:bg-primary-dark text-white py-6 rounded-[2.5rem] font-display font-black text-sm uppercase tracking-widest flex items-center justify-center gap-4 shadow-2xl shadow-red-200/50 active:scale-95 transition-all group"
+               className="w-full bg-primary hover:bg-primary-dark text-white py-6 rounded-[2.5rem] font-sans font-black text-sm uppercase tracking-widest flex items-center justify-center gap-4 shadow-2xl shadow-red-200/50 active:scale-95 transition-all group"
              >
                 <span>{content.action}</span>
                 <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform" />
@@ -148,3 +148,4 @@ const TransactionSuccess: React.FC = () => {
 
 
 export default TransactionSuccess;
+

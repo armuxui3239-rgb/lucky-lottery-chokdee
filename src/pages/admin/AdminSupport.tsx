@@ -88,7 +88,7 @@ const AdminSupport: React.FC = () => {
     <div className="space-y-6 font-prompt text-white">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <h2 className="text-2xl font-black text-white tracking-tight uppercase italic flex items-center gap-3">
+          <h2 className="text-2xl font-black text-white tracking-tight uppercase  flex items-center gap-3">
             <Headphones size={24} className="text-primary" />
             ระบบช่วยเหลือและร้องเรียน
           </h2>
@@ -133,7 +133,7 @@ const AdminSupport: React.FC = () => {
                   </div>
                   <div className="flex flex-col">
                     <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1.5">หัวข้อคำร้อง</p>
-                    <h4 className="text-lg font-black text-white tracking-tight italic uppercase">{ticket.subject}</h4>
+                    <h4 className="text-lg font-black text-white tracking-tight  uppercase">{ticket.subject}</h4>
                   </div>
                 </div>
                 
@@ -168,7 +168,7 @@ const AdminSupport: React.FC = () => {
 
               <div className="py-6 flex flex-col md:flex-row gap-8">
                 <div className="flex-1 space-y-4">
-                  <p className="text-slate-300 text-sm font-medium leading-relaxed bg-slate-950/50 p-6 rounded-2xl border border-slate-800 italic">"{ticket.message}"</p>
+                  <p className="text-slate-300 text-sm font-medium leading-relaxed bg-slate-950/50 p-6 rounded-2xl border border-slate-800 ">"{ticket.message}"</p>
                   <div className="flex items-center gap-4 text-slate-500">
                     <Reply size={16} />
                     <span className="text-[10px] font-black uppercase tracking-widest">ตอบกลับเบื้องต้นผ่าน SMS หรือแชทไลน์</span>
@@ -190,7 +190,7 @@ const AdminSupport: React.FC = () => {
                     {ticket.status !== 'closed' && (
                       <button 
                         onClick={() => updateTicketStatus(ticket.id, ticket.status === 'open' ? 'in_progress' : 'closed')}
-                        className="col-span-2 h-12 bg-primary text-white rounded-xl font-black text-[9px] uppercase tracking-widest italic shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all"
+                        className="col-span-2 h-12 bg-primary text-white rounded-xl font-black text-[9px] uppercase tracking-widest  shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all"
                       >
                         {ticket.status === 'open' ? 'เริ่มดำเนินการ' : 'ปิดตั๋วคำร้อง'}
                       </button>
@@ -220,3 +220,4 @@ const AdminSupport: React.FC = () => {
 };
 
 export default AdminSupport;
+

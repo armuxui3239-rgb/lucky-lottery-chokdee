@@ -86,7 +86,7 @@ const Loyalty: React.FC = () => {
             <button onClick={() => navigate('/profile')} className="text-slate-900 flex size-10 items-center justify-center hover:bg-slate-50 rounded-full transition-all active:scale-95">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-xl font-display font-black leading-tight flex-1 text-center pr-10 italic uppercase tracking-widest text-slate-900">สิทธิพิเศษ</h1>
+            <h1 className="text-xl font-sans font-black leading-tight flex-1 text-center pr-10  uppercase tracking-widest text-slate-900">สิทธิพิเศษ</h1>
 
             <button className="text-slate-400 hover:text-primary transition-colors">
                <History className="size-6" />
@@ -108,11 +108,11 @@ const Loyalty: React.FC = () => {
                  <div className="relative z-10 flex flex-col gap-4">
                    <div className="flex items-center gap-3">
                      <Star className={`${tier.color} size-6 fill-current`} />
-                     <p className={`${tier.color} text-sm font-black uppercase tracking-[0.4em] italic`}>{tier.label}</p>
+                     <p className={`${tier.color} text-sm font-black uppercase tracking-[0.4em] `}>{tier.label}</p>
                    </div>
                    <div className="flex items-baseline gap-4">
-                     <p className="text-amber-950 tracking-tighter text-8xl font-display font-black italic">{points.toLocaleString()}</p>
-                     <p className="text-amber-900 text-2xl font-black uppercase tracking-widest italic">แต้ม</p>
+                     <p className="text-amber-950 tracking-tighter text-8xl font-sans font-black ">{points.toLocaleString()}</p>
+                     <p className="text-amber-900 text-2xl font-black uppercase tracking-widest ">แต้ม</p>
 
                    </div>
                    <div className="w-full h-2 bg-white/20 rounded-full overflow-hidden mt-4">
@@ -129,7 +129,7 @@ const Loyalty: React.FC = () => {
             {/* Rewards Filter Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between border-l-8 border-primary pl-8 gap-4">
                <div className="flex flex-col space-y-2">
-                  <h2 className="text-4xl font-display font-black text-slate-900 tracking-tighter uppercase leading-none">
+                  <h2 className="text-4xl font-sans font-black text-slate-900 tracking-tighter uppercase leading-none">
                     แลกรางวัล
                   </h2>
                   <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">
@@ -158,7 +158,7 @@ const Loyalty: React.FC = () => {
                    
                    <div className="p-8 flex flex-col gap-6 flex-1">
                      <div className="space-y-2">
-                       <h4 className="text-slate-900 font-display font-black text-xl uppercase italic group-hover:text-primary transition-colors">{reward.name}</h4>
+                       <h4 className="text-slate-900 font-sans font-black text-xl uppercase  group-hover:text-primary transition-colors">{reward.name}</h4>
                        <p className="text-slate-400 text-xs font-medium leading-relaxed">{reward.description}</p>
                      </div>
                      
@@ -167,7 +167,7 @@ const Loyalty: React.FC = () => {
                           <span className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-1">ใช้แต้ม</span>
                           <div className="flex items-center gap-2 text-amber-500">
                             <Star className="size-5 fill-amber-500" />
-                            <span className="font-display font-black text-2xl italic tracking-tighter">{reward.points_required.toLocaleString()}</span>
+                            <span className="font-sans font-black text-2xl  tracking-tighter">{reward.points_required.toLocaleString()}</span>
                           </div>
                        </div>
                        
@@ -194,3 +194,4 @@ const Loyalty: React.FC = () => {
 };
 
 export default Loyalty;
+

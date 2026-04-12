@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '../lib/supabase';
 import { useAuth } from '../lib/AuthContext';
 import { useCart } from '../lib/CartContext';
 import { toast } from 'react-hot-toast';
-import { ShoppingCart, Ticket as TicketIcon, Filter, X } from 'lucide-react';
-import { getActiveRounds, type Ticket, generateVirtualTickets, generateRandomTickets } from '../services/lottery';
+import { ShoppingCart, Ticket as TicketIcon, Filter, X, Sparkles } from 'lucide-react';
+import { getActiveRounds, type Ticket, generateVirtualTickets } from '../services/lottery';
 import NumberKeypad from '../components/lottery/NumberKeypad';
 
 const LotteryGrid: React.FC = () => {
@@ -18,6 +19,7 @@ const LotteryGrid: React.FC = () => {
   const [digits, setDigits] = useState(['', '', '', '', '', '']);
   const [isKeypadOpen, setIsKeypadOpen] = useState(false);
   const [activeSlotIndex, setActiveSlotIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
   const inputRefs = React.useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
@@ -41,7 +43,7 @@ const LotteryGrid: React.FC = () => {
     newDigits[activeSlotIndex] = num;
     setDigits(newDigits);
 
-    const fullQuery = newDigits.join('');
+    const fullQuery = newDigits.filter(d => d !== '').join('');
     setSearchQuery(fullQuery);
     fetchTickets(fullQuery);
 
@@ -49,6 +51,11 @@ const LotteryGrid: React.FC = () => {
       setActiveSlotIndex(prev => prev + 1);
     } else {
       setIsKeypadOpen(false);
+      // Trigger Ticket Pop-up if 6 digits
+      if (newDigits.every(d => d !== '')) {
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
+      }
     }
   };
 
@@ -57,7 +64,7 @@ const LotteryGrid: React.FC = () => {
     newDigits[activeSlotIndex] = '';
     setDigits(newDigits);
 
-    const fullQuery = newDigits.join('');
+    const fullQuery = newDigits.filter(d => d !== '').join('');
     setSearchQuery(fullQuery);
     fetchTickets(fullQuery);
 
@@ -84,7 +91,6 @@ const LotteryGrid: React.FC = () => {
       }
       const activeRound = rounds[0];
 
-      // 1. Fetch from DB if exists (for pre-generated or already bought by others if applicable)
       let results: Ticket[] = [];
       if (query && query.length > 0) {
          const { data: dbTickets } = await supabase
@@ -97,7 +103,6 @@ const LotteryGrid: React.FC = () => {
          results = (dbTickets || []) as Ticket[];
       }
 
-      // 2. "Unlimited Supply" Logic: If no exact match found for 6 digits, spawn it instantly
       if (query && query.length === 6) {
         const exactMatch = results.find(t => t.ticket_number === query);
         if (!exactMatch) {
@@ -106,7 +111,6 @@ const LotteryGrid: React.FC = () => {
         }
       }
 
-      // 3. Guaranteed Inventory: If grid is too empty, fill with randoms matching the query pattern
       if (results.length < 12) {
         const needed = 12 - results.length;
         const randoms = Array(needed).fill(0).map(() => {
@@ -120,7 +124,6 @@ const LotteryGrid: React.FC = () => {
         results = [...results, ...virtuals];
       }
 
-      // Remove duplicates just in case
       const unique = results.filter((v, i, a) => a.findIndex(t => t.ticket_number === v.ticket_number) === i);
       setTickets(unique.slice(0, 24));
     } catch (error: any) {
@@ -129,7 +132,6 @@ const LotteryGrid: React.FC = () => {
       setLoading(false);
     }
   };
-
 
   const onAddToCart = (ticket: Ticket) => {
     if (profile?.kyc_status !== 'verified') {
@@ -153,7 +155,7 @@ const LotteryGrid: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white font-prompt pb-24">
+    <div className="flex flex-col min-h-screen bg-white font-prompt pb-24 overflow-x-hidden">
       
       {/* 6-Digit Search Strategy Header */}
       <section className="sticky top-[73px] z-30 bg-white border-b border-slate-100 shadow-sm w-full">
@@ -161,26 +163,27 @@ const LotteryGrid: React.FC = () => {
           <div className="flex flex-col items-center gap-8">
             
             <div className="flex flex-col items-center text-center gap-2">
-               <h2 className="text-sm font-black text-slate-300 uppercase tracking-[0.4em] italic">ระบุเลขนำโชคของคุณ</h2>
+               <h2 className="text-sm font-black text-slate-300 uppercase tracking-[0.4em] ">ระบุเลขนำโชคของคุณ</h2>
                <div className="h-1 w-12 bg-primary rounded-full"></div>
             </div>
 
             <div className="flex flex-col md:flex-row items-center gap-8 w-full max-w-2xl">
               <div className="flex gap-2 sm:gap-4 justify-center flex-1">
                 {digits.map((digit, idx) => (
-                  <input
+                  <motion.input
                     key={idx}
                     ref={(el) => { inputRefs.current[idx] = el; }}
                     type="text"
                     readOnly
                     value={digit}
                     onClick={() => handleSlotClick(idx)}
-                    className={`size-12 sm:size-16 rounded-2xl border-4 flex items-center justify-center text-center text-2xl sm:text-3xl font-display font-black italic transition-all duration-300 outline-none selection:bg-transparent cursor-pointer ${
+                    whileTap={{ scale: 0.95 }}
+                    className={`size-12 sm:size-16 rounded-2xl border-[3px] flex items-center justify-center text-center text-2xl sm:text-4xl font-sans font-black transition-all duration-200 outline-none selection:bg-transparent cursor-pointer ${
                       activeSlotIndex === idx && isKeypadOpen
-                      ? 'border-primary ring-4 ring-primary/10 bg-white'
+                      ? 'border-red-600 ring-8 ring-red-600/5 bg-white scale-110 z-10 shadow-2xl'
                       : digit 
-                        ? 'bg-primary border-primary text-white shadow-xl shadow-red-200' 
-                        : 'bg-slate-50 border-slate-50 text-slate-400'
+                        ? 'bg-red-600 border-red-600 text-white shadow-xl shadow-red-200' 
+                        : 'bg-slate-50 border-red-600/20 text-slate-400'
                     }`}
                     placeholder="•"
                   />
@@ -200,7 +203,36 @@ const LotteryGrid: React.FC = () => {
         </div>
       </section>
 
-      {/* Number Keypad Drawer */}
+      {/* Epic Ticket Pop-up Animation */}
+      <AnimatePresence>
+         {showPopup && (
+           <div className="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none">
+              <motion.div 
+                initial={{ scale: 0, rotate: -15, opacity: 0 }}
+                animate={{ scale: 1, rotate: 0, opacity: 1 }}
+                exit={{ scale: 1.5, opacity: 0, filter: 'blur(20px)' }}
+                transition={{ type: 'spring', damping: 15, stiffness: 200 }}
+                className="relative w-80 aspect-[2/1] bg-cover bg-center rounded-2xl shadow-[0_40px_100px_rgba(236,19,30,0.4)] flex flex-col items-end justify-center pr-10 border-4 border-white overflow-hidden"
+                style={{ backgroundImage: "url('/ticket-bg.png')" }}
+              >
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-white/20 animate-pulse"></div>
+                  <span className="text-4xl md:text-5xl font-sans font-black tracking-[0.3em] text-slate-800 drop-shadow-2xl z-10">
+                    {digits.join('')}
+                  </span>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="absolute bottom-4 left-4 bg-red-600 px-3 py-1 rounded-lg text-white text-[10px] font-black uppercase tracking-widest flex items-center gap-2 shadow-lg"
+                  >
+                    <Sparkles size={12} /> พบเลขนำโชคแล้ว
+                  </motion.div>
+              </motion.div>
+           </div>
+         )}
+      </AnimatePresence>
+
+      {/* Number Keypad Integration */}
       <NumberKeypad 
         isOpen={isKeypadOpen}
         onClose={() => setIsKeypadOpen(false)}
@@ -211,63 +243,58 @@ const LotteryGrid: React.FC = () => {
 
       {/* Grid Content */}
       <div className="max-w-7xl mx-auto px-6 py-12 w-full">
-        <div className="flex items-center justify-between mb-10 border-l-4 border-primary pl-6">
+        <div className="flex items-center justify-between mb-10 border-l-4 border-red-600 pl-6">
            <div className="flex flex-col">
-              <h3 className="text-2xl font-display font-black text-slate-900 tracking-tight uppercase leading-none italic">ผลการค้นหาสลาก</h3>
+              <h3 className="text-2xl font-sans font-black text-slate-900 tracking-tight uppercase leading-none ">ผลการค้นหาสลาก</h3>
               <p className="text-xs text-slate-400 font-bold uppercase tracking-widest mt-2">มีสลากพร้อมขาย {tickets.length} ใบ</p>
            </div>
-           <button className="hidden sm:flex items-center gap-3 text-primary text-xs font-black uppercase tracking-widest bg-red-50 px-6 py-4 rounded-2xl border border-red-100 hover:bg-red-100 transition-all">
+           <button className="hidden sm:flex items-center gap-3 text-red-600 text-xs font-black uppercase tracking-widest bg-red-50 px-6 py-4 rounded-2xl border border-red-100 hover:bg-red-100 transition-all">
              <span>กรองตัวเลข</span>
              <Filter size={16} />
            </button>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6">
-
           {loading ? (
             [...Array(4)].map((_, i) => (
               <div key={i} className="h-24 bg-white rounded-[2rem] border border-slate-100 animate-pulse shadow-sm" />
             ))
           ) : tickets.length > 0 ? (
             tickets.map((ticket) => (
-              <div
+              <motion.div
                 key={ticket.id}
-                className="relative overflow-hidden transition-all duration-300 w-full aspect-[2/1] rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.2)] bg-cover bg-center cursor-pointer group hover:-translate-y-1"
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                className="relative overflow-hidden w-full aspect-[2/1] rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_30px_rgba(236,19,30,0.2)] bg-cover bg-center cursor-pointer group"
                 style={{ backgroundImage: "url('/ticket-bg.png')" }}
                 onClick={() => onAddToCart(ticket)}
               >
-                {/* 6-Digit Number */}
                 <div className="absolute inset-0 flex flex-col items-end justify-center pr-[12%] pt-[2%] md:pt-[0%]">
-                  <span className="text-[3vw] sm:text-xl lg:text-2xl font-display font-black tracking-[0.3em] text-slate-800 drop-shadow-sm bg-white/70 px-2 py-1 rounded-sm backdrop-blur-sm">
+                  <span className="text-[3vw] sm:text-xl lg:text-2xl font-sans font-black tracking-[0.3em] text-slate-800 drop-shadow-sm bg-white/70 px-2 py-1 rounded-sm backdrop-blur-sm">
                     {ticket.ticket_number}
                   </span>
                 </div>
-
-                {/* Price Label (Red Highlight) */}
                 <div className="absolute bottom-[10%] left-[5%]">
-                  <span className="text-[3vw] sm:text-sm lg:text-base font-display font-black text-white bg-[#ec131e] px-2 py-0.5 rounded shadow-lg border border-red-400">
+                  <span className="text-[3vw] sm:text-sm lg:text-base font-sans font-black text-white bg-[#ec131e] px-2 py-0.5 rounded shadow-lg border border-red-400">
                     {ticket.price.toLocaleString()} ฿
                   </span>
                 </div>
-
-                {/* Hover Cart Action */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                   <div className="size-10 sm:size-12 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-300">
+                   <div className="size-10 sm:size-12 bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-300">
                      <ShoppingCart size={20} />
                    </div>
                 </div>
-              </div>
+              </motion.div>
             ))
           ) : (
-            <div className="py-20 flex flex-col items-center text-center px-8 border-2 border-dashed border-slate-200 rounded-[3rem] bg-slate-50/50">
-              <div className="w-24 h-24 rounded-[2rem] bg-white flex items-center justify-center text-slate-200 shadow-xl mb-6">
+            <div className="col-span-full py-20 flex flex-col items-center text-center px-8 border-2 border-dashed border-slate-200 rounded-[3rem] bg-slate-50/50">
+              <div className="size-24 rounded-[2rem] bg-white flex items-center justify-center text-slate-200 shadow-xl mb-6">
                 <TicketIcon size={48} />
               </div>
               <h4 className="text-2xl font-black text-slate-900">ไม่พบเลขที่คุณตามหา</h4>
               <p className="text-sm text-slate-400 mt-3 font-medium">ลองเปลี่ยนเลขที่ค้นหา หรือเลือกดูจากหมวดหมู่เลขดัง</p>
               <button
                 onClick={() => { setSearchQuery(''); fetchTickets(''); }}
-                className="mt-10 bg-primary text-white px-10 py-3.5 rounded-[1.8rem] font-black text-xs uppercase tracking-[0.2em] shadow-2xl hover:scale-105 active:scale-95 transition-all"
+                className="mt-10 bg-red-600 text-white px-10 py-3.5 rounded-[1.8rem] font-black text-xs uppercase tracking-[0.2em] shadow-2xl hover:scale-105 active:scale-95 transition-all"
               >
                 ดูเลขเด่นประจำงวด
               </button>

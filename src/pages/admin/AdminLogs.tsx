@@ -69,7 +69,7 @@ const AdminLogs: React.FC = () => {
     <div className="space-y-6 font-prompt text-white">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <h2 className="text-2xl font-black text-white tracking-tight uppercase italic flex items-center gap-3">
+          <h2 className="text-2xl font-black text-white tracking-tight uppercase  flex items-center gap-3">
             <Activity size={24} className="text-primary" />
             Audit Trail ระบบ
           </h2>
@@ -89,7 +89,7 @@ const AdminLogs: React.FC = () => {
           </div>
           <div>
             <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1">ความปลอดภัย</p>
-            <h4 className="text-lg font-black text-white tracking-tight uppercase italic">เปิดใช้งาน</h4>
+            <h4 className="text-lg font-black text-white tracking-tight uppercase ">เปิดใช้งาน</h4>
           </div>
         </div>
         <div className="bg-slate-900 rounded-[2rem] border border-slate-800 p-8 shadow-2xl flex items-center gap-6">
@@ -98,7 +98,7 @@ const AdminLogs: React.FC = () => {
           </div>
           <div>
             <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1">บันทึกวันนี้</p>
-            <h4 className="text-lg font-black text-white tracking-tight uppercase italic">{logs.length} รายการ</h4>
+            <h4 className="text-lg font-black text-white tracking-tight uppercase ">{logs.length} รายการ</h4>
           </div>
         </div>
         <div className="bg-slate-900 rounded-[2rem] border border-slate-800 p-8 shadow-2xl flex items-center gap-6">
@@ -107,7 +107,7 @@ const AdminLogs: React.FC = () => {
           </div>
           <div>
             <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1">สถานะ DB</p>
-            <h4 className="text-lg font-black text-white tracking-tight uppercase italic">เชื่อมต่อปกติ</h4>
+            <h4 className="text-lg font-black text-white tracking-tight uppercase ">เชื่อมต่อปกติ</h4>
           </div>
         </div>
       </div>
@@ -146,7 +146,7 @@ const AdminLogs: React.FC = () => {
                 <tr key={log.id} className="hover:bg-white/5 transition-all group">
                   <td className="px-8 py-6">
                     <div className="flex flex-col">
-                       <p className="text-xs font-black text-slate-300 italic tracking-tight uppercase group-hover:text-primary transition-colors">{new Date(log.created_at).toLocaleString('th-TH', { day: '2-digit', month: 'short' })}</p>
+                       <p className="text-xs font-black text-slate-300  tracking-tight uppercase group-hover:text-primary transition-colors">{new Date(log.created_at).toLocaleString('th-TH', { day: '2-digit', month: 'short' })}</p>
                        <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mt-1">{new Date(log.created_at).toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })}</p>
                     </div>
                   </td>
@@ -172,7 +172,7 @@ const AdminLogs: React.FC = () => {
                     </div>
                   </td>
                   <td className="px-8 py-6">
-                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest italic">{log.resource_type}</p>
+                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest ">{log.resource_type}</p>
                   </td>
                   <td className="px-8 py-6 text-right">
                     <button className="text-[9px] font-black text-slate-500 uppercase tracking-[0.3em] hover:text-primary transition-all">
@@ -197,3 +197,4 @@ const AdminLogs: React.FC = () => {
 };
 
 export default AdminLogs;
+

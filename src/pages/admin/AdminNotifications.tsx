@@ -108,7 +108,7 @@ export const AdminNotifications = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">ระบบการแจ้งเตือน</h2>
+          <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">ระบบการแจ้งเตือน</h2>
           <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mt-1">
             ทั้งหมด {notifications.length} รายการ · อ่านแล้ว {readCount} · ยังไม่อ่าน {notifications.length - readCount}
           </p>
@@ -136,7 +136,7 @@ export const AdminNotifications = () => {
           {/* Form */}
           <div className="lg:col-span-2">
             <form onSubmit={handleSend} className="bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8 space-y-6">
-              <h3 className="text-lg font-display font-black text-white italic tracking-tighter uppercase flex items-center gap-3">
+              <h3 className="text-lg font-sans font-black text-white  tracking-tighter uppercase flex items-center gap-3">
                 <Megaphone size={22} className="text-red-500" /> ส่งการแจ้งเตือน
               </h3>
 
@@ -277,3 +277,4 @@ export const AdminNotifications = () => {
     </div>
   );
 };
+

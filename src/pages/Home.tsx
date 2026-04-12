@@ -13,10 +13,11 @@ import { toast } from 'react-hot-toast';
 import {
   Trophy, Sparkles,
   Flame, Star, Zap, TrendingUp, ChevronRight,
-  Shuffle, ShoppingBag, X, Ticket as TicketIcon
+  Shuffle, ShoppingBag, X, Ticket as TicketIcon, ArrowLeft
 } from 'lucide-react';
 
 import WinnerTicker from '../components/WinnerTicker';
+import PromotionSlider from '../components/PromotionSlider';
 
 export default function Home() {
   const { user, balance, refreshProfile } = useAuth();
@@ -133,43 +134,45 @@ export default function Home() {
       <WinnerTicker />
 
       {/* Hero Banner with Auto Slider (Horizontal 3:1) */}
-      <section className="relative w-full aspect-[3/1] overflow-hidden shadow-2xl">
-        {/* Slider Backgrounds */}
-        {banners.map((banner, idx) => (
-          <div 
-            key={idx}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === idx ? 'opacity-100' : 'opacity-0'}`}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent z-10" />
-            <img 
-              src={banner} 
-              alt={`แบนเนอร์ประชาสัมพันธ์ ${idx + 1}`} 
-              className="w-full h-full object-cover transform scale-105 animate-slow-zoom"
-            />
-          </div>
-        ))}
+      <section className="relative w-full overflow-hidden px-4 md:px-8 pt-6">
+        <div className="relative aspect-[3/1] rounded-[2.5rem] overflow-hidden shadow-2xl group">
+          {/* Slider Backgrounds */}
+          {banners.map((banner, idx) => (
+            <div 
+              key={idx}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === idx ? 'opacity-100' : 'opacity-0'}`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent z-10" />
+              <img 
+                src={banner} 
+                alt={`แบนเนอร์ประชาสัมพันธ์ ${idx + 1}`} 
+                className="w-full h-full object-cover transform scale-105 animate-slow-zoom"
+              />
+            </div>
+          ))}
 
-        <div className="max-w-7xl mx-auto px-8 h-full relative z-20 flex flex-col justify-center">
-          <div className="absolute top-0 right-0 p-12 opacity-5 scale-150 rotate-12 pointer-events-none hidden md:block text-white">
-            <Trophy size={250} />
-          </div>
-          
-          <div className="flex flex-col items-start text-left space-y-8">
-            <div className="animate-in slide-in-from-left duration-700">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-[9px] font-black uppercase tracking-[0.2em] text-amber-300">
-                <Sparkles size={12} className="animate-pulse" />
-                <span>{config.site_tagline || 'เปิดให้เลือกเลขแล้ว — ไม่มีเลขอั้น'}</span>
-              </div>
-              <h2 className="text-5xl md:text-7xl font-display font-black text-white italic tracking-tighter mt-6 leading-[0.95] drop-shadow-2xl" dangerouslySetInnerHTML={{ __html: config.hero_title.replace('\n', '<br />') || 'สลาก 6 หลัก<br /><span class="text-amber-300 drop-shadow-[0_0_15px_rgba(251,191,36,0.4)]">เลือกเองได้เลย!</span>' }} />
-              {config.hero_subtitle && (
-                <p className="text-white/60 text-[11px] font-black leading-relaxed mt-4 max-w-[85%]">{config.hero_subtitle}</p>
-              )}
-              {activeRound && (
-                <div className="text-[11px] text-white/60 mt-6 font-black uppercase tracking-[0.3em] backdrop-blur-sm bg-black/10 px-4 py-2 rounded-xl w-fit border border-white/5">
-                  งวดวันที่: {new Date(activeRound.draw_date).toLocaleDateString('th-TH', { day: 'numeric', month: 'long', year: 'numeric' })}
-                  {' · '}ราคาใบละ {activeRound.price_per_ticket} บาท
+          <div className="max-w-7xl mx-auto px-8 h-full relative z-20 flex flex-col justify-center">
+            <div className="absolute top-0 right-0 p-12 opacity-5 scale-150 rotate-12 pointer-events-none hidden md:block text-white">
+              <Trophy size={250} />
+            </div>
+            
+            <div className="flex flex-col items-start text-left space-y-8">
+              <div className="animate-in slide-in-from-left duration-700">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-[9px] font-black uppercase tracking-[0.2em] text-amber-300">
+                  <Sparkles size={12} className="animate-pulse" />
+                  <span>{config.site_tagline || 'เปิดให้เลือกเลขแล้ว — ไม่มีเลขอั้น'}</span>
                 </div>
-              )}
+                <h2 className="text-4xl md:text-7xl font-sans font-black text-white tracking-tighter mt-6 leading-[0.95] drop-shadow-2xl" dangerouslySetInnerHTML={{ __html: config.hero_title.replace('\n', '<br />') || 'สลาก 6 หลัก<br /><span class="text-amber-300 drop-shadow-[0_0_15px_rgba(251,191,36,0.4)]">เลือกเองได้เลย!</span>' }} />
+                {config.hero_subtitle && (
+                  <p className="text-white/60 text-[11px] font-black leading-relaxed mt-4 max-w-[85%]">{config.hero_subtitle}</p>
+                )}
+                {activeRound && (
+                  <div className="text-[11px] text-white/90 mt-6 font-black uppercase tracking-[0.3em] backdrop-blur-sm px-4 py-2 rounded-xl w-fit border border-white/10">
+                    งวดวันที่: {new Date(activeRound.draw_date).toLocaleDateString('th-TH', { day: 'numeric', month: 'long', year: 'numeric' })}
+                    {' · '}ราคาใบละ {activeRound.price_per_ticket} บาท
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -204,7 +207,7 @@ export default function Home() {
             <button
               onClick={handleBuySelected}
               disabled={loading}
-              className="w-full h-14 bg-gradient-to-r from-[#FF0000] to-rose-600 text-white rounded-[1.5rem] font-display font-black text-sm uppercase tracking-widest shadow-xl shadow-red-200 active:scale-95 transition-all flex items-center justify-center gap-3 disabled:opacity-60"
+              className="w-full h-14 bg-gradient-to-r from-[#FF0000] to-rose-600 text-white rounded-[1.5rem] font-sans font-black text-sm uppercase tracking-widest shadow-xl shadow-red-200 active:scale-95 transition-all flex items-center justify-center gap-3 disabled:opacity-60"
             >
               {loading ? (
                 <div className="size-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -239,11 +242,11 @@ export default function Home() {
         {/* Lottery Grid */}
         <section className="px-6 space-y-6">
           <div className="flex items-center justify-between px-2">
-            <h3 className="text-sm font-display font-black text-slate-900 uppercase tracking-widest italic flex items-center gap-2">
+            <h3 className="text-sm font-sans font-black text-slate-900 uppercase tracking-widest flex items-center gap-2">
               <Zap size={14} className="text-amber-500 fill-amber-500" />
               {activePill === 1 ? 'เลขยอดนิยมประจำงวด' : 'เลขแนะนำสำหรับคุณ'}
             </h3>
-            <button onClick={handleShuffle} className="text-[10px] font-black text-primary uppercase tracking-[0.2em] flex items-center gap-1">
+            <button onClick={handleShuffle} className="text-[10px] font-black text-primary uppercase tracking-[0.2em] flex items-center gap-1 hover:bg-red-50 px-3 py-1.5 rounded-xl transition-all">
               <Shuffle size={12} /> สุ่มใหม่
             </button>
           </div>
@@ -289,7 +292,7 @@ export default function Home() {
                       </div>
 
                       <div className="text-center my-4">
-                        <span className={`text-2xl font-display font-black tracking-[0.1em] leading-none ${isSelected ? 'text-white' : 'text-slate-900'}`}>
+                        <span className={`text-2xl font-sans font-black tracking-[0.1em] leading-none ${isSelected ? 'text-white' : 'text-slate-900'}`}>
                           {number}
                         </span>
                       </div>
@@ -297,7 +300,7 @@ export default function Home() {
                       <div className="mt-auto flex items-center justify-between pt-4 border-t border-white/20">
                         <div className="flex flex-col">
                           <span className={`text-[8px] font-bold uppercase tracking-widest ${isSelected ? 'text-white/60' : 'text-slate-400'}`}>ราคา</span>
-                          <span className={`text-lg font-black italic leading-none ${isSelected ? 'text-white' : 'text-primary'}`}>
+                          <span className={`text-lg font-black leading-none ${isSelected ? 'text-white' : 'text-primary'}`}>
                             {activeRound?.price_per_ticket || 80} ฿
                           </span>
                         </div>
@@ -315,6 +318,17 @@ export default function Home() {
           )}
         </section>
 
+        {/* Promotion Slider (Added Above Affiliate Card) */}
+        <section className="px-6 py-6">
+          <div className="flex items-center justify-between px-2 mb-4">
+            <h3 className="text-sm font-sans font-black text-slate-900 uppercase tracking-widest flex items-center gap-2">
+              <Star size={14} className="text-amber-500 fill-amber-500" />
+              โปรโมชั่นแนะนำ
+            </h3>
+          </div>
+          <PromotionSlider />
+        </section>
+
           {/* Footer Banner — ชวนเพื่อน */}
           <section className="px-6 pb-20">
             <div className="p-10 rounded-[3.5rem] bg-primary border border-white/5 relative overflow-hidden group shadow-2xl shadow-primary/20">
@@ -325,13 +339,13 @@ export default function Home() {
                     <TrendingUp className="text-emerald-400" size={28} />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-display font-black text-white italic tracking-tighter leading-none">สร้างรายได้ไปกับเรา</h4>
+                    <h4 className="text-2xl font-sans font-black text-white tracking-tighter leading-none">สร้างรายได้ไปกับเรา</h4>
                     <p className="text-white/40 text-xs font-black uppercase tracking-[0.2em] mt-2">ชวนเพื่อน รับค่าแนะนำระดับพรีเมียมทันที 5-10%</p>
                   </div>
                 </div>
                 <button
                   onClick={() => navigate('/affiliate')}
-                  className="px-10 py-4 bg-white text-black rounded-2xl font-display font-black text-xs uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all w-full md:w-auto"
+                  className="px-10 py-4 bg-white text-black rounded-2xl font-sans font-black text-xs uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all w-full md:w-auto"
                 >
                   เริ่มสร้างรายได้ตอนนี้
                 </button>

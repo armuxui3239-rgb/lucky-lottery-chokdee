@@ -14,8 +14,8 @@ const Maintenance: React.FC = () => {
         </div>
       </div>
 
-      <h1 className="text-4xl md:text-6xl font-display font-black text-slate-900 tracking-tighter uppercase italic leading-none mb-6">
-        Under <span className="text-primary italic">Maintenance</span>
+      <h1 className="text-4xl md:text-6xl font-sans font-black text-slate-900 tracking-tighter uppercase  leading-none mb-6">
+        Under <span className="text-primary ">Maintenance</span>
       </h1>
       
       <p className="text-slate-400 text-xs font-black uppercase tracking-[0.4em] max-w-md mx-auto leading-loose mb-12">
@@ -39,10 +39,11 @@ const Maintenance: React.FC = () => {
       </div>
 
       <div className="mt-20 pt-10 border-t border-slate-50 w-full max-w-xs mx-auto">
-         <p className="text-[9px] font-black text-slate-300 uppercase tracking-[0.5em] italic">Lucky Lottery Official</p>
+         <p className="text-[9px] font-black text-slate-300 uppercase tracking-[0.5em] ">Lucky Lottery Official</p>
       </div>
     </div>
   );
 };
 
 export default Maintenance;
+

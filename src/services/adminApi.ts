@@ -301,7 +301,7 @@ export const getAllTransactions = async (
     .in('status', statuses)
     .order('created_at', { ascending: false })
     .limit(limit);
-  
+
   if (txError) throw txError;
   if (!txs || txs.length === 0) return [];
 
@@ -335,7 +335,7 @@ export const getPendingTransactions = async (): Promise<Transaction[]> => {
     .in('type', ['deposit', 'withdraw'])
     .eq('status', 'pending')
     .order('created_at', { ascending: true });
-  
+
   if (txError) throw txError;
   if (!txs || txs.length === 0) return [];
 
@@ -528,7 +528,7 @@ export const getTicketsByRound = async (roundId: string) => {
     .select('*')
     .eq('round_id', roundId)
     .order('ticket_number', { ascending: true });
-  
+
   if (ticketError) throw ticketError;
   if (!tickets || tickets.length === 0) return [];
 
@@ -866,7 +866,7 @@ export const getAllLoyaltyPoints = async () => {
     .select('*')
     .order('points_balance', { ascending: false })
     .limit(100);
-  
+
   if (ptError) throw ptError;
   if (!pts || pts.length === 0) return [];
 
@@ -938,7 +938,7 @@ export const getPendingRedemptions = async () => {
     .select('*, loyalty_rewards(name, reward_type, reward_value)')
     .eq('status', 'pending')
     .order('created_at', { ascending: true });
-  
+
   if (rdError) throw rdError;
   if (!rd || rd.length === 0) return [];
 
@@ -1139,6 +1139,62 @@ export const getAutoDrawStatus = async (): Promise<AutoDrawStatus> => {
     } : null
   };
 };
+
+/** Export ข้อมูลผู้ถูกรางวัลเป็น CSV */
+export const exportWinnersAsCSV = async (roundId?: string): Promise<string> => {
+  // 1. Fetch
+  const { data: winners, error } = await supabase.rpc('admin_get_winners_list', {
+    p_round_id: roundId || null,
+    p_limit: 1000,
+  });
+
+  if (error) throw error;
+  if (!winners || winners.length === 0) return '';
+
+  const rows = [
+    ['ID', 'ชื่อผู้ถูกรางวัล', 'เลขสลาก', 'ประเภทรางวัล', 'จำนวนเงิน', 'งวด', 'สถานะการแสดงผล', 'วันที่บันทึก'],
+    ...(winners as any[]).map((w) => [
+      w.id.slice(0, 8),
+      w.display_name || '-',
+      w.ticket_number || '-',
+      w.prize_type,
+      w.amount,
+      w.round_name || '-',
+      w.is_public ? 'Public' : 'Hidden',
+      new Date(w.created_at).toLocaleString('th-TH'),
+    ]),
+  ];
+
+  return rows.map((row) => row.join(',')).join('\n');
+};
+
+/** ล้างข้อมูลผู้ถูกรางวัลที่เก่ากว่า 30 วัน */
+export const deleteOldWinners = async (): Promise<number> => {
+  const thirtyDaysAgo = new Date();
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+  const { error, count } = await supabase
+    .from('winners')
+    .delete({ count: 'exact' })
+    .lt('created_at', thirtyDaysAgo.toISOString());
+
+  if (error) throw error;
+  return count || 0;
+};
+
+/** Utility: ดาวน์โหลดไล์ CSV */
+export const downloadCSV = (content: string, fileName: string) => {
+  const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.setAttribute('href', url);
+  link.setAttribute('download', fileName);
+  link.style.visibility = 'hidden';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
 /** รัน Auto Draw ด้วยมือ (สำหรับทดสอบ) */
 export const triggerManualDraw = async () => {

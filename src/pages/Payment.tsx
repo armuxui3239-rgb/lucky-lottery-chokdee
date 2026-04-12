@@ -50,7 +50,7 @@ const Payment: React.FC = () => {
             <button onClick={() => navigate(-1)} className="size-11 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-2xl transition-all active:scale-95 shadow-lg border border-white/5">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-xl font-display font-black tracking-[0.2em] uppercase italic drop-shadow-md">ชำระเงิน</h1>
+            <h1 className="text-xl font-sans font-black tracking-[0.2em] uppercase  drop-shadow-md">ชำระเงิน</h1>
             <div className="size-11"></div>
           </div>
         </header>
@@ -180,7 +180,7 @@ const Payment: React.FC = () => {
               <button
                 onClick={handleContinue}
                 disabled={!method || (method === 'bank' && !selectedBank)}
-                className={`w-full h-18 font-display font-black rounded-[2rem] shadow-2xl transition-all flex items-center justify-center gap-4 active:scale-95 uppercase tracking-[0.25em] text-sm group ${!method || (method === 'bank' && !selectedBank)
+                className={`w-full h-18 font-sans font-black rounded-[2rem] shadow-2xl transition-all flex items-center justify-center gap-4 active:scale-95 uppercase tracking-[0.25em] text-sm group ${!method || (method === 'bank' && !selectedBank)
                     ? 'bg-slate-50 text-slate-200 cursor-not-allowed'
                     : 'bg-primary text-white shadow-primary/30'
                   }`}
@@ -197,3 +197,4 @@ const Payment: React.FC = () => {
 };
 
 export default Payment;
+

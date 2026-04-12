@@ -53,7 +53,7 @@ const PinSetup: React.FC = () => {
             <button onClick={() => navigate(-1)} className="text-slate-900 flex size-10 items-center justify-center hover:bg-slate-50 rounded-full transition-all active:scale-95">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-xl font-display font-black leading-tight flex-1 text-center pr-10 italic uppercase tracking-widest text-slate-900">ความปลอดภัย</h1>
+            <h1 className="text-xl font-sans font-black leading-tight flex-1 text-center pr-10  uppercase tracking-widest text-slate-900">ความปลอดภัย</h1>
           </div>
         </header>
 
@@ -68,8 +68,8 @@ const PinSetup: React.FC = () => {
                      <ShieldCheck className="text-white w-10 h-10" strokeWidth={1.5} />
                   </div>
                </div>
-               <h3 className="text-5xl md:text-6xl font-display font-black italic tracking-tighter uppercase leading-none text-slate-900">
-                  ตั้งค่ารหัส <span className="text-primary italic">ผ่านรายการ</span>
+               <h3 className="text-5xl md:text-6xl font-sans font-black  tracking-tighter uppercase leading-none text-slate-900">
+                  ตั้งค่ารหัส <span className="text-primary ">ผ่านรายการ</span>
                </h3>
                <p className="text-slate-400 text-[11px] font-black uppercase tracking-[0.4em] max-w-sm mx-auto leading-relaxed">กรุณากำหนดรหัสผ่านความปลอดภัย เพื่อใช้ยืนยันการทำธุรกรรมทางการเงิน</p>
             </div>
@@ -113,7 +113,7 @@ const PinSetup: React.FC = () => {
                   <div className="relative z-10 flex flex-col gap-4">
                      <div className="flex items-center gap-3">
                         <Zap className="size-4 text-amber-400 fill-amber-400" />
-                        <span className="text-[9px] font-black text-white uppercase tracking-widest italic">ระดับการป้องกัน: สูงสุด</span>
+                        <span className="text-[9px] font-black text-white uppercase tracking-widest ">ระดับการป้องกัน: สูงสุด</span>
                      </div>
                      <p className="text-white/60 text-[9px] font-black uppercase tracking-widest leading-none">รหัสผ่านนี้จะถูกเข้ารหัสและใช้ยืนยันการทำธุรกรรมเท่านั้น</p>
                   </div>
@@ -128,7 +128,7 @@ const PinSetup: React.FC = () => {
               <button 
                 onClick={handleConfirm}
                 disabled={loading || !securityPassword || securityPassword !== confirmPassword}
-                className={`w-full h-20 rounded-[2.5rem] font-display font-black text-2xl uppercase italic tracking-[0.15em] shadow-2xl transition-all active:scale-95 flex items-center justify-center gap-4 ${
+                className={`w-full h-20 rounded-[2.5rem] font-sans font-black text-2xl uppercase  tracking-[0.15em] shadow-2xl transition-all active:scale-95 flex items-center justify-center gap-4 ${
                   loading || !securityPassword || securityPassword !== confirmPassword
                     ? 'bg-slate-50 text-slate-200 cursor-not-allowed shadow-none' 
                     : 'bg-primary text-white shadow-primary/30 group'
@@ -151,3 +151,4 @@ const PinSetup: React.FC = () => {
 };
 
 export default PinSetup;
+

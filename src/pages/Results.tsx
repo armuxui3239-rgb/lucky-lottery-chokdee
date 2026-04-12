@@ -104,7 +104,7 @@ const Results: React.FC = () => {
             <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-base font-display font-black tracking-[0.2em] uppercase italic text-slate-900 leading-none">ผลการออกรางวัล</h1>
+            <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase text-slate-900 leading-none">ผลการออกรางวัล</h1>
             <button className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <Share2 size={20} />
             </button>
@@ -115,21 +115,20 @@ const Results: React.FC = () => {
         <main className="flex-1 pt-32 pb-40">
           <div className="max-w-5xl mx-auto space-y-16">
 
-          {/* Main Draw Result Card */}
-          {/* Compact Government Official Header - Pushed up to save space */}
+          {/* Compact Government Official Header - Borderless */}
           <section className="px-4 sm:px-8 -mt-24 mb-6">
-            <div className="flex items-stretch gap-3 sm:gap-4 w-full">
-              {/* Box 1: GLO Logo */}
-              <div className="w-[35%] sm:w-[160px] bg-white rounded-2xl shadow-sm border border-slate-200 flex items-center justify-center p-2 sm:p-4 shrink-0 overflow-hidden relative">
-                <img src="/glo-logo.png" className="w-[150%] max-w-none h-auto object-cover object-left" alt="GLO Logo" />
+            <div className="flex items-center gap-6 w-full py-4 border-b border-slate-100 bg-transparent">
+              {/* Box 1: GLO Logo (Borderless) */}
+              <div className="w-[80px] sm:w-[120px] flex items-center justify-center shrink-0">
+                <img src="/glo-logo.png" className="w-full h-auto object-contain" alt="GLO Logo" />
               </div>
               
-              {/* Box 2: Results Title */}
-              <div className="flex-1 bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-center px-4 sm:px-6 py-3">
-                <h2 className="text-[3vw] sm:text-lg md:text-2xl font-display font-black text-slate-800 tracking-tighter leading-tight uppercase italic break-words">
+              {/* Box 2: Results Title (Borderless) */}
+              <div className="flex-1 flex flex-col justify-center">
+                <h2 className="text-lg sm:text-2xl font-sans font-black text-slate-900 tracking-tighter leading-tight uppercase">
                   ผลการออกรางวัลสลากกินแบ่งรัฐบาล
                 </h2>
-                <p className="text-[10px] sm:text-xs font-black text-primary uppercase tracking-[0.2em] italic mt-1">
+                <p className="text-[10px] sm:text-xs font-black text-primary uppercase tracking-[0.2em] mt-1">
                   {drawDate}
                 </p>
               </div>
@@ -143,18 +142,18 @@ const Results: React.FC = () => {
                 <Loader2 className="size-12 text-primary animate-spin" />
               </div>
             )}
-            <div className="bg-white rounded-[2rem] sm:rounded-[3rem] border border-slate-100 p-6 sm:p-12 shadow-2xl shadow-slate-200/40 space-y-10 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-12 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity pointer-events-none">
+            <div className="bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-12 shadow-xl shadow-slate-100/50 space-y-10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-12 opacity-[0.02] group-hover:opacity-[0.04] transition-opacity pointer-events-none">
                 <Trophy size={200} className="rotate-12" />
               </div>
 
               {/* L6 Result Section */}
               <div className="space-y-10 relative z-10">
                 <div className="flex items-center gap-4">
-                  <div className="h-10 px-4 bg-blue-600 rounded-xl flex items-center justify-center text-white font-display font-black italic text-sm tracking-widest shadow-xl shadow-blue-200">
+                  <div className="h-10 px-4 bg-primary rounded-xl flex items-center justify-center text-white font-sans font-black text-sm tracking-widest shadow-lg shadow-red-200">
                     L6
                   </div>
-                  <h3 className="text-2xl font-display font-black text-slate-900 tracking-tighter uppercase italic">สลากหกหลัก</h3>
+                  <h3 className="text-2xl font-sans font-black text-slate-900 tracking-tighter uppercase">สลากหกหลัก</h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -163,7 +162,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลที่ 1</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 6,000,000 บาท</span>
                     </div>
-                    <div className="h-24 bg-[#F2E8A1] rounded-[2rem] flex items-center justify-center text-5xl font-display font-black tracking-tighter text-slate-800 italic shadow-inner">
+                    <div className="h-24 bg-red-50 rounded-[2rem] flex items-center justify-center text-5xl font-sans font-black tracking-tighter text-slate-900 shadow-inner">
                       {l6Result}
                     </div>
                   </div>
@@ -173,7 +172,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลเลขหน้า 3 ตัว</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 4,000 บาท</span>
                     </div>
-                    <div className="h-24 flex items-center gap-6 text-4xl font-display font-black text-slate-800 italic tracking-tighter">
+                    <div className="h-24 flex items-center gap-6 text-4xl font-sans font-black text-slate-800  tracking-tighter">
                       {r3top.join('  ')}
                     </div>
                   </div>
@@ -183,7 +182,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลเลขท้าย 3 ตัว</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 4,000 บาท</span>
                     </div>
-                    <div className="h-24 flex items-center gap-6 text-4xl font-display font-black text-slate-800 italic tracking-tighter">
+                    <div className="h-24 flex items-center gap-6 text-4xl font-sans font-black text-slate-800  tracking-tighter">
                       {r3low.join('  ')}
                     </div>
                   </div>
@@ -193,7 +192,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลเลขท้าย 2 ตัว</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 2,000 บาท</span>
                     </div>
-                    <div className="h-24 flex items-center text-4xl font-display font-black text-slate-800 italic tracking-tighter">
+                    <div className="h-24 flex items-center text-4xl font-sans font-black text-slate-900 tracking-tighter">
                       {r2bot}
                     </div>
                   </div>
@@ -205,14 +204,13 @@ const Results: React.FC = () => {
               {/* N3 Result Section */}
               <div className="space-y-10 relative z-10">
                 <div className="flex items-center gap-4">
-                  <div className="h-10 px-4 bg-slate-900 rounded-xl flex items-center justify-center text-white font-display font-black italic text-sm tracking-widest shadow-xl shadow-slate-200">
+                  <div className="h-10 px-4 bg-primary rounded-xl flex items-center justify-center text-white font-sans font-black text-sm tracking-widest shadow-xl shadow-red-200">
                     N3
                   </div>
-                  <h3 className="text-2xl font-display font-black text-slate-900 tracking-tighter uppercase italic">สลากตัวเลขสามหลัก</h3>
+                  <h3 className="text-2xl font-sans font-black text-slate-900 tracking-tighter uppercase">สลากตัวเลขสามหลัก</h3>
                   <div className="flex items-center gap-2 bg-red-600 px-4 py-1.5 rounded-full shadow-lg shadow-red-200 animate-pulse">
                      <Star size={12} className="text-white fill-white" />
-                     <span className="text-[10px] font-black text-white uppercase italic tracking-widest leading-none">ใหม่</span>
-
+                     <span className="text-[10px] font-black text-white uppercase tracking-widest leading-none">ใหม่</span>
                   </div>
                 </div>
 
@@ -222,7 +220,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลสามตรง</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 2,644 บาท</span>
                     </div>
-                    <div className="h-24 bg-[#F2E8A1] rounded-[2rem] flex items-center justify-center text-5xl font-display font-black tracking-tighter text-slate-800 italic shadow-inner">
+                    <div className="h-24 bg-[#F2E8A1] rounded-[2rem] flex items-center justify-center text-5xl font-sans font-black tracking-tighter text-slate-800  shadow-inner">
                       {n3Result}
                     </div>
                   </div>
@@ -232,7 +230,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลสามสลับหลัก</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 598 บาท</span>
                     </div>
-                    <div className="h-24 flex flex-wrap items-center gap-x-6 gap-y-2 text-2xl font-display font-black text-slate-700 italic tracking-tighter">
+                    <div className="h-24 flex flex-wrap items-center gap-x-6 gap-y-2 text-2xl font-sans font-black text-slate-700  tracking-tighter">
                       {toadNumbers.length > 0 ? (
                         toadNumbers.map((num, i) => <span key={i}>{num}</span>)
                       ) : (
@@ -246,7 +244,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลสองตรง</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 500 บาท</span>
                     </div>
-                    <div className="h-24 flex items-center text-4xl font-display font-black text-slate-800 italic tracking-tighter">
+                    <div className="h-24 flex items-center text-4xl font-sans font-black text-slate-900 tracking-tighter">
                       {r2bot}
                     </div>
                   </div>
@@ -256,7 +254,7 @@ const Results: React.FC = () => {
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลพิเศษ</span>
                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 724,332 บาท</span>
                     </div>
-                    <div className="h-24 flex items-center text-3xl font-display font-black text-slate-800 italic tracking-tighter truncate max-w-[200px]">
+                    <div className="h-24 flex items-center text-3xl font-sans font-black text-slate-800  tracking-tighter truncate max-w-[200px]">
                       {specialPrize}
                     </div>
                   </div>
@@ -268,22 +266,22 @@ const Results: React.FC = () => {
           {/* Secondary Prize Grid */}
           <section className="px-8 space-y-8 animate-in fade-in slide-in-from-bottom duration-700">
             <div className="flex items-center justify-between px-2">
-              <h3 className="text-2xl font-display font-black text-slate-900 uppercase italic tracking-tighter leading-none">รางวัลอื่นประจำงวด</h3>
+              <h3 className="text-2xl font-sans font-black text-slate-900 uppercase tracking-tighter leading-none">รางวัลอื่นประจำงวด</h3>
               <div className="flex items-center gap-3 text-primary bg-red-50 px-4 py-2 rounded-xl border border-red-100">
                 <Calendar size={16} />
-                <span className="text-xs font-black uppercase tracking-widest italic">งวดล่าสุด</span>
+                <span className="text-xs font-black uppercase tracking-widest">งวดล่าสุด</span>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {prizeResults.slice(1).map((prize, idx) => (
-                <div key={idx} className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 flex flex-col items-center justify-center text-center space-y-6 relative overflow-hidden group hover:bg-white hover:shadow-2xl hover:shadow-black/5 hover:border-primary/20 transition-all">
+                <div key={idx} className="p-8 rounded-[3rem] bg-slate-50 flex flex-col items-center justify-center text-center space-y-6 relative overflow-hidden group hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all">
                   <div className="absolute top-6 left-6 size-10 bg-white rounded-xl shadow-sm flex items-center justify-center opacity-40 group-hover:opacity-100 transition-opacity">
                     <Star className="text-amber-500 fill-amber-500 size-4" />
                   </div>
                   
                   <div className="space-y-2">
-                    <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] leading-none italic">{prize.name}</p>
+                    <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] leading-none ">{prize.name}</p>
                     <p className="text-[9px] font-black text-primary uppercase tracking-widest">เงินรางวัลรวม: {prize.prize}</p>
 
                   </div>
@@ -291,7 +289,7 @@ const Results: React.FC = () => {
                   <div className="flex items-center gap-3">
                     {prize.numbers.map((n: string, i: number) => (
                       n === '|' ? <div key={i} className="w-1 h-10 bg-slate-200 rounded-full mx-3" /> :
-                      <div key={i} className="size-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-2xl font-display font-black text-slate-900 italic shadow-2xl group-hover:scale-110 transition-transform">
+                      <div key={i} className="size-12 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-2xl font-sans font-black text-slate-900  shadow-2xl group-hover:scale-110 transition-transform">
                         {n}
                       </div>
                     ))}
@@ -309,8 +307,8 @@ const Results: React.FC = () => {
                 <Search size={32} />
               </div>
               <div className="text-center relative z-10 space-y-3">
-                <h3 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase leading-none">ค้นหาประวัติย้อนหลัง</h3>
-                <p className="text-[9px] font-black text-white/30 uppercase tracking-[0.3em] italic leading-relaxed">เข้าถึงข้อมูลการออกรางวัลย้อนหลัง</p>
+                <h3 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase leading-none">ค้นหาประวัติย้อนหลัง</h3>
+                <p className="text-[9px] font-black text-white/30 uppercase tracking-[0.3em]  leading-relaxed">เข้าถึงข้อมูลการออกรางวัลย้อนหลัง</p>
 
               </div>
               <div className="w-full relative px-2 z-10">
@@ -324,7 +322,7 @@ const Results: React.FC = () => {
               <button 
                 onClick={handleSearch}
                 disabled={searching}
-                className="text-primary text-[10px] font-display font-black uppercase tracking-[0.3em] flex items-center gap-3 hover:text-white transition-colors relative z-10 leading-none disabled:opacity-50"
+                className="text-primary text-[10px] font-sans font-black uppercase tracking-[0.3em] flex items-center gap-3 hover:text-primary transition-colors relative z-10 leading-none disabled:opacity-50 px-6 py-4 bg-red-50 rounded-2xl border border-red-100 hover:bg-red-100"
               >
                 {searching ? 'กำลังค้นหา...' : 'ดูประวัติการออกรางวัลทั้งหมด'}
                 {!searching && <ArrowRight size={16} />}
@@ -339,7 +337,7 @@ const Results: React.FC = () => {
            <div className="max-w-5xl mx-auto px-4">
               <button 
                 onClick={() => navigate('/history')}
-                className="w-full h-18 bg-primary text-white rounded-[2rem] font-display font-black text-sm uppercase italic tracking-widest shadow-2xl shadow-primary/30 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all"
+                className="w-full h-18 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-[2rem] font-sans font-black text-sm uppercase tracking-widest shadow-2xl shadow-red-200 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all"
               >
                  ตรวจสอบสลากของฉัน
                  <Zap className="w-6 h-6 fill-white" />
@@ -353,3 +351,4 @@ const Results: React.FC = () => {
 };
 
 export default Results;
+

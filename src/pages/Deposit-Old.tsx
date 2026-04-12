@@ -84,7 +84,7 @@ const Deposit: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#f8f6f6] dark:bg-[#221011] font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+    <div className="bg-[#f8f6f6] dark:bg-[#221011] font-sans text-slate-900 dark:text-slate-100 antialiased min-h-screen">
       <div className="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col bg-white dark:bg-[#1a1a1a] overflow-x-hidden shadow-2xl">
         {/* Header */}
         <div className="flex items-center bg-white dark:bg-[#1a1a1a] p-4 pb-2 justify-between sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800">
@@ -234,3 +234,4 @@ const Deposit: React.FC = () => {
 };
 
 export default Deposit;
+

@@ -46,7 +46,7 @@ const AdminLogin = () => {
             <Shield size={36} className="text-red-500" />
           </div>
           <div>
-            <h1 className="text-3xl font-display font-black tracking-tighter uppercase italic text-white">
+            <h1 className="text-3xl font-sans font-black tracking-tighter uppercase  text-white">
               แอดมิน<span className="text-red-500">พอร์ทัล</span>
             </h1>
             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-500 mt-2">
@@ -125,3 +125,4 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
+

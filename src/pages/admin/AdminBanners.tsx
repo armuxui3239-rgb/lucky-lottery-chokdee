@@ -56,7 +56,7 @@ const AdminBanners: React.FC = () => {
     <div className="space-y-6 font-prompt text-white">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <h2 className="text-2xl font-black text-white tracking-tight uppercase italic flex items-center gap-3">
+          <h2 className="text-2xl font-black text-white tracking-tight uppercase  flex items-center gap-3">
             <Image size={24} className="text-primary" />
             จัดการแบนเนอร์ประชาสัมพันธ์
           </h2>
@@ -66,7 +66,7 @@ const AdminBanners: React.FC = () => {
         <button 
           onClick={handleSave}
           disabled={loading}
-          className="h-12 px-8 bg-primary text-white rounded-2xl flex items-center gap-3 font-black text-[10px] uppercase tracking-widest italic shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all"
+          className="h-12 px-8 bg-primary text-white rounded-2xl flex items-center gap-3 font-black text-[10px] uppercase tracking-widest  shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all"
         >
           {loading ? <div className="size-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <Save size={16} />}
           บันทึกการตั้งค่า
@@ -80,7 +80,7 @@ const AdminBanners: React.FC = () => {
                 {/* Preview Area */}
                 <div className="w-full md:w-80 space-y-4">
                    <div className="flex items-center justify-between">
-                      <h4 className="text-xs font-black text-white uppercase tracking-widest italic group-hover:text-primary transition-colors">แบนเนอร์ที่ {banner.id}</h4>
+                      <h4 className="text-xs font-black text-white uppercase tracking-widest  group-hover:text-primary transition-colors">แบนเนอร์ที่ {banner.id}</h4>
                       <div className="size-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center border border-emerald-500/20">
                          <CheckCircle2 size={16} />
                       </div>
@@ -98,7 +98,7 @@ const AdminBanners: React.FC = () => {
                 {/* Settings Area */}
                 <div className="flex-1 space-y-6">
                    <div className="space-y-4">
-                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] italic">ลิ้งก์รูปภาพ (Image URL)</label>
+                      <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] ">ลิ้งก์รูปภาพ (Image URL)</label>
                       <div className="relative">
                          <Layout className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" size={18} />
                          <input 
@@ -140,3 +140,4 @@ const AdminBanners: React.FC = () => {
 };
 
 export default AdminBanners;
+

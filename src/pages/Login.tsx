@@ -50,16 +50,23 @@ const Login: React.FC = () => {
           <div className="mb-16 text-center space-y-6">
              <div className="relative inline-block">
                 <div className="absolute inset-0 bg-primary/10 rounded-[2.5rem] blur-3xl scale-150 animate-pulse" />
-                <div className="relative size-24 bg-slate-900 rounded-[2.2rem] flex items-center justify-center shadow-2xl rotate-6 border border-white/5 group hover:rotate-0 transition-all duration-700">
-                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
-                   <Ticket size={48} className="text-white group-hover:scale-110 transition-transform" strokeWidth={1.5} />
+                <div className="relative size-24 bg-white rounded-[2.2rem] flex items-center justify-center shadow-2xl group hover:scale-105 transition-all duration-700 border border-slate-100 p-4">
+                   {config.site_logo ? (
+                     <img 
+                       src={config.site_logo} 
+                       alt={config.site_name} 
+                       className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform" 
+                     />
+                   ) : (
+                     <Ticket size={48} className="text-primary group-hover:scale-110 transition-transform" strokeWidth={1.5} />
+                   )}
                 </div>
              </div>
              <div>
-                <h1 className="text-4xl font-display font-black text-slate-900 italic tracking-tighter uppercase leading-none">
+                <h1 className="text-4xl font-sans font-black text-slate-900  tracking-tighter uppercase leading-none">
                   {config.site_name.split(' ')[0]} <span className="text-primary">{config.site_name.split(' ')[1] || 'หวยดี'}</span>
                 </h1>
-                <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] mt-3 italic leading-none">ระบบสมาชิกพรีเมียม</p>
+                <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] mt-3  leading-none">ระบบสมาชิกพรีเมียม</p>
              </div>
           </div>
 
@@ -102,13 +109,13 @@ const Login: React.FC = () => {
                 </div>
 
                 <div className="flex justify-end px-4">
-                   <button type="button" className="text-[9px] font-black text-primary uppercase tracking-widest hover:text-slate-900 transition-colors italic border-b border-primary/20 pb-0.5">ลืมรหัสผ่าน?</button>
+                   <button type="button" className="text-[9px] font-black text-primary uppercase tracking-widest hover:text-slate-900 transition-colors  border-b border-primary/20 pb-0.5">ลืมรหัสผ่าน?</button>
                 </div>
 
                 <button 
                   type="submit"
                   disabled={loading}
-                  className="w-full h-18 bg-primary hover:bg-rose-700 text-white rounded-[2rem] font-display font-black text-sm uppercase italic tracking-[0.25em] flex items-center justify-center gap-4 shadow-2xl shadow-primary/30 active:scale-95 transition-all group overflow-hidden relative"
+                  className="w-full h-18 bg-primary hover:bg-rose-700 text-white rounded-[2rem] font-sans font-black text-sm uppercase  tracking-[0.25em] flex items-center justify-center gap-4 shadow-2xl shadow-primary/30 active:scale-95 transition-all group overflow-hidden relative"
                 >
                   <div className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
                   {loading ? (
@@ -133,9 +140,9 @@ const Login: React.FC = () => {
         <footer className="p-12 mt-auto flex flex-col items-center gap-6 relative z-10">
            <div className="flex items-center gap-4 px-6 py-3 bg-slate-50 rounded-full border border-slate-100 shadow-sm transition-all hover:bg-white hover:shadow-xl">
               <ShieldCheck size={18} className="text-emerald-500" />
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest italic leading-none">ความปลอดภัยขั้นสูง: <span className="text-slate-900">เข้ารหัสข้อมูลระดับสากล SSL 256-BIT</span></p>
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest  leading-none">ความปลอดภัยขั้นสูง: <span className="text-slate-900">เข้ารหัสข้อมูลระดับสากล SSL 256-BIT</span></p>
            </div>
-           <p className="text-[9px] text-slate-100 font-black uppercase tracking-[0.5em] italic">ขับเคลื่อนด้วยระบบเครือข่ายคุณภาพสูง</p>
+           <p className="text-[9px] text-slate-100 font-black uppercase tracking-[0.5em] ">ขับเคลื่อนด้วยระบบเครือข่ายคุณภาพสูง</p>
         </footer>
 
       </div>
@@ -144,3 +151,4 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+

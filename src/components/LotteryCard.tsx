@@ -26,7 +26,7 @@ const LotteryCard: React.FC<LotteryCardProps> = ({ number, drawDate, roundName, 
         <div className="flex justify-between items-start mb-2">
           <div className="flex flex-col">
             <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">สลากกินแบ่งรัฐบาล</span>
-            <span className="text-sm font-black text-slate-800 italic leading-none">{roundName}</span>
+            <span className="text-sm font-black text-slate-800  leading-none">{roundName}</span>
           </div>
           <div className="bg-red-500 text-white px-3 py-1 rounded-full font-black text-[10px] shadow-lg shadow-red-500/20">
             OFFICIAL
@@ -48,11 +48,11 @@ const LotteryCard: React.FC<LotteryCardProps> = ({ number, drawDate, roundName, 
         <div className="mt-4 flex justify-between items-end">
           <div className="flex flex-col">
             <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Draw Date</span>
-            <span className="text-xs font-black text-slate-900 uppercase italic">{drawDate}</span>
+            <span className="text-xs font-black text-slate-900 uppercase ">{drawDate}</span>
           </div>
           <div className="text-right">
              <span className="block text-[8px] font-black text-slate-300 uppercase tracking-tighter">Authorized Retailer</span>
-             <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 italic">
+             <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-600 ">
                ฿{price.toLocaleString()}
              </span>
           </div>
@@ -66,3 +66,4 @@ const LotteryCard: React.FC<LotteryCardProps> = ({ number, drawDate, roundName, 
 };
 
 export default LotteryCard;
+

@@ -75,7 +75,7 @@ const History: React.FC = () => {
             <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-base font-display font-black tracking-[0.2em] uppercase italic text-slate-900 leading-none">ประวัติสลากของฉัน</h1>
+            <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase  text-slate-900 leading-none">ประวัติสลากของฉัน</h1>
             <button className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <Filter size={20} />
             </button>
@@ -94,7 +94,7 @@ const History: React.FC = () => {
                   </div>
                   <div>
                      <p className="text-[8px] font-black uppercase tracking-widest text-white/40 mb-1 leading-none">สลากที่กำลังลุ้น</p>
-                     <p className="text-2xl font-display font-black italic tracking-tighter leading-none">{activeTickets} <span className="text-[10px] uppercase font-prompt">ใบ</span></p>
+                     <p className="text-2xl font-sans font-black  tracking-tighter leading-none">{activeTickets} <span className="text-[10px] uppercase font-prompt">ใบ</span></p>
                   </div>
                </div>
                <div className="p-6 rounded-[2.5rem] bg-slate-50 border border-slate-100 space-y-4 shadow-inner flex flex-col justify-between">
@@ -103,7 +103,7 @@ const History: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-[8px] font-black uppercase tracking-widest text-slate-300 mb-1 leading-none">ยอดรวมการซื้อสลาก</p>
-                    <p className="text-2xl font-display font-black italic tracking-tighter text-slate-900 leading-none">{totalInvestment.toLocaleString()} <span className="text-[10px] uppercase font-prompt text-primary">฿</span></p>
+                    <p className="text-2xl font-sans font-black  tracking-tighter text-slate-900 leading-none">{totalInvestment.toLocaleString()} <span className="text-[10px] uppercase font-prompt text-primary">฿</span></p>
                   </div>
                </div>
            </section>
@@ -111,10 +111,10 @@ const History: React.FC = () => {
            {/* Luxury Ticket Log */}
            <section className="px-8 space-y-8 pb-10">
                <div className="flex items-center justify-between px-2">
-                  <h3 className="text-xl font-display font-black text-slate-900 uppercase italic tracking-tighter leading-none">ประวัติการทำรายการ</h3>
+                  <h3 className="text-xl font-sans font-black text-slate-900 uppercase  tracking-tighter leading-none">ประวัติการทำรายการ</h3>
                   <div className="flex items-center gap-2.5 text-primary bg-red-50 px-3 py-1.5 rounded-xl border border-red-100">
                      <Calendar size={14} />
-                     <span className="text-[9px] font-black uppercase tracking-widest italic">ข้อมูลล่าสุด</span>
+                     <span className="text-[9px] font-black uppercase tracking-widest ">ข้อมูลล่าสุด</span>
                   </div>
                </div>
 
@@ -129,7 +129,7 @@ const History: React.FC = () => {
                            <div className="space-y-4">
                               <div className="flex flex-col gap-1">
                                  <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] leading-none mb-1">หมายเลขสลาก</p>
-                                 <h4 className="text-3xl font-display font-black text-slate-900 tracking-[0.1em] italic leading-none">{log.ticket_number}</h4>
+                                 <h4 className="text-3xl font-sans font-black text-slate-900 tracking-[0.1em]  leading-none">{log.ticket_number}</h4>
                               </div>
                               <div className="flex items-center gap-2">
                                  <span className="text-[8px] font-black uppercase tracking-widest p-1.5 bg-slate-50 text-slate-400 rounded-lg border border-slate-100 leading-none">
@@ -139,8 +139,8 @@ const History: React.FC = () => {
                               </div>
                            </div>
                            <div className="text-right">
-                              <p className="text-lg font-display font-black text-slate-900 italic tracking-tighter leading-none">{log.price.toLocaleString()} <span className="text-[10px] text-primary">฿</span></p>
-                              <p className="text-[8px] font-black text-slate-300 uppercase tracking-widest mt-2 leading-none italic">ราคาซื้อสลาก</p>
+                              <p className="text-lg font-sans font-black text-slate-900  tracking-tighter leading-none">{log.price.toLocaleString()} <span className="text-[10px] text-primary">฿</span></p>
+                              <p className="text-[8px] font-black text-slate-300 uppercase tracking-widest mt-2 leading-none ">ราคาซื้อสลาก</p>
                            </div>
                        </div>
                        
@@ -175,7 +175,7 @@ const History: React.FC = () => {
 
         <footer className="fixed bottom-20 left-0 right-0 p-8 bg-white/95 backdrop-blur-2xl border-t border-slate-50 z-50">
            <div className="max-w-5xl mx-auto px-4">
-              <button onClick={() => navigate('/')} className="w-full h-18 bg-primary text-white rounded-[2rem] font-display font-black text-sm uppercase italic tracking-widest shadow-2xl shadow-primary/30 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all">
+              <button onClick={() => navigate('/')} className="w-full h-18 bg-primary text-white rounded-[2rem] font-sans font-black text-sm uppercase  tracking-widest shadow-2xl shadow-primary/30 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all">
                  เลือกเลขใหม่เพิ่ม
                  <TicketIcon className="w-6 h-6 text-white/50" />
               </button>
@@ -188,3 +188,4 @@ const History: React.FC = () => {
 };
 
 export default History;
+

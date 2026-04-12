@@ -138,7 +138,7 @@ const Withdraw: React.FC = () => {
             <ArrowLeft className="w-6 h-6 text-slate-600" />
           </button>
           <div className="text-center">
-            <h1 className="text-xl font-black italic tracking-tighter uppercase leading-none text-slate-900">ถอนเงิน</h1>
+            <h1 className="text-xl font-black  tracking-tighter uppercase leading-none text-slate-900">ถอนเงิน</h1>
             <p className="text-[8px] font-bold text-orange-500/80 uppercase tracking-[0.3em] mt-1">รหัสธุรกรรม 777</p>
           </div>
           <button onClick={() => navigate('/history')} className="p-2 hover:bg-slate-200 rounded-xl transition-colors">
@@ -155,7 +155,7 @@ const Withdraw: React.FC = () => {
               <span className="text-[10px] font-black text-orange-500/80 uppercase tracking-[0.4em]">ยอดเงินที่ถอนได้</span>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-5xl font-black text-slate-900 italic tracking-tighter">฿{balance.toLocaleString()}</span>
+              <span className="text-5xl font-black text-slate-900  tracking-tighter">฿{balance.toLocaleString()}</span>
               <span className="text-xs font-bold text-slate-500">THB</span>
             </div>
             {/* Liquid Decoration */}
@@ -181,10 +181,10 @@ const Withdraw: React.FC = () => {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="0.00"
-                className="w-full bg-white shadow-sm border-2 border-slate-200 focus:border-orange-500/50 rounded-[2.5rem] py-8 px-10 text-4xl font-black text-slate-900 italic tracking-tighter outline-none transition-all placeholder:text-slate-300 focus:shadow-2xl focus:shadow-orange-500/10 relative z-10"
+                className="w-full bg-white shadow-sm border-2 border-slate-200 focus:border-orange-500/50 rounded-[2.5rem] py-8 px-10 text-4xl font-black text-slate-900  tracking-tighter outline-none transition-all placeholder:text-slate-300 focus:shadow-2xl focus:shadow-orange-500/10 relative z-10"
               />
               <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-end">
-                <span className="text-xs font-black text-orange-500 italic">฿</span>
+                <span className="text-xs font-black text-orange-500 ">฿</span>
                 <span className="text-[8px] font-bold text-slate-600 uppercase tracking-widest mt-1">THB</span>
               </div>
             </div>
@@ -225,7 +225,7 @@ const Withdraw: React.FC = () => {
                     <CreditCard className="w-8 h-8 text-emerald-500" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-black text-white tracking-tighter uppercase italic">{bankInfo.name}</h4>
+                    <h4 className="text-xl font-black text-white tracking-tighter uppercase ">{bankInfo.name}</h4>
                     <p className="text-sm font-bold text-slate-500 tracking-[0.3em] font-mono mt-2">{bankInfo.account}</p>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ const Withdraw: React.FC = () => {
             <button
               disabled={submitting || !bankInfo.account || !amount}
               onClick={handleWithdraw}
-              className={`w-full py-7 rounded-[2.5rem] font-black text-xl italic uppercase tracking-widest shadow-2xl transition-all active:scale-95 flex items-center justify-center gap-4 relative overflow-hidden group ${submitting || !bankInfo.account || !amount ? 'bg-slate-100 border border-slate-200 text-slate-400 cursor-not-allowed' : 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-orange-500/30 hover:from-orange-400 hover:to-red-400'}`}
+              className={`w-full py-7 rounded-[2.5rem] font-black text-xl  uppercase tracking-widest shadow-2xl transition-all active:scale-95 flex items-center justify-center gap-4 relative overflow-hidden group ${submitting || !bankInfo.account || !amount ? 'bg-slate-100 border border-slate-200 text-slate-400 cursor-not-allowed' : 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-orange-500/30 hover:from-orange-400 hover:to-red-400'}`}
             >
               {submitting ? 'กำลังตรวจสอบสิทธิ์...' : (
                 <>
@@ -266,7 +266,7 @@ const Withdraw: React.FC = () => {
           <div className="space-y-6 pt-10">
             <div className="flex items-center gap-4 mb-2">
               <div className="h-[1px] flex-1 bg-slate-200"></div>
-              <h4 className="text-[10px] font-black text-slate-700 uppercase tracking-[0.5em] italic">รายการที่อยู่ระหว่างดำเนินการ</h4>
+              <h4 className="text-[10px] font-black text-slate-700 uppercase tracking-[0.5em] ">รายการที่อยู่ระหว่างดำเนินการ</h4>
               <div className="h-[1px] flex-1 bg-slate-200"></div>
             </div>
 
@@ -278,7 +278,7 @@ const Withdraw: React.FC = () => {
                       {req.status === 'pending' ? <Clock size={16} /> : req.status === 'approved' ? <CheckCircle2 size={16} /> : <AlertCircle size={16} />}
                     </div>
                     <div>
-                      <p className="text-sm font-black text-slate-900 italic tracking-tighter uppercase transition-colors">฿{Number(req.amount).toLocaleString()}</p>
+                      <p className="text-sm font-black text-slate-900  tracking-tighter uppercase transition-colors">฿{Number(req.amount).toLocaleString()}</p>
                       <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest mt-1 font-mono">{new Date(req.created_at).toLocaleDateString()}</p>
                     </div>
                   </div>
@@ -288,7 +288,7 @@ const Withdraw: React.FC = () => {
                 </div>
               ))}
               {pendingRequests.length === 0 && (
-                <div className="py-10 text-center opacity-20 italic text-[10px] font-bold tracking-[0.3em] uppercase">
+                <div className="py-10 text-center opacity-20  text-[10px] font-bold tracking-[0.3em] uppercase">
                   ไม่พบรายการเคลื่อนไหวล่าสุด
                 </div>
               )}
@@ -311,3 +311,4 @@ const Withdraw: React.FC = () => {
 };
 
 export default Withdraw;
+

@@ -74,8 +74,8 @@ const AdminReports: React.FC = () => {
        </div>
        <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none mb-2">{title}</p>
        <div className="flex items-baseline gap-2">
-          <h4 className="text-3xl font-display font-black text-white tracking-tighter italic uppercase">{value}</h4>
-          {subValue && <span className="text-[10px] font-black text-primary uppercase italic">{subValue}</span>}
+          <h4 className="text-3xl font-sans font-black text-white tracking-tighter  uppercase">{value}</h4>
+          {subValue && <span className="text-[10px] font-black text-primary uppercase ">{subValue}</span>}
        </div>
        <div className="absolute top-0 right-0 p-8 opacity-[0.03] rotate-12 scale-150 text-white pointer-events-none group-hover:scale-110 transition-transform">
           <Icon size={120} />
@@ -87,7 +87,7 @@ const AdminReports: React.FC = () => {
     <div className="space-y-10 font-prompt text-white">
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <h2 className="text-2xl font-black text-white tracking-tight uppercase italic flex items-center gap-3">
+          <h2 className="text-2xl font-black text-white tracking-tight uppercase  flex items-center gap-3">
             <BarChart3 size={24} className="text-primary" />
             รายงานและสถิติภาพรวม
           </h2>
@@ -120,7 +120,7 @@ const AdminReports: React.FC = () => {
             
             <div className="flex items-center justify-between relative z-10">
                <div className="space-y-1">
-                  <h3 className="text-xl font-display font-black text-white italic uppercase tracking-tighter">วิเคราะห์รายได้เทียบรายวัน</h3>
+                  <h3 className="text-xl font-sans font-black text-white  uppercase tracking-tighter">วิเคราะห์รายได้เทียบรายวัน</h3>
                   <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">ข้อมูลแบบ Real-time</p>
                </div>
                <button onClick={fetchReports} className="size-12 bg-slate-950 text-slate-600 hover:text-primary rounded-xl flex items-center justify-center transition-all active:scale-90 border border-slate-800">
@@ -158,14 +158,14 @@ const AdminReports: React.FC = () => {
                   <PieChart className="text-primary" size={28} />
                </div>
                <div>
-                  <h4 className="text-lg font-display font-black text-white italic uppercase tracking-tighter">ขีดจำกัดงวดปัจจุบัน</h4>
+                  <h4 className="text-lg font-sans font-black text-white  uppercase tracking-tighter">ขีดจำกัดงวดปัจจุบัน</h4>
                   <p className="text-[10px] font-black text-white/30 uppercase tracking-widest leading-relaxed mt-2">เปอร์เซ็นต์คำนวณจากคลังสลากที่ถูกจองแล้วเทียบกับสถิติงวดก่อน</p>
                </div>
                
                <div className="space-y-4">
                   <div className="flex justify-between items-baseline">
-                     <span className="text-xs font-black text-white uppercase italic">อัตรากำไรเฉลี่ย</span>
-                     <span className="text-2xl font-display font-black text-amber-400 italic">+{stats?.margin.toFixed(1)}%</span>
+                     <span className="text-xs font-black text-white uppercase ">อัตรากำไรเฉลี่ย</span>
+                     <span className="text-2xl font-sans font-black text-amber-400 ">+{stats?.margin.toFixed(1)}%</span>
                   </div>
                   <div className="w-full h-3 bg-white/10 rounded-full overflow-hidden">
                      <div className="h-full bg-primary" style={{ width: `${stats?.margin}%` }}></div>
@@ -183,3 +183,4 @@ const AdminReports: React.FC = () => {
 };
 
 export default AdminReports;
+

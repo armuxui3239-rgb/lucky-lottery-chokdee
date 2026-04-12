@@ -44,7 +44,7 @@ const WinnerTicker: React.FC = () => {
               <span className="text-primary">{winner.display_name}</span>
               <span className="mx-1 text-slate-400 font-medium">ถูกรางวัล</span>
               <span className="text-emerald-500 font-black">{winner.amount.toLocaleString()} ฿</span>
-              <span className="ml-2 px-1.5 py-0.5 rounded-md bg-amber-50 text-amber-600 text-[8px] font-black italic">
+              <span className="ml-2 px-1.5 py-0.5 rounded-md bg-amber-50 text-amber-600 text-[8px] font-black ">
                 {winner.prize_type}
               </span>
             </p>
@@ -71,3 +71,4 @@ const WinnerTicker: React.FC = () => {
 };
 
 export default WinnerTicker;
+

@@ -56,7 +56,7 @@ const Rules: React.FC = () => {
             <ChevronLeft size={24} />
           </button>
           <div className="flex-1">
-            <h1 className="text-lg font-display font-black leading-tight uppercase italic tracking-tighter text-slate-900">กฎกติกาการใช้งาน</h1>
+            <h1 className="text-lg font-sans font-black leading-tight uppercase  tracking-tighter text-slate-900">กฎกติกาการใช้งาน</h1>
             <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-0.5">ข้อกำหนดและเงื่อนไข (Terms & Conditions)</p>
           </div>
           <div className="size-11 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shadow-inner">
@@ -72,7 +72,7 @@ const Rules: React.FC = () => {
             <Scale size={120} />
           </div>
           <div className="relative z-10 space-y-4">
-            <h2 className="text-2xl font-display font-black italic tracking-tighter uppercase leading-none">มาตรฐาน <span className="text-primary italic">ความยุติธรรม</span></h2>
+            <h2 className="text-2xl font-sans font-black  tracking-tighter uppercase leading-none">มาตรฐาน <span className="text-primary ">ความยุติธรรม</span></h2>
             <p className="text-white/50 text-[10px] font-black uppercase tracking-[0.3em] leading-relaxed">เราให้ความสำคัญกับความปลอดภัยและกติกาที่เป็นธรรมสำหรับสมาชิกทุกคน</p>
           </div>
         </div>
@@ -85,7 +85,7 @@ const Rules: React.FC = () => {
                  <div className="size-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 border border-slate-100">
                     <section.icon size={22} />
                  </div>
-                 <h3 className="text-lg font-display font-black text-slate-900 uppercase italic tracking-tighter leading-none">{section.title}</h3>
+                 <h3 className="text-lg font-sans font-black text-slate-900 uppercase  tracking-tighter leading-none">{section.title}</h3>
               </div>
               <ul className="grid grid-cols-1 gap-3">
                 {section.content.map((item, idy) => (
@@ -112,7 +112,7 @@ const Rules: React.FC = () => {
 
         {/* Timestamp */}
         <div className="text-center pb-20">
-           <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest italic leading-none animate-pulse">อัปเดตล่าสุด: {new Date().toLocaleDateString('th-TH', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+           <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest  leading-none animate-pulse">อัปเดตล่าสุด: {new Date().toLocaleDateString('th-TH', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
         </div>
       </main>
     </div>
@@ -120,3 +120,4 @@ const Rules: React.FC = () => {
 };
 
 export default Rules;
+

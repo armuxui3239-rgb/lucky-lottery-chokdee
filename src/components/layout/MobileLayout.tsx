@@ -3,7 +3,7 @@ import Header from './Header';
 
 export default function MobileLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-[#f0f2f5] dark:bg-[#0f0506] flex justify-center items-start font-display overflow-x-hidden">
+    <div className="min-h-screen bg-[#f0f2f5] dark:bg-[#0f0506] flex justify-center items-start font-sans overflow-x-hidden">
       {/* Background Decorative Elements for Desktop */}
       <div className="fixed inset-0 pointer-events-none opacity-20 dark:opacity-10 overflow-hidden hidden lg:block">
          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] bg-[#ec131e] rounded-full blur-[150px]"></div>
@@ -22,3 +22,4 @@ export default function MobileLayout({ children }: { children: React.ReactNode }
     </div>
   );
 }
+

@@ -68,7 +68,7 @@ const OTP: React.FC = () => {
             <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-base font-display font-black tracking-[0.2em] uppercase italic text-slate-900 leading-none">ยืนยันตัวตนระบบ</h1>
+            <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase  text-slate-900 leading-none">ยืนยันตัวตนระบบ</h1>
             <div className="size-12"></div>
           </div>
         </header>
@@ -95,8 +95,8 @@ const OTP: React.FC = () => {
           </div>
 
           <div className="text-center space-y-3">
-            <h2 className="text-3xl font-display font-black italic tracking-tighter uppercase leading-none">รหัสผ่าน <span className="text-primary">OTP</span></h2>
-            <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] leading-relaxed italic">
+            <h2 className="text-3xl font-sans font-black  tracking-tighter uppercase leading-none">รหัสผ่าน <span className="text-primary">OTP</span></h2>
+            <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] leading-relaxed ">
               กำลังเชื่อมต่อกับระบบรักษาความปลอดภัย...<br/>
               เบอร์โทรศัพท์: {profile?.phone || 'เชื่อมต่อด้วยโทรศัพท์'}
             </p>
@@ -107,7 +107,7 @@ const OTP: React.FC = () => {
             {otp.map((digit, idx) => (
               <div 
                 key={idx}
-                className={`size-14 rounded-2xl border-2 flex items-center justify-center text-2xl font-display font-black italic transition-all duration-300 ${
+                className={`size-14 rounded-2xl border-2 flex items-center justify-center text-2xl font-sans font-black  transition-all duration-300 ${
                   digit 
                   ? 'bg-primary border-primary text-white shadow-xl shadow-primary/20 scale-110' 
                   : 'bg-slate-50 border-slate-100 text-slate-200'
@@ -134,7 +134,7 @@ const OTP: React.FC = () => {
            <div className="max-w-2xl mx-auto px-4">
               <button 
                 disabled={loading}
-                className={`w-full h-18 rounded-[2rem] font-display font-black text-sm uppercase italic tracking-[0.3em] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-4 ${
+                className={`w-full h-18 rounded-[2rem] font-sans font-black text-sm uppercase  tracking-[0.3em] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-4 ${
                   loading ? 'bg-slate-50 text-slate-200 cursor-not-allowed' : 'bg-primary text-white shadow-primary/20'
                 }`}
               >
@@ -150,3 +150,4 @@ const OTP: React.FC = () => {
 };
 
 export default OTP;
+

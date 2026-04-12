@@ -75,7 +75,7 @@ const KYC: React.FC = () => {
         <button onClick={onBack} className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <h1 className="text-base font-display font-black tracking-[0.2em] uppercase italic text-slate-900 leading-none">{title}</h1>
+        <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase  text-slate-900 leading-none">{title}</h1>
         <div className="size-12"></div>
       </div>
     </header>
@@ -106,8 +106,8 @@ const KYC: React.FC = () => {
             </div>
 
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-display font-black tracking-tighter mb-3 uppercase italic leading-none">ความปลอดภัย <span className="text-primary font-display">สูงสุด</span></h2>
-              <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] leading-relaxed italic">
+              <h2 className="text-3xl font-sans font-black tracking-tighter mb-3 uppercase  leading-none">ความปลอดภัย <span className="text-primary font-sans">สูงสุด</span></h2>
+              <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] leading-relaxed ">
                 เข้ารหัสข้อมูลระดับสถาบันการเงิน (Bank-grade)<br/>
                 ปกป้องข้อมูลส่วนบุคคลของคุณตลอด 24 ชั่วโมง
               </p>
@@ -124,7 +124,7 @@ const KYC: React.FC = () => {
                     <item.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h3 className="font-display font-black text-sm uppercase italic text-slate-900 leading-none mb-2">{item.title}</h3>
+                    <h3 className="font-sans font-black text-sm uppercase  text-slate-900 leading-none mb-2">{item.title}</h3>
                     <p className="text-[10px] text-slate-400 font-black uppercase tracking-wide leading-relaxed opacity-60">{item.desc}</p>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const KYC: React.FC = () => {
             <div className="max-w-4xl mx-auto px-4">
               <button 
                 onClick={() => setStep('upload')}
-                className="w-full h-18 bg-primary text-white rounded-[2rem] font-display font-black text-sm uppercase italic tracking-[0.3em] shadow-2xl shadow-primary/30 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-4"
+                className="w-full h-18 bg-primary text-white rounded-[2rem] font-sans font-black text-sm uppercase  tracking-[0.3em] shadow-2xl shadow-primary/30 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-4"
               >
                 เริ่มต้นยืนยันตัวตน
                 <ArrowRight className="w-5 h-5 text-white animate-bounce-horizontal" />
@@ -174,8 +174,8 @@ const KYC: React.FC = () => {
             <div key={field.id} className="space-y-4">
               <div className="flex items-center justify-between px-2">
                 <div className="flex items-center gap-3">
-                  <div className="size-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-display font-black text-[10px] shadow-xl italic shrink-0">{field.step}</div>
-                  <h3 className="font-display font-black text-base uppercase italic tracking-tight text-slate-900 leading-none">{field.label}</h3>
+                  <div className="size-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-sans font-black text-[10px] shadow-xl  shrink-0">{field.step}</div>
+                  <h3 className="font-sans font-black text-base uppercase  tracking-tight text-slate-900 leading-none">{field.label}</h3>
                 </div>
                 {previews[field.type as 'idCard' | 'selfie'] && <CheckCircle className="text-emerald-500 w-5 h-5 fill-emerald-500/10" />}
               </div>
@@ -188,7 +188,7 @@ const KYC: React.FC = () => {
                   <div className="w-full h-full p-3 relative group">
                     <img src={previews[field.type as 'idCard' | 'selfie']!} alt="Preview" className="w-full h-full object-cover rounded-[1.8rem] shadow-2xl animate-in zoom-in duration-300" />
                     <div className="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-[1.8rem]">
-                      <span className="text-white font-black text-[10px] uppercase tracking-[0.3em] italic">เปลี่ยนรูปภาพ</span>
+                      <span className="text-white font-black text-[10px] uppercase tracking-[0.3em] ">เปลี่ยนรูปภาพ</span>
                     </div>
                   </div>
                 ) : (
@@ -196,7 +196,7 @@ const KYC: React.FC = () => {
                     <div className="size-16 rounded-2xl bg-white shadow-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <field.icon className="w-8 h-8" strokeWidth={1.5} />
                     </div>
-                    <p className="text-[9px] font-black uppercase tracking-[0.3em] italic">แตะเพื่อถ่ายภาพหรือเลือกไฟล์</p>
+                    <p className="text-[9px] font-black uppercase tracking-[0.3em] ">แตะเพื่อถ่ายภาพหรือเลือกไฟล์</p>
                   </div>
                 )}
                 <input id={field.id} type="file" accept="image/*" className="hidden" onChange={(e) => handleFileChange(e, field.type as any)} />
@@ -213,7 +213,7 @@ const KYC: React.FC = () => {
                  <Shield className="w-6 h-6 text-primary shrink-0" />
                </div>
                <div>
-                 <p className="text-[10px] font-black text-white uppercase tracking-[0.2em] leading-none mb-2 italic">เข้ารหัสความปลอดภัย</p>
+                 <p className="text-[10px] font-black text-white uppercase tracking-[0.2em] leading-none mb-2 ">เข้ารหัสความปลอดภัย</p>
                  <p className="text-[9px] text-white/40 font-black leading-relaxed uppercase tracking-widest leading-relaxed">
                    เอกสารของคุณจะถูกจัดเก็บในระบบที่มีการเข้ารหัสสูงสุด AES-256 เพื่อความปลอดภัยของข้อมูลส่วนบุคคล
                  </p>
@@ -228,7 +228,7 @@ const KYC: React.FC = () => {
             <button 
               onClick={handleSubmit}
               disabled={uploading || !files.idCard || !files.selfie}
-              className={`w-full h-18 rounded-[2rem] font-display font-black text-sm uppercase italic tracking-[0.3em] shadow-2xl transition-all active:scale-[0.98] flex items-center justify-center gap-4 ${
+              className={`w-full h-18 rounded-[2rem] font-sans font-black text-sm uppercase  tracking-[0.3em] shadow-2xl transition-all active:scale-[0.98] flex items-center justify-center gap-4 ${
                 uploading || !files.idCard || !files.selfie 
                   ? 'bg-slate-50 text-slate-200 cursor-not-allowed shadow-none' 
                   : 'bg-primary text-white shadow-primary/30 hover:scale-[1.02]'
@@ -252,3 +252,4 @@ const KYC: React.FC = () => {
 };
 
 export default KYC;
+

@@ -110,7 +110,7 @@ export const AdminPromotions = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">จัดการโปรโมชั่น</h2>
+          <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">จัดการโปรโมชั่น</h2>
           <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mt-1">
             ทั้งหมด {promos.length} รายการ · เปิดใช้ {activeCount} รายการ
           </p>
@@ -150,7 +150,7 @@ export const AdminPromotions = () => {
                     {promo.badge}
                   </span>
                 )}
-                <h3 className="font-display font-black text-white text-lg italic tracking-tighter leading-tight drop-shadow-md">{promo.title}</h3>
+                <h3 className="font-sans font-black text-white text-lg  tracking-tighter leading-tight drop-shadow-md">{promo.title}</h3>
                 {promo.subtitle && <p className="text-white/70 text-[10px] font-bold mt-0.5 drop-shadow-sm">{promo.subtitle}</p>}
               </div>
             </div>
@@ -230,7 +230,7 @@ export const AdminPromotions = () => {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/95 backdrop-blur-sm overflow-auto">
           <form onSubmit={handleSave} className="bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto space-y-6 animate-in zoom-in-95 duration-200 my-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-display font-black text-white italic tracking-tighter uppercase">
+              <h3 className="text-xl font-sans font-black text-white  tracking-tighter uppercase">
                 {isCreating ? '✨ สร้างโปรโมชั่นใหม่' : '✏️ แก้ไขโปรโมชั่น'}
               </h3>
               <button type="button" onClick={() => { setEditPromo(null); setIsCreating(false); }} className="text-slate-500 hover:text-white">
@@ -347,3 +347,4 @@ export const AdminPromotions = () => {
     </div>
   );
 };
+

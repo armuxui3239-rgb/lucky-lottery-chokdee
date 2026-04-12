@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
   const activeTickets = stats?.active_tickets || 0;
 
   return (
-    <div className="bg-[#f8f6f6] dark:bg-[#221011] font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen">
+    <div className="bg-[#f8f6f6] dark:bg-[#221011] font-sans text-slate-900 dark:text-slate-100 antialiased min-h-screen">
       <div className="relative flex min-h-screen w-full max-w-[430px] mx-auto flex-col overflow-x-hidden pb-24 bg-white dark:bg-[#1a1a1a]">
         {/* Header */}
         <div className="flex items-center bg-white dark:bg-[#1a1a1a] p-4 sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800">
@@ -108,3 +108,4 @@ const Dashboard: React.FC = () => {
 };
 
 export default Dashboard;
+

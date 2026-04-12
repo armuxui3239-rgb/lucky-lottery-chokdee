@@ -15,7 +15,7 @@ const Guide: React.FC = () => {
             <button onClick={() => navigate(-1)} className="text-slate-900 flex size-10 items-center justify-center hover:bg-slate-50 rounded-full transition-all active:scale-95">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-xl font-display font-black leading-tight flex-1 text-center pr-10 italic uppercase tracking-widest text-slate-900">วิธีเล่นสลาก</h1>
+            <h1 className="text-xl font-sans font-black leading-tight flex-1 text-center pr-10  uppercase tracking-widest text-slate-900">วิธีเล่นสลาก</h1>
           </div>
         </header>
 
@@ -35,7 +35,7 @@ const Guide: React.FC = () => {
                   <PlayCircle className="size-4 text-primary" />
                   <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">คู่มือการใช้งาน</span>
                </div>
-               <h2 className="text-6xl font-display font-black italic tracking-tighter uppercase leading-none text-slate-900">ขั้นตอนการ <span className="text-primary italic">เลือกเลขเด็ด</span></h2>
+               <h2 className="text-6xl font-sans font-black  tracking-tighter uppercase leading-none text-slate-900">ขั้นตอนการ <span className="text-primary ">เลือกเลขเด็ด</span></h2>
                <p className="text-slate-400 text-[11px] font-black uppercase tracking-[0.4em] max-w-lg mx-auto leading-loose">เริ่มต้นเส้นทางการเป็นเศรษฐีด้วย ล็อตเตอรี่โชคดี ง่ายๆ เพียง 3 ขั้นตอน</p>
             </div>
 
@@ -47,9 +47,9 @@ const Guide: React.FC = () => {
                   <div className="relative z-10 flex flex-col items-center gap-8 group/ticket">
                      <div className="flex items-center gap-1">
                         <Star className="size-4 text-amber-400 fill-amber-400" />
-                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest italic">ตัวอย่างสลากดิจิทัล</span>
+                        <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest ">ตัวอย่างสลากดิจิทัล</span>
                      </div>
-                     <span className="text-7xl md:text-8xl font-display font-black tracking-[0.2em] text-slate-900 italic transition-all group-hover/ticket:scale-110 group-hover/ticket:tracking-[0.4em] duration-1000">
+                     <span className="text-7xl md:text-8xl font-sans font-black tracking-[0.2em] text-slate-900  transition-all group-hover/ticket:scale-110 group-hover/ticket:tracking-[0.4em] duration-1000">
                         832594
                      </span>
                      <div className="flex items-center gap-3 px-6 py-2 bg-emerald-50 text-emerald-500 rounded-2xl text-[10px] font-black uppercase tracking-widest border border-emerald-100 shadow-xl shadow-emerald-500/10">
@@ -63,9 +63,9 @@ const Guide: React.FC = () => {
             {/* Steps Detailed */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-10">
                <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 group">
-                  <div className="size-16 rounded-[1.8rem] bg-primary text-white flex items-center justify-center font-display font-black text-2xl italic shadow-2xl shadow-primary/30 group-hover:-translate-y-2 group-hover:rotate-6 transition-all duration-700">1</div>
+                  <div className="size-16 rounded-[1.8rem] bg-primary text-white flex items-center justify-center font-sans font-black text-2xl  shadow-2xl shadow-primary/30 group-hover:-translate-y-2 group-hover:rotate-6 transition-all duration-700">1</div>
                   <div className="space-y-3">
-                     <h4 className="text-xl font-display font-black text-slate-900 uppercase italic">เลือกเมนูหน้าหลัก</h4>
+                     <h4 className="text-xl font-sans font-black text-slate-900 uppercase ">เลือกเมนูหน้าหลัก</h4>
                      <p className="text-xs font-medium text-slate-400 leading-relaxed uppercase tracking-widest leading-loose">กดที่ปุ่มหน้าหลักเพื่อเข้าสู่ระบบค้นหาสลากที่ดีที่สุด</p>
                   </div>
                   <div className="hidden md:flex items-center gap-2 text-primary opacity-20 group-hover:opacity-100 transition-opacity">
@@ -75,9 +75,9 @@ const Guide: React.FC = () => {
                </div>
                
                <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 group">
-                  <div className="size-16 rounded-[1.8rem] bg-rose-800 text-white flex items-center justify-center font-display font-black text-2xl italic shadow-2xl shadow-rose-800/30 group-hover:-translate-y-2 group-hover:-rotate-6 transition-all duration-700">2</div>
+                  <div className="size-16 rounded-[1.8rem] bg-rose-800 text-white flex items-center justify-center font-sans font-black text-2xl  shadow-2xl shadow-rose-800/30 group-hover:-translate-y-2 group-hover:-rotate-6 transition-all duration-700">2</div>
                   <div className="space-y-3">
-                     <h4 className="text-xl font-display font-black text-slate-900 uppercase italic">พิมพ์เลขที่ต้องการ</h4>
+                     <h4 className="text-xl font-sans font-black text-slate-900 uppercase ">พิมพ์เลขที่ต้องการ</h4>
                      <p className="text-xs font-medium text-slate-400 leading-relaxed uppercase tracking-widest leading-loose">ระบุเลข 3 ตัว หรือ 6 ตัวในช่องค้นหาอัจฉริยะเพื่อกรองสลากที่คุณชื่นชอบ</p>
                   </div>
                   <div className="hidden md:flex items-center gap-2 text-slate-900 opacity-20 group-hover:opacity-100 transition-opacity">
@@ -87,9 +87,9 @@ const Guide: React.FC = () => {
                </div>
 
                <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 group">
-                  <div className="size-16 rounded-[1.8rem] bg-amber-400 text-slate-900 flex items-center justify-center font-display font-black text-2xl italic shadow-2xl shadow-amber-400/30 group-hover:-translate-y-2 group-hover:rotate-12 transition-all duration-700">3</div>
+                  <div className="size-16 rounded-[1.8rem] bg-amber-400 text-slate-900 flex items-center justify-center font-sans font-black text-2xl  shadow-2xl shadow-amber-400/30 group-hover:-translate-y-2 group-hover:rotate-12 transition-all duration-700">3</div>
                   <div className="space-y-3">
-                     <h4 className="text-xl font-display font-black text-slate-900 uppercase italic">กดเลือกใส่ตะกร้า</h4>
+                     <h4 className="text-xl font-sans font-black text-slate-900 uppercase ">กดเลือกใส่ตะกร้า</h4>
                      <p className="text-xs font-medium text-slate-400 leading-relaxed uppercase tracking-widest leading-loose">เลือกจากรายการที่แสดงเพื่อใส่ลงในตะกร้าและดำเนินการชำระเงิน</p>
                   </div>
                   <div className="hidden md:flex items-center gap-2 text-amber-500 opacity-20 group-hover:opacity-100 transition-opacity">
@@ -109,7 +109,7 @@ const Guide: React.FC = () => {
                      <Sparkles className="size-5 text-amber-500" />
                      <p className="text-[11px] font-black text-slate-500 uppercase tracking-[0.3em]">สนับสนุนโดย ล็อตเตอรี่โชคดี Official</p>
                   </div>
-                  <p className="text-xs text-slate-400 font-bold max-w-md mx-auto uppercase tracking-widest italic line-height-relaxed">
+                  <p className="text-xs text-slate-400 font-bold max-w-md mx-auto uppercase tracking-widest  line-height-relaxed">
                      ระบบรองรับการใช้งานผ่านมือถือ แท็บเล็ต และคอมพิวเตอร์อย่างเต็มรูปแบบ<br/>ขอบคุณที่เลือกใช้บริการ {window.location.hostname}
                   </p>
                </div>
@@ -121,7 +121,7 @@ const Guide: React.FC = () => {
            <div className="max-w-4xl mx-auto px-4">
               <button 
                 onClick={() => navigate('/')}
-                className="w-full h-20 rounded-[2.5rem] font-display font-black text-2xl uppercase italic tracking-[0.15em] shadow-2xl transition-all active:scale-95 flex items-center justify-center gap-4 bg-primary text-white shadow-primary/30 group"
+                className="w-full h-20 rounded-[2.5rem] font-sans font-black text-2xl uppercase  tracking-[0.15em] shadow-2xl transition-all active:scale-95 flex items-center justify-center gap-4 bg-primary text-white shadow-primary/30 group"
               >
                  <span>เริ่มเสี่ยงโชคเลย</span>
                  <ArrowRight className="size-8 group-hover:translate-x-3 transition-transform duration-700" />
@@ -134,3 +134,4 @@ const Guide: React.FC = () => {
 };
 
 export default Guide;
+

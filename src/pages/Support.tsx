@@ -35,7 +35,7 @@ const Support: React.FC = () => {
             <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-base font-display font-black tracking-[0.2em] uppercase italic text-slate-900 leading-none">ศูนย์ช่วยเหลือ</h1>
+            <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase text-slate-900 leading-none">ศูนย์ช่วยเหลือ</h1>
             <div className="size-12"></div>
           </div>
         </header>
@@ -51,8 +51,8 @@ const Support: React.FC = () => {
                      <Send className="w-12 h-12 text-primary relative z-10" />
                   </div>
                   <div className="space-y-3">
-                     <h2 className="text-3xl font-display font-black italic tracking-tighter uppercase leading-none">ทีมงานผู้เชี่ยวชาญ</h2>
-                     <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest max-w-[220px] mx-auto leading-relaxed italic">ทีมงานที่ผ่านการตรวจสอบของเราพร้อมดูแลคุณตลอด 24 ชั่วโมง</p>
+                     <h2 className="text-3xl font-sans font-black tracking-tighter uppercase leading-none text-slate-900">ทีมงานผู้เชี่ยวชาญ</h2>
+                     <p className="text-[10px] font-black text-slate-800 uppercase tracking-widest max-w-[220px] mx-auto leading-relaxed">ทีมงานที่ผ่านการตรวจสอบของเราพร้อมดูแลคุณตลอด 24 ชั่วโมง</p>
                   </div>
                </div>
             </section>
@@ -68,7 +68,7 @@ const Support: React.FC = () => {
                         <LineIcon />
                      </div>
                       <div className="space-y-1">
-                         <p className="text-[10px] font-black uppercase tracking-widest group-hover:text-white transition-colors leading-none italic">ช่องทางไลน์ทางการ</p>
+                         <p className="text-[10px] font-black uppercase tracking-widest group-hover:text-white transition-colors leading-none text-slate-900">ช่องทางไลน์ทางการ</p>
                          <p className="text-[8px] font-black text-[#06C755] uppercase tracking-widest leading-none group-hover:text-white/60">@lottochokdee</p>
                       </div>
                   </button>
@@ -80,7 +80,7 @@ const Support: React.FC = () => {
                         <FacebookIcon />
                      </div>
                       <div className="space-y-1">
-                         <p className="text-[10px] font-black uppercase tracking-widest group-hover:text-white transition-colors leading-none italic">เฟซบุ๊กแฟนเพจ</p>
+                         <p className="text-[10px] font-black uppercase tracking-widest group-hover:text-white transition-colors leading-none text-slate-900">เฟซบุ๊กแฟนเพจ</p>
                          <p className="text-[8px] font-black text-[#1877F2] uppercase tracking-widest leading-none group-hover:text-white/60">{config.site_name || 'ล็อตเตอรี่ โชคดี'}</p>
                       </div>
                   </button>
@@ -94,8 +94,8 @@ const Support: React.FC = () => {
                     <Mail className="size-5 text-slate-300 group-hover:text-primary transition-colors" />
                   </div>
                   <div className="flex-1 text-left">
-                     <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-900 italic leading-none">ติดต่อผ่านอีเมลทางการ</p>
-                     <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest mt-1.5 leading-none">support@lotto-chokdee.com</p>
+                     <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-900 leading-none">ติดต่อผ่านอีเมลทางการ</p>
+                     <p className="text-[9px] font-black text-slate-800 uppercase tracking-widest mt-1.5 leading-none">support@lotto-chokdee.com</p>
                   </div>
                   <ChevronRight className="size-5 text-slate-100 group-hover:text-slate-900" />
                </button>
@@ -106,8 +106,8 @@ const Support: React.FC = () => {
                <div className="flex items-center gap-4 px-1">
                   <div className="w-2 h-8 bg-primary rounded-full shadow-2xl shadow-primary/40"></div>
                   <div className="space-y-1">
-                     <h3 className="text-xl font-display font-black uppercase italic tracking-tighter text-slate-900 leading-none">ศูนย์ข้อมูลความรู้</h3>
-                     <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-none italic">คำถามที่พบบ่อย</p>
+                     <h3 className="text-xl font-sans font-black uppercase tracking-tighter text-slate-900 leading-none">ศูนย์ข้อมูลความรู้</h3>
+                     <p className="text-[10px] font-black text-slate-800 uppercase tracking-widest leading-none">คำถามที่พบบ่อย</p>
                   </div>
                </div>
 
@@ -119,8 +119,8 @@ const Support: React.FC = () => {
                               <HelpCircle className="size-5" />
                            </div>
                            <div>
-                              <h4 className="text-xs font-display font-black text-slate-900 uppercase leading-relaxed italic tracking-tight">{faq.q}</h4>
-                              <p className="text-[10px] font-black text-slate-400 leading-relaxed mt-3 uppercase tracking-widest italic group-hover:text-slate-500 transition-colors">{faq.a}</p>
+                              <h4 className="text-xs font-sans font-black text-slate-900 uppercase leading-relaxed tracking-tight">{faq.q}</h4>
+                              <p className="text-[10px] font-black text-slate-800 leading-relaxed mt-3 uppercase tracking-widest group-hover:text-slate-500 transition-colors">{faq.a}</p>
                            </div>
                         </div>
                      </div>
@@ -130,15 +130,15 @@ const Support: React.FC = () => {
 
             {/* Compliance & Trust Badges */}
             <section className="pt-10 pb-20 flex justify-between gap-6 border-t border-slate-100 mx-auto w-full max-w-sm">
-               <div className="flex flex-col items-center gap-3 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+               <div className="flex flex-col items-center gap-3 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer text-slate-900">
                   <ShieldCheck className="size-10 text-primary" strokeWidth={1} />
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] leading-none">ปลอดภัย</span>
                </div>
-               <div className="flex flex-col items-center gap-3 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+               <div className="flex flex-col items-center gap-3 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer text-slate-900">
                   <Zap className="size-10 text-amber-500" strokeWidth={1} />
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] leading-none">รวดเร็ว</span>
                </div>
-               <div className="flex flex-col items-center gap-3 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+               <div className="flex flex-col items-center gap-3 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer text-slate-900">
                   <Star className="size-10 text-slate-900" strokeWidth={1} />
                   <span className="text-[10px] font-black uppercase tracking-[0.2em] leading-none">มืออาชีพ</span>
                </div>
@@ -150,7 +150,7 @@ const Support: React.FC = () => {
            <div className="max-w-4xl mx-auto px-4">
               <button 
                 onClick={() => config.line_url && window.open(config.line_url, '_blank')}
-                className="w-full h-18 bg-primary text-white rounded-[2rem] font-display font-black text-sm uppercase italic tracking-[0.2em] shadow-2xl shadow-primary/30 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all"
+                className="w-full h-18 bg-primary text-white rounded-[2rem] font-sans font-black text-sm uppercase tracking-[0.2em] shadow-2xl shadow-red-200 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all"
               >
                  เริ่มแชทสดกับพนักงาน
                  <Send className="size-6 text-white/50" />
@@ -163,3 +163,4 @@ const Support: React.FC = () => {
 };
 
 export default Support;
+

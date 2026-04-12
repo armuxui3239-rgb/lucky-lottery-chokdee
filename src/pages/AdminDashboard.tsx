@@ -141,8 +141,8 @@ const AdminDashboard = () => {
               <LayoutDashboard size={20} className="text-white" />
             </div>
             <div>
-              <span className="font-display font-black text-lg tracking-tighter uppercase italic text-white">Lucky</span>
-              <span className="font-display font-black text-lg tracking-tighter uppercase italic text-red-500">Admin</span>
+              <span className="font-sans font-black text-lg tracking-tighter uppercase  text-white">Lucky</span>
+              <span className="font-sans font-black text-lg tracking-tighter uppercase  text-red-500">Admin</span>
               <p className="text-[8px] text-slate-500 font-black uppercase tracking-widest">ระบบจัดการหลังบ้าน</p>
             </div>
           </div>
@@ -296,3 +296,4 @@ const NavItem = ({ icon: Icon, label, active = false, badge = 0, onClick }: any)
 );
 
 export default AdminDashboard;
+

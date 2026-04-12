@@ -93,7 +93,7 @@ export default function Winners() {
             <Trophy size={12} />
             ผู้โชคดีประจำงวด
           </div>
-          <h1 className="text-3xl font-display font-black text-white italic tracking-tighter leading-none">
+          <h1 className="text-3xl font-sans font-black text-white  tracking-tighter leading-none">
             🏆 ผู้ถูกรางวัล<br />
             <span className="text-yellow-300">ล็อตเตอรี่โชคดี</span>
           </h1>
@@ -160,7 +160,7 @@ export default function Winners() {
                     )}
                   </div>
                   <div className="text-right flex-shrink-0">
-                    <p className={`font-display font-black text-lg italic leading-none ${prize.color}`}>
+                    <p className={`font-sans font-black text-lg  leading-none ${prize.color}`}>
                       {formatAmount(w.amount)}
                     </p>
                     <p className="text-[9px] text-slate-400 font-black mt-1">รางวัล</p>
@@ -174,6 +174,7 @@ export default function Winners() {
         {/* Footer note */}
         <div className="mt-8 p-5 bg-slate-50 rounded-[1.5rem] border border-slate-100 text-center">
           <p className="text-[10px] text-slate-400 font-bold leading-relaxed">
+            * ระบบจะเก็บประวัติย้อนหลังให้ตรวจสอบได้ 30 วัน<br />
             * ข้อมูลผู้ถูกรางวัลได้รับการยืนยันจากระบบ<br />
             รางวัลจะถูกโอนเข้ากระเป๋าเงินอิเล็กทรอนิกส์โดยอัตโนมัติ
           </p>
@@ -182,3 +183,4 @@ export default function Winners() {
     </div>
   );
 }
+

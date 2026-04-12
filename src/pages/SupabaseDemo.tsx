@@ -38,7 +38,7 @@ export default function SupabaseDemo() {
       </h1>
       <ul className="space-y-3">
         {todos.length === 0 ? (
-          <li className="text-gray-500 italic">No todos found. Have you created the 'todos' table in Supabase?</li>
+          <li className="text-gray-500 ">No todos found. Have you created the 'todos' table in Supabase?</li>
         ) : (
           todos.map((todo) => (
             <li key={todo.id} className="p-4 bg-gray-50 rounded-lg border border-gray-100 font-medium hover:shadow-md transition-shadow">
@@ -53,3 +53,4 @@ export default function SupabaseDemo() {
     </div>
   )
 }
+

@@ -2,9 +2,13 @@ import { useState, useEffect, useCallback } from 'react';
 import toast from 'react-hot-toast';
 import {
   Trophy, Plus, Eye, EyeOff, Trash2, RefreshCw, X, Save,
-  Star, Medal, Award, Crown
+  Star, Medal, Award, Crown, Download, DatabaseZap
 } from 'lucide-react';
-import { getAllWinners, addWinner, toggleWinnerVisibility, deleteWinner, getAllLotteryRounds, type Winner } from '../../services/adminApi';
+import { 
+  getAllWinners, addWinner, toggleWinnerVisibility, deleteWinner, 
+  getAllLotteryRounds, exportWinnersAsCSV, deleteOldWinners, 
+  downloadCSV, type Winner 
+} from '../../services/adminApi';
 
 const prizeTypes = [
   { value: 'first', label: 'รางวัลที่ 1 (6,000,000 บาท)', amount: 6000000 },
@@ -66,6 +70,35 @@ export const AdminWinners = () => {
     setForm((f: any) => ({ ...f, prize_type: type, amount: found?.amount || f.amount }));
   };
 
+  const handleExportCSV = async () => {
+    const t = toast.loading('กำลังเตรียมไฟล์ CSV...');
+    try {
+      const csv = await exportWinnersAsCSV(selectedRound || undefined);
+      if (!csv) {
+        toast.error('ไม่มีข้อมูลให้ส่งออก', { id: t });
+        return;
+      }
+      const fileName = `winners_${selectedRound || 'all'}_${new Date().toISOString().split('T')[0]}.csv`;
+      downloadCSV(csv, fileName);
+      toast.success('ส่งออกไฟล์สำเร็จ! 📥', { id: t });
+    } catch (e: any) {
+      toast.error(e.message, { id: t });
+    }
+  };
+
+  const handleCleanup = async () => {
+    if (!window.confirm('ยืนยันระบบกรองข้อมูล: ระบบจะลบประวัติผู้ถูกรางวัลที่เก่ากว่า 30 วันทั้งหมด? \n(แนะนำให้สำรองข้อมูล CSV ก่อนดำเนินการ)')) return;
+    
+    const t = toast.loading('กำลังล้างข้อมูลเก่า...');
+    try {
+       const deletedCount = await deleteOldWinners();
+       toast.success(`ล้างข้อมูลสำเร็จ! ลบไปทั้งหมด ${deletedCount} รายการ`, { id: t });
+       fetchData();
+    } catch (e: any) {
+       toast.error(e.message, { id: t });
+    }
+  };
+
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.display_name.trim()) { toast.error('กรุณาระบุชื่อผู้ถูกรางวัล'); return; }
@@ -113,12 +146,20 @@ export const AdminWinners = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-display font-black text-white italic tracking-tighter uppercase">ผู้ถูกรางวัล</h2>
+          <h2 className="text-2xl font-sans font-black text-white  tracking-tighter uppercase">ผู้ถูกรางวัล</h2>
           <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mt-1">
             รวม {winners.length} รายการ · เงินรางวัลรวม ฿{totalPrize.toLocaleString()}
           </p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
+          <button onClick={handleCleanup}
+            className="bg-slate-900 border border-amber-900/30 text-amber-500 hover:bg-amber-500/10 px-4 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2 transition-all">
+            <DatabaseZap size={14} /> ล้างประวัติ (>30วัน)
+          </button>
+          <button onClick={handleExportCSV}
+            className="bg-slate-900 border border-slate-700 text-slate-300 hover:text-white px-4 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2 transition-all">
+            <Download size={14} /> สำรอง CSV
+          </button>
           <button onClick={() => setShowForm(true)}
             className="bg-red-600 hover:bg-red-500 text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-red-900/20">
             <Plus size={14} /> เพิ่มรายการ
@@ -163,7 +204,7 @@ export const AdminWinners = () => {
 
             <div className="bg-slate-950/50 rounded-2xl p-3 text-center">
               <p className="text-[9px] text-slate-500 font-black uppercase">เงินรางวัล</p>
-              <p className="text-2xl font-display font-black text-white italic tracking-tighter mt-0.5">
+              <p className="text-2xl font-sans font-black text-white  tracking-tighter mt-0.5">
                 ฿{Number(w.amount).toLocaleString()}
               </p>
               <p className="text-[9px] text-slate-600 mt-1">{prizeTypes.find(p => p.value === w.prize_type)?.label || w.prize_type}</p>
@@ -203,7 +244,7 @@ export const AdminWinners = () => {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/95 backdrop-blur-sm">
           <form onSubmit={handleSave} className="bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8 max-w-lg w-full space-y-5 animate-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-display font-black text-white italic tracking-tighter uppercase">🏆 เพิ่มผู้ถูกรางวัล</h3>
+              <h3 className="text-xl font-sans font-black text-white  tracking-tighter uppercase">🏆 เพิ่มผู้ถูกรางวัล</h3>
               <button type="button" onClick={() => setShowForm(false)} className="text-slate-500 hover:text-white"><X size={20} /></button>
             </div>
 

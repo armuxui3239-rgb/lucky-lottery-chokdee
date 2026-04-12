@@ -110,7 +110,7 @@ const BankSettings: React.FC = () => {
             <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-95 shadow-sm border border-slate-100">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-base font-display font-black tracking-[0.2em] uppercase italic text-slate-900 leading-none">ตั้งค่าบัญชีธนาคาร</h1>
+            <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase  text-slate-900 leading-none">ตั้งค่าบัญชีธนาคาร</h1>
             <div className="size-12"></div>
           </div>
         </header>
@@ -123,19 +123,19 @@ const BankSettings: React.FC = () => {
           {/* Section: Identity */}
           <section className="space-y-8">
             <div className="flex items-center justify-between px-2">
-               <h2 className="text-xl font-display font-black uppercase italic tracking-tighter text-slate-900 leading-none">ข้อมูลยืนยันตัวตน</h2>
+               <h2 className="text-xl font-sans font-black uppercase  tracking-tighter text-slate-900 leading-none">ข้อมูลยืนยันตัวตน</h2>
                {profile.kyc_status === 'verified' ? (
-                 <span className="text-[8px] font-black uppercase text-emerald-500 bg-emerald-50 px-2 py-1 rounded-lg border border-emerald-100 italic tracking-widest">ยืนยันตัวตนแล้ว</span>
+                 <span className="text-[8px] font-black uppercase text-emerald-500 bg-emerald-50 px-2 py-1 rounded-lg border border-emerald-100  tracking-widest">ยืนยันตัวตนแล้ว</span>
                ) : profile.kyc_status === 'pending' ? (
-                 <span className="text-[8px] font-black uppercase text-amber-500 bg-amber-50 px-2 py-1 rounded-lg border border-amber-100 italic tracking-widest">รอตรวจสอบ</span>
+                 <span className="text-[8px] font-black uppercase text-amber-500 bg-amber-50 px-2 py-1 rounded-lg border border-amber-100  tracking-widest">รอตรวจสอบ</span>
                ) : (
-                 <span className="text-[8px] font-black uppercase text-slate-400 bg-slate-50 px-2 py-1 rounded-lg border border-slate-100 italic tracking-widest">ยังไม่ยืนยัน</span>
+                 <span className="text-[8px] font-black uppercase text-slate-400 bg-slate-50 px-2 py-1 rounded-lg border border-slate-100  tracking-widest">ยังไม่ยืนยัน</span>
                )}
             </div>
 
             <div className="space-y-6">
                <div className="space-y-3">
-                  <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] px-4 italic">ชื่อ-นามสกุล (ต้องตรงกับหน้าสมุดบัญชี)</label>
+                  <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] px-4 ">ชื่อ-นามสกุล (ต้องตรงกับหน้าสมุดบัญชี)</label>
                   <input 
                     className="w-full bg-slate-50 border-2 border-slate-100 rounded-3xl h-16 px-6 text-sm font-black focus:border-primary/20 outline-none transition-all placeholder:text-slate-200"
                     placeholder="กรุณากรอกชื่อ-นามสกุล จริง"
@@ -144,7 +144,7 @@ const BankSettings: React.FC = () => {
                   />
                </div>
                <div className="space-y-3">
-                  <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] px-4 italic">เบอร์โทรศัพท์สำหรับติดต่อ</label>
+                  <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] px-4 ">เบอร์โทรศัพท์สำหรับติดต่อ</label>
                   <input 
                     className="w-full bg-slate-50 border-2 border-slate-100 rounded-3xl h-16 px-6 text-sm font-black focus:border-primary/20 outline-none transition-all placeholder:text-slate-200"
                     placeholder="เบอร์โทรศัพท์ 10 หลัก"
@@ -158,7 +158,7 @@ const BankSettings: React.FC = () => {
           {/* Section: Banking Assets */}
           <section className="space-y-8 pt-4">
              <div className="flex items-center justify-between px-2">
-                <h2 className="text-xl font-display font-black uppercase italic tracking-tighter text-slate-900 leading-none">บัญชีรับเงินรางวัล</h2>
+                <h2 className="text-xl font-sans font-black uppercase  tracking-tighter text-slate-900 leading-none">บัญชีรับเงินรางวัล</h2>
              </div>
 
              {profile.bank_account && profile.bank_code ? (
@@ -169,22 +169,22 @@ const BankSettings: React.FC = () => {
                            <img src={selectedBank?.logo_url} alt="Bank Logo" className="w-full h-full object-contain" />
                         </div>
                         <div>
-                           <p className="text-white/40 text-[9px] font-black uppercase tracking-[0.4em] mb-2 leading-none italic">ช่องทางรับเงินที่ยืนยันแล้ว</p>
-                           <h4 className="text-xl font-display font-black italic uppercase leading-none tracking-tighter">{selectedBank?.name_th}</h4>
+                           <p className="text-white/40 text-[9px] font-black uppercase tracking-[0.4em] mb-2 leading-none ">ช่องทางรับเงินที่ยืนยันแล้ว</p>
+                           <h4 className="text-xl font-sans font-black  uppercase leading-none tracking-tighter">{selectedBank?.name_th}</h4>
                         </div>
                      </div>
-                     <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 rounded-xl border border-white/10 italic text-[8px] font-black uppercase tracking-widest text-emerald-400">
+                     <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 rounded-xl border border-white/10  text-[8px] font-black uppercase tracking-widest text-emerald-400">
                         <CheckCircle2 size={12} /> เชื่อมต่อสำเร็จ
                      </div>
                   </div>
                   
                   <div className="relative z-10 space-y-4">
-                     <p className="text-3xl font-black font-mono tracking-[0.2em] leading-none italic group-hover:tracking-[0.3em] transition-all">
+                     <p className="text-3xl font-black font-mono tracking-[0.2em] leading-none  group-hover:tracking-[0.3em] transition-all">
                         {profile.bank_account.replace(/(\d{3})(\d{1})(\d{5})(\d{1})/, '$1-$2-$3-$4')}
                      </p>
                      <div className="flex items-center gap-2">
                         <LockIcon size={12} className="text-white/20" />
-                        <span className="text-white/20 text-[8px] font-black uppercase tracking-[0.3em] italic">ระบบเข้ารหัสความปลอดภัยขั้นสูง (E2EE)</span>
+                        <span className="text-white/20 text-[8px] font-black uppercase tracking-[0.3em] ">ระบบเข้ารหัสความปลอดภัยขั้นสูง (E2EE)</span>
                      </div>
                   </div>
 
@@ -221,7 +221,7 @@ const BankSettings: React.FC = () => {
                   </div>
 
                   <div className="space-y-4 pt-4">
-                     <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] px-4 italic">หมายเลขเลขที่บัญชีรับเงินรางวัล</label>
+                     <label className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] px-4 ">หมายเลขเลขที่บัญชีรับเงินรางวัล</label>
                      <div className="relative">
                         <CreditCard className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-200" size={20} />
                         <input 
@@ -244,7 +244,7 @@ const BankSettings: React.FC = () => {
             <button 
               onClick={handleSave}
               disabled={saving}
-              className={`w-full h-18 rounded-[2rem] font-display font-black text-sm uppercase italic tracking-widest shadow-2xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-4 ${
+              className={`w-full h-18 rounded-[2rem] font-sans font-black text-sm uppercase  tracking-widest shadow-2xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-4 ${
                 saving 
                   ? 'bg-slate-50 text-slate-200 cursor-not-allowed' 
                   : 'bg-primary text-white shadow-primary/20'
@@ -268,3 +268,4 @@ const BankSettings: React.FC = () => {
 };
 
 export default BankSettings;
+

@@ -63,7 +63,7 @@ export default function Header() {
               />
             ) : (
               <div className="flex flex-col items-start">
-                <h1 className="text-xl font-black italic tracking-tighter uppercase leading-none text-white group-hover/logo:scale-105 transition-all">
+                <h1 className="text-xl font-black  tracking-tighter uppercase leading-none text-white group-hover/logo:scale-105 transition-all">
                   ล็อตเตอรี่
                   <span className="text-yellow-300 drop-shadow-[0_0_8px_rgba(255,215,0,0.5)]">
                     โชคดี
@@ -122,3 +122,4 @@ export default function Header() {
     </header>
   );
 }
+

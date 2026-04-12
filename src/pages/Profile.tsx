@@ -67,18 +67,18 @@ const Profile: React.FC = () => {
         <div className="size-24 bg-white rounded-[2.5rem] flex items-center justify-center mb-10 text-slate-200 border border-slate-100 shadow-inner">
           <User size={48} strokeWidth={1} />
         </div>
-        <h2 className="text-3xl font-display font-black text-slate-900 uppercase tracking-tighter italic leading-none mb-4">ยังไม่ได้ <span className="text-primary">เข้าสู่ระบบ</span></h2>
+        <h2 className="text-3xl font-sans font-black text-slate-900 uppercase tracking-tighter  leading-none mb-4">ยังไม่ได้ <span className="text-primary">เข้าสู่ระบบ</span></h2>
         <p className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] mb-12 max-w-[260px] leading-relaxed">กรุณาเข้าสู่ระบบเพื่อเข้าใช้งานระบบสมาชิกและประวัติการซื้อสลาก</p>
         <div className="w-full max-w-[300px] space-y-5">
           <button
             onClick={() => navigate('/login')}
-            className="w-full h-18 bg-slate-900 text-white rounded-[1.8rem] font-display font-black text-sm uppercase italic tracking-[0.3em] shadow-2xl active:scale-95 transition-all"
+            className="w-full h-18 bg-slate-900 text-white rounded-[1.8rem] font-sans font-black text-sm uppercase  tracking-[0.3em] shadow-2xl active:scale-95 transition-all"
           >
             เข้าสู่ระบบ
           </button>
           <button
             onClick={() => navigate('/register')}
-            className="w-full h-18 bg-white text-slate-300 font-display font-black text-xs uppercase italic tracking-[0.3em] border-2 border-white rounded-[1.8rem] hover:bg-white transition-all shadow-sm"
+            className="w-full h-18 bg-white text-slate-300 font-sans font-black text-xs uppercase  tracking-[0.3em] border-2 border-white rounded-[1.8rem] hover:bg-white transition-all shadow-sm"
           >
             สมัครสมาชิกใหม่
           </button>
@@ -101,7 +101,7 @@ const Profile: React.FC = () => {
 
          <div className="flex flex-col gap-10">
             <div className="flex justify-between items-center relative z-50">
-               <h3 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.5em] leading-none italic pointer-events-none">ข้อมูลสมาชิก</h3>
+               <h3 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.5em] leading-none  pointer-events-none">ข้อมูลสมาชิก</h3>
                <button onClick={handleSignOut} className="size-12 rounded-2xl bg-primary text-white hover:bg-primary-dark transition-all flex items-center justify-center shadow-lg shadow-primary/20 border border-white/10 active:scale-95 cursor-pointer relative z-50">
                   <LogOut size={20} />
                </button>
@@ -123,13 +123,13 @@ const Profile: React.FC = () => {
                </div>
 
                <div className="flex flex-col gap-3">
-                  <h2 className="text-3xl font-display font-black text-slate-900 tracking-tighter uppercase italic leading-none truncate max-w-[180px]">
+                  <h2 className="text-3xl font-sans font-black text-slate-900 tracking-tighter uppercase  leading-none truncate max-w-[180px]">
                     {profile?.full_name || user?.email?.split('@')[0]}
                   </h2>
                   <div className="flex flex-col gap-1.5">
                      <div className="flex items-center gap-2.5">
                         <div className="size-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse"></div>
-                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest italic">{profile?.phone || 'เชื่อมต่อด้วยโทรศัพท์'}</span>
+                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest ">{profile?.phone || 'เชื่อมต่อด้วยโทรศัพท์'}</span>
                      </div>
                      <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-900 text-white w-fit rounded-xl border border-white/10 shadow-lg">
                         <Zap size={10} className="text-primary fill-primary" />
@@ -147,16 +147,16 @@ const Profile: React.FC = () => {
             <div className="absolute top-0 right-0 w-24 h-full bg-white/50 skew-x-12 translate-x-12 pointer-events-none group-hover:translate-x-6 transition-transform duration-700"></div>
             
             <div className="flex flex-col gap-3 relative z-10">
-               <span className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] italic">ยอดเงินรวม</span>
+               <span className="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] ">ยอดเงินรวม</span>
                <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-display font-black text-slate-900 tracking-tighter">{balance?.toLocaleString() || '0'}</span>
-                  <span className="text-sm font-black text-primary uppercase italic">บาท</span>
+                  <span className="text-5xl font-sans font-black text-slate-900 tracking-tighter">{balance?.toLocaleString() || '0'}</span>
+                  <span className="text-sm font-black text-primary uppercase ">บาท</span>
                </div>
 
                <div className="mt-6 flex items-center gap-3">
                   <button 
                     onClick={() => navigate('/deposit')}
-                    className="flex-1 h-14 bg-primary text-white rounded-2xl font-black text-[10px] uppercase tracking-widest italic shadow-xl shadow-primary/20 active:scale-95 transition-all flex items-center justify-center gap-3"
+                    className="flex-1 h-14 bg-primary text-white rounded-2xl font-black text-[10px] uppercase tracking-widest  shadow-xl shadow-primary/20 active:scale-95 transition-all flex items-center justify-center gap-3"
                   >
                     เติมเงิน <Plus size={14} strokeWidth={3} />
                   </button>
@@ -174,10 +174,10 @@ const Profile: React.FC = () => {
          {/* Elite Controls List */}
          <div className="space-y-4">
             <div className="flex items-center justify-between px-2">
-               <h3 className="text-lg font-display font-black text-slate-900 uppercase italic tracking-tighter leading-none">ความปลอดภัยและการตั้งค่า</h3>
-               <div className="flex items-center gap-1.5 text-emerald-500 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-100 italic">
+               <h3 className="text-lg font-sans font-black text-slate-900 uppercase  tracking-tighter leading-none">ความปลอดภัยและการตั้งค่า</h3>
+               <div className="flex items-center gap-1.5 text-emerald-500 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-100 ">
                   <ShieldCheck size={12} />
-                  <span className="text-[8px] font-black uppercase tracking-widest italic leading-none">ปกป้องอยู่</span>
+                  <span className="text-[8px] font-black uppercase tracking-widest  leading-none">ปกป้องอยู่</span>
                </div>
             </div>
 
@@ -193,7 +193,7 @@ const Profile: React.FC = () => {
                    </div>
                    <div className="flex flex-col text-left overflow-hidden w-full">
                       <div className="flex items-center justify-between w-full gap-1">
-                         <span className="text-[9px] sm:text-[10px] font-black text-slate-900 uppercase tracking-widest group-hover:text-primary transition-colors italic leading-none truncate">{item.label}</span>
+                         <span className="text-[9px] sm:text-[10px] font-black text-slate-900 uppercase tracking-widest group-hover:text-primary transition-colors  leading-none truncate">{item.label}</span>
                          <ChevronRight size={12} className="text-slate-300 group-hover:text-slate-900 transition-all flex-shrink-0 -mr-1" />
                       </div>
                       <span className="text-[7px] sm:text-[8px] font-black text-slate-400 uppercase tracking-widest truncate mt-1 leading-none">{item.sub}</span>
@@ -208,8 +208,8 @@ const Profile: React.FC = () => {
             <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             
             <div className="space-y-3 relative z-10">
-               <h4 className="text-lg font-display font-black text-slate-900 italic tracking-tighter uppercase leading-none">มีปัญหา <span className="text-primary">ปรึกษาเรา!</span></h4>
-               <p className="text-[8px] font-black text-slate-300 uppercase tracking-[0.4em] italic leading-none">ทีมงานช่วยเหลือพรีเมียมพร้อมดูแลตลอด 24 ชม.</p>
+               <h4 className="text-lg font-sans font-black text-slate-900  tracking-tighter uppercase leading-none">มีปัญหา <span className="text-primary">ปรึกษาเรา!</span></h4>
+               <p className="text-[8px] font-black text-slate-300 uppercase tracking-[0.4em]  leading-none">ทีมงานช่วยเหลือพรีเมียมพร้อมดูแลตลอด 24 ชม.</p>
             </div>
             
             <button 
@@ -227,3 +227,4 @@ const Profile: React.FC = () => {
 
 
 export default Profile;
+

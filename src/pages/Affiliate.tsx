@@ -66,7 +66,7 @@ const Affiliate: React.FC = () => {
             <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-white text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <h1 className="text-base font-display font-black tracking-[0.2em] uppercase italic text-slate-900 leading-none">ระบบแนะนำเพื่อน</h1>
+            <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase  text-slate-900 leading-none">ระบบแนะนำเพื่อน</h1>
             <div className="size-12"></div>
           </div>
         </header>
@@ -84,27 +84,27 @@ const Affiliate: React.FC = () => {
 
               <div className="relative z-10 space-y-10">
                 <div className="space-y-4">
-                  <p className="text-white/40 text-[9px] font-black uppercase tracking-[0.4em] mb-2 leading-none italic">ค่าคอมมิชชั่นสะสม</p>
+                  <p className="text-white/40 text-[9px] font-black uppercase tracking-[0.4em] mb-2 leading-none ">ค่าคอมมิชชั่นสะสม</p>
                   <div className="flex items-baseline gap-3">
-                    <h2 className="text-5xl font-display font-black text-white italic tracking-tighter leading-none">
+                    <h2 className="text-5xl font-sans font-black text-white  tracking-tighter leading-none">
                       {stats.total_commission.toLocaleString()}
                     </h2>
-                    <span className="text-xl font-display font-black text-primary italic">฿</span>
+                    <span className="text-xl font-sans font-black text-primary ">฿</span>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-8 py-2">
                   <div className="flex flex-col gap-2">
                      <span className="text-white/40 text-[9px] font-black uppercase tracking-widest leading-none">เพื่อนที่แนะนำสำเร็จ</span>
-                     <span className="text-2xl font-display font-black text-white tracking-tighter italic">{stats.total_referrals} <span className="text-[10px] uppercase opacity-40">คน</span></span>
+                     <span className="text-2xl font-sans font-black text-white tracking-tighter ">{stats.total_referrals} <span className="text-[10px] uppercase opacity-40">คน</span></span>
                   </div>
                   <div className="flex flex-col gap-2">
                      <span className="text-white/40 text-[9px] font-black uppercase tracking-widest leading-none">เพื่อนที่กำลังใช้งาน</span>
-                     <span className="text-2xl font-display font-black text-emerald-400 tracking-tighter italic">{stats.active_referrals} <span className="text-[10px] uppercase opacity-40 text-white">คน</span></span>
+                     <span className="text-2xl font-sans font-black text-emerald-400 tracking-tighter ">{stats.active_referrals} <span className="text-[10px] uppercase opacity-40 text-white">คน</span></span>
                   </div>
                 </div>
 
-                <button className="w-full h-14 bg-white/5 hover:bg-white/10 backdrop-blur-xl rounded-2xl border border-white/5 text-white font-display font-black text-[10px] uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all active:scale-95">
+                <button className="w-full h-14 bg-white/5 hover:bg-white/10 backdrop-blur-xl rounded-2xl border border-white/5 text-white font-sans font-black text-[10px] uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all active:scale-95">
                    แจ้งถอนรายได้คอมมิชชั่น
                    <ArrowUpRight className="w-4 h-4 text-primary" />
                 </button>
@@ -117,7 +117,7 @@ const Affiliate: React.FC = () => {
             <div className="flex items-center gap-4 px-1">
                <div className="w-2 h-8 bg-primary rounded-full shadow-2xl shadow-primary/40"></div>
                <div className="space-y-1">
-                  <h2 className="text-xl font-display font-black uppercase italic tracking-tighter text-slate-900 leading-none">ลิงก์แนะนำเพื่อน</h2>
+                  <h2 className="text-xl font-sans font-black uppercase  tracking-tighter text-slate-900 leading-none">ลิงก์แนะนำเพื่อน</h2>
                   <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-none">เส้นทางสร้างรายได้จากโครงการของคุณ</p>
                </div>
             </div>
@@ -134,7 +134,7 @@ const Affiliate: React.FC = () => {
                </div>
                
                <div className="flex gap-4">
-                  <button className="flex-1 h-14 bg-primary text-white rounded-2xl font-display font-black text-[10px] uppercase tracking-[0.2em] shadow-xl shadow-primary/20 hover:bg-rose-700 transition-all active:scale-95 flex items-center justify-center gap-2">
+                  <button className="flex-1 h-14 bg-primary text-white rounded-2xl font-sans font-black text-[10px] uppercase tracking-[0.2em] shadow-xl shadow-primary/20 hover:bg-rose-700 transition-all active:scale-95 flex items-center justify-center gap-2">
                     <Zap className="size-4 fill-white text-white" />
                     เชิญเพื่อนทันที
                   </button>
@@ -149,7 +149,7 @@ const Affiliate: React.FC = () => {
           <section className="px-8 space-y-8 animate-in fade-in slide-in-from-bottom duration-700">
             <div className="flex items-center justify-between px-2">
                <div className="space-y-1">
-                  <h2 className="text-xl font-display font-black uppercase italic tracking-tighter text-slate-900 leading-none">ภาพรวมรายได้</h2>
+                  <h2 className="text-xl font-sans font-black uppercase  tracking-tighter text-slate-900 leading-none">ภาพรวมรายได้</h2>
                   <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-none">วิเคราะห์ค่าคอมมิชชั่นสะสม</p>
                </div>
                <div className="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 rounded-xl border border-emerald-100">
@@ -164,8 +164,8 @@ const Affiliate: React.FC = () => {
                      <Wallet className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-1 italic">ยอดถอนเงิน</h4>
-                    <p className="text-2xl font-display font-black text-slate-900 tracking-tighter italic leading-none">0.00 <span className="text-[10px] text-primary italic">฿</span></p>
+                    <h4 className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-1 ">ยอดถอนเงิน</h4>
+                    <p className="text-2xl font-sans font-black text-slate-900 tracking-tighter  leading-none">0.00 <span className="text-[10px] text-primary ">฿</span></p>
                   </div>
                </div>
                <div className="p-8 rounded-[2.5rem] bg-white border border-slate-50 shadow-2xl shadow-black/5 flex flex-col justify-between aspect-square group hover:border-primary/20 transition-all">
@@ -173,8 +173,8 @@ const Affiliate: React.FC = () => {
                      <Gift className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-1 italic">โบนัสพิเศษ</h4>
-                    <p className="text-2xl font-display font-black text-slate-900 tracking-tighter italic leading-none">500 <span className="text-[10px] text-amber-500 italic">฿</span></p>
+                    <h4 className="text-[9px] font-black text-slate-300 uppercase tracking-widest mb-1 ">โบนัสพิเศษ</h4>
+                    <p className="text-2xl font-sans font-black text-slate-900 tracking-tighter  leading-none">500 <span className="text-[10px] text-amber-500 ">฿</span></p>
                   </div>
                </div>
                <div className="p-8 rounded-[2.5rem] bg-emerald-50 border border-emerald-100 flex flex-col justify-between aspect-square group hover:border-emerald-200 transition-all hidden lg:flex">
@@ -182,8 +182,8 @@ const Affiliate: React.FC = () => {
                      <TrendingUp className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-[9px] font-black text-emerald-300 uppercase tracking-widest mb-1 italic">อัตราการเปลี่ยน</h4>
-                    <p className="text-2xl font-display font-black text-emerald-600 tracking-tighter italic leading-none">25% <span className="text-[10px] text-emerald-300 italic">PRO</span></p>
+                    <h4 className="text-[9px] font-black text-emerald-300 uppercase tracking-widest mb-1 ">อัตราการเปลี่ยน</h4>
+                    <p className="text-2xl font-sans font-black text-emerald-600 tracking-tighter  leading-none">25% <span className="text-[10px] text-emerald-300 ">PRO</span></p>
                   </div>
                </div>
             </div>
@@ -192,7 +192,7 @@ const Affiliate: React.FC = () => {
             {/* Audit History Log */}
             <div className="p-10 rounded-[3rem] bg-white border border-slate-50 space-y-8 shadow-inner-xl">
                <div className="flex justify-between items-center px-2">
-                  <h4 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] italic">ตรวจสอบกิจกรรมล่าสุด</h4>
+                  <h4 className="text-[10px] font-black text-slate-300 uppercase tracking-[0.3em] ">ตรวจสอบกิจกรรมล่าสุด</h4>
                   <button className="text-[8px] font-black uppercase text-primary border-b border-primary/20 tracking-[0.2em] pb-0.5">ดูทั้งหมด</button>
                </div>
                <div className="space-y-6">
@@ -202,7 +202,7 @@ const Affiliate: React.FC = () => {
                           <Users className="size-6 text-slate-200 group-hover:text-primary transition-colors" />
                        </div>
                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-display font-black text-slate-900 uppercase italic leading-none truncate">
+                          <p className="text-sm font-sans font-black text-slate-900 uppercase  leading-none truncate">
                             {log.profiles?.full_name || `Partner #${log.referee_id.slice(0, 8)}`}
                           </p>
                           <p className="text-[9px] font-black text-slate-300 uppercase tracking-widest mt-2">
@@ -210,7 +210,7 @@ const Affiliate: React.FC = () => {
                           </p>
                        </div>
                        <div className="text-right">
-                          <p className="text-sm font-display font-black text-emerald-500 italic tracking-tighter leading-none">+{log.amount.toLocaleString()} ฿</p>
+                          <p className="text-sm font-sans font-black text-emerald-500  tracking-tighter leading-none">+{log.amount.toLocaleString()} ฿</p>
                           <div className="flex items-center justify-end gap-1.5 mt-2">
                              <div className="size-1.5 bg-emerald-500 rounded-full shadow-[0_0_8px_#10b981]"></div>
                              <span className="text-[8px] font-black text-emerald-600 uppercase tracking-[0.2em]">{log.status === 'success' ? 'สำเร็จ' : 'ดำเนินการ'}</span>
@@ -233,7 +233,7 @@ const Affiliate: React.FC = () => {
            <div className="max-w-5xl mx-auto px-4">
               <button 
                 onClick={copyToClipboard}
-                className="w-full h-18 bg-gradient-to-r from-primary via-primary-dark to-rose-950 text-white rounded-[2rem] font-display font-black text-sm uppercase italic tracking-widest shadow-2xl shadow-primary/30 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all"
+                className="w-full h-18 bg-gradient-to-r from-primary via-primary-dark to-rose-950 text-white rounded-[2rem] font-sans font-black text-sm uppercase  tracking-widest shadow-2xl shadow-primary/30 flex items-center justify-center gap-4 hover:scale-[1.02] active:scale-95 transition-all"
               >
                  แชร์ลิงก์ให้เพื่อน
                  <ShieldCheck className="w-6 h-6 text-white/50" />
@@ -247,3 +247,4 @@ const Affiliate: React.FC = () => {
 };
 
 export default Affiliate;
+

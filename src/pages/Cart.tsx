@@ -69,7 +69,7 @@ const Cart: React.FC = () => {
           
           <div className="flex flex-col md:flex-row md:items-end justify-between border-l-8 border-primary pl-8 gap-4">
              <div className="flex flex-col space-y-2">
-                <h2 className="text-4xl font-display font-black text-slate-900 tracking-tighter uppercase leading-none">
+                <h2 className="text-4xl font-sans font-black text-slate-900 tracking-tighter uppercase leading-none">
                   ตะกร้าของฉัน
                 </h2>
                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em]">
@@ -111,15 +111,15 @@ const Cart: React.FC = () => {
                 {items.map(item => (
                   <div key={item.id} className="group bg-white p-8 rounded-[3rem] border border-slate-100 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden transition-all hover:border-primary/20 hover:shadow-2xl hover:shadow-slate-200/50">
                     <div className="w-24 h-24 bg-red-50 rounded-[2rem] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-700">
-                       <span className="text-primary font-black italic text-sm tracking-widest uppercase">พรีเมียม</span>
+                       <span className="text-primary font-black  text-sm tracking-widest uppercase">พรีเมียม</span>
                     </div>
                     
                     <div className="flex-1 flex flex-col items-center md:items-start space-y-2">
-                      <span className="text-5xl font-black tracking-tighter text-slate-900 leading-none font-display italic">
+                      <span className="text-5xl font-black tracking-tighter text-slate-900 leading-none font-sans ">
                         {item.number}
                       </span>
                       <div className="flex items-center gap-3">
-                        <span className="text-sm font-black text-red-600 italic">฿ {item.price.toLocaleString()}</span>
+                        <span className="text-sm font-black text-red-600 ">฿ {item.price.toLocaleString()}</span>
                         <div className="h-1 w-1 rounded-full bg-slate-200" />
                         <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">({item.setType})</span>
                       </div>
@@ -159,24 +159,24 @@ const Cart: React.FC = () => {
                   <div className="relative space-y-6">
                     <div className="flex items-center justify-between border-b border-white/10 pb-6">
                       <span className="text-[10px] font-black text-white/50 uppercase tracking-[0.4em]">สรุปรายการสั่งซื้อ</span>
-                      <span className="bg-primary text-white text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest italic">{totalItems} ใบ</span>
+                      <span className="bg-primary text-white text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest ">{totalItems} ใบ</span>
                     </div>
 
                     <div className="space-y-4">
                       <div className="flex justify-between items-center text-white/70">
-                         <span className="text-[11px] font-black uppercase tracking-widest italic">ยอดรวมสลาก</span>
-                         <span className="text-sm font-black italic">฿ {totalPrice.toLocaleString()}.00</span>
+                         <span className="text-[11px] font-black uppercase tracking-widest ">ยอดรวมสลาก</span>
+                         <span className="text-sm font-black ">฿ {totalPrice.toLocaleString()}.00</span>
                       </div>
                       <div className="flex justify-between items-center text-white/70">
-                         <span className="text-[11px] font-black uppercase tracking-widest italic">ค่าธรรมเนียมบริการ</span>
-                         <span className="text-sm font-black italic">฿ 0.00</span>
+                         <span className="text-[11px] font-black uppercase tracking-widest ">ค่าธรรมเนียมบริการ</span>
+                         <span className="text-sm font-black ">฿ 0.00</span>
                       </div>
                     </div>
 
                     <div className="pt-8 border-t border-white/10 flex flex-col gap-2">
                        <p className="text-[10px] font-black text-white/30 uppercase tracking-[0.4em]">ยอดชำระสุทธิ</p>
                        <div className="flex items-end gap-2">
-                          <span className="text-5xl font-black text-primary tracking-tighter italic font-display">฿ {totalPrice.toLocaleString()}</span>
+                          <span className="text-5xl font-black text-primary tracking-tighter  font-sans">฿ {totalPrice.toLocaleString()}</span>
                           <span className="text-xs font-black text-white/50 mb-2 uppercase">.00</span>
                        </div>
                     </div>
@@ -186,7 +186,7 @@ const Cart: React.FC = () => {
                     <button 
                       onClick={handleCheckout} 
                       disabled={loading} 
-                      className="w-full bg-white text-primary py-6 rounded-[2.5rem] font-display font-black text-sm uppercase tracking-[0.3em] flex items-center justify-center gap-4 active:scale-95 shadow-2xl shadow-black/10 transition-all disabled:opacity-50 group hover:shadow-white/20"
+                      className="w-full bg-white text-primary py-6 rounded-[2.5rem] font-sans font-black text-sm uppercase tracking-[0.3em] flex items-center justify-center gap-4 active:scale-95 shadow-2xl shadow-black/10 transition-all disabled:opacity-50 group hover:shadow-white/20"
                     >
                       {loading ? (
                         <div className="size-6 border-4 border-primary/30 border-t-primary animate-spin rounded-full" />
@@ -201,7 +201,7 @@ const Cart: React.FC = () => {
                        <div className="size-1.5 rounded-full bg-green-400 animate-pulse" />
                        <span className="text-[9px] font-black text-white/50 uppercase tracking-widest">ระบบชำระเงินปลอดภัยสูงสุด</span>
                     </div>
-                     <p className="text-[9px] text-white/30 font-bold uppercase tracking-[0.2em] leading-relaxed italic">
+                     <p className="text-[9px] text-white/30 font-bold uppercase tracking-[0.2em] leading-relaxed ">
                         ระบบจะคำนวณและตัดเงินจากวอลเล็ทของคุณโดยอัตโนมัติ<br/>
                         ลิขสิทธิ์ของ {config.site_name} อย่างเป็นทางการ
                      </p>
