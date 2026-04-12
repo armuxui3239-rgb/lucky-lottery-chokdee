@@ -142,7 +142,7 @@ export default function Home() {
               key={idx}
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${currentSlide === idx ? 'opacity-100' : 'opacity-0'}`}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-transparent z-10" />
               <img 
                 src={banner} 
                 alt={`แบนเนอร์ประชาสัมพันธ์ ${idx + 1}`} 
@@ -164,7 +164,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-4xl md:text-7xl font-sans font-black text-white tracking-tighter mt-6 leading-[0.95] drop-shadow-2xl" dangerouslySetInnerHTML={{ __html: config.hero_title.replace('\n', '<br />') || 'สลาก 6 หลัก<br /><span class="text-amber-300 drop-shadow-[0_0_15px_rgba(251,191,36,0.4)]">เลือกเองได้เลย!</span>' }} />
                 {config.hero_subtitle && (
-                  <p className="text-white/60 text-[11px] font-black leading-relaxed mt-4 max-w-[85%]">{config.hero_subtitle}</p>
+                  <p className="text-white/80 text-[11px] font-black leading-relaxed mt-4 max-w-[85%]">{config.hero_subtitle}</p>
                 )}
                 {activeRound && (
                   <div className="text-[11px] text-white/90 mt-6 font-black uppercase tracking-[0.3em] backdrop-blur-sm px-4 py-2 rounded-xl w-fit border border-white/10">

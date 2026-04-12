@@ -117,18 +117,15 @@ const Results: React.FC = () => {
 
           {/* Compact Government Official Header - Borderless */}
           <section className="px-4 sm:px-8 -mt-24 mb-6">
-            <div className="flex items-center gap-6 w-full py-4 border-b border-slate-100 bg-transparent">
-              {/* Box 1: GLO Logo (Borderless) */}
+            <div className="flex items-center gap-6 w-full py-6">
               <div className="w-[80px] sm:w-[120px] flex items-center justify-center shrink-0">
                 <img src="/glo-logo.png" className="w-full h-auto object-contain" alt="GLO Logo" />
               </div>
-              
-              {/* Box 2: Results Title (Borderless) */}
               <div className="flex-1 flex flex-col justify-center">
-                <h2 className="text-lg sm:text-2xl font-sans font-black text-slate-900 tracking-tighter leading-tight uppercase">
+                <h2 className="text-lg sm:text-2xl font-sans font-black text-slate-900 tracking-tighter leading-tight">
                   ผลการออกรางวัลสลากกินแบ่งรัฐบาล
                 </h2>
-                <p className="text-[10px] sm:text-xs font-black text-primary uppercase tracking-[0.2em] mt-1">
+                <p className="text-[10px] sm:text-xs font-black text-primary uppercase tracking-[0.25em] mt-1">
                   {drawDate}
                 </p>
               </div>
@@ -160,7 +157,7 @@ const Results: React.FC = () => {
                   <div className="space-y-4">
                     <div className="flex flex-col">
                        <span className="text-xs font-black text-slate-900 leading-none">รางวัลที่ 1</span>
-                       <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-loose">รางวัลละ 6,000,000 บาท</span>
+                       <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest leading-loose">รางวัลละ 6,000,000 บาท</span>
                     </div>
                     <div className="h-24 bg-red-50 rounded-[2rem] flex items-center justify-center text-5xl font-sans font-black tracking-tighter text-slate-900 shadow-inner">
                       {l6Result}
