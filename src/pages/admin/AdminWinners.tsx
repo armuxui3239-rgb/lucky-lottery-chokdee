@@ -154,7 +154,7 @@ export const AdminWinners = () => {
         <div className="flex flex-wrap gap-3">
           <button onClick={handleCleanup}
             className="bg-slate-900 border border-amber-900/30 text-amber-500 hover:bg-amber-500/10 px-4 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2 transition-all">
-            <DatabaseZap size={14} /> ล้างประวัติ (>30วัน)
+            <DatabaseZap size={14} /> ล้างประวัติ {">30วัน"}
           </button>
           <button onClick={handleExportCSV}
             className="bg-slate-900 border border-slate-700 text-slate-300 hover:text-white px-4 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-widest flex items-center gap-2 transition-all">

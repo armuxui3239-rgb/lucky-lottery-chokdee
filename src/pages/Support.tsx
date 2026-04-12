@@ -32,7 +32,7 @@ const Support: React.FC = () => {
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 z-[60] bg-white/90 backdrop-blur-2xl border-b border-slate-50 py-6 px-8 shadow-sm">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
-            <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-slate-50 text-slate-400 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
+            <button onClick={() => navigate(-1)} className="size-12 flex items-center justify-center bg-slate-50 text-slate-900 hover:text-primary rounded-2xl transition-all active:scale-90 shadow-sm border border-slate-100">
               <ChevronLeft className="w-6 h-6" />
             </button>
             <h1 className="text-base font-sans font-black tracking-[0.2em] uppercase text-slate-900 leading-none">ศูนย์ช่วยเหลือ</h1>
@@ -52,7 +52,7 @@ const Support: React.FC = () => {
                   </div>
                   <div className="space-y-3">
                      <h2 className="text-3xl font-sans font-black tracking-tighter uppercase leading-none text-slate-900">ทีมงานผู้เชี่ยวชาญ</h2>
-                     <p className="text-[10px] font-black text-slate-800 uppercase tracking-widest max-w-[220px] mx-auto leading-relaxed">ทีมงานที่ผ่านการตรวจสอบของเราพร้อมดูแลคุณตลอด 24 ชั่วโมง</p>
+                     <p className="text-[10px] font-black text-slate-900 uppercase tracking-widest max-w-[220px] mx-auto leading-relaxed">ทีมงานที่ผ่านการตรวจสอบของเราพร้อมดูแลคุณตลอด 24 ชั่วโมง</p>
                   </div>
                </div>
             </section>
@@ -69,7 +69,7 @@ const Support: React.FC = () => {
                      </div>
                       <div className="space-y-1">
                          <p className="text-[10px] font-black uppercase tracking-widest group-hover:text-white transition-colors leading-none text-slate-900">ช่องทางไลน์ทางการ</p>
-                         <p className="text-[8px] font-black text-[#06C755] uppercase tracking-widest leading-none group-hover:text-white/60">@lottochokdee</p>
+                         <p className="text-[8px] font-black text-[#06C755] uppercase tracking-widest leading-none group-hover:text-slate-900">@lottochokdee</p>
                       </div>
                   </button>
                   <button 
@@ -81,7 +81,7 @@ const Support: React.FC = () => {
                      </div>
                       <div className="space-y-1">
                          <p className="text-[10px] font-black uppercase tracking-widest group-hover:text-white transition-colors leading-none text-slate-900">เฟซบุ๊กแฟนเพจ</p>
-                         <p className="text-[8px] font-black text-[#1877F2] uppercase tracking-widest leading-none group-hover:text-white/60">{config.site_name || 'ล็อตเตอรี่ โชคดี'}</p>
+                         <p className="text-[8px] font-black text-[#1877F2] uppercase tracking-widest leading-none group-hover:text-slate-900">{config.site_name || 'ล็อตเตอรี่ โชคดี'}</p>
                       </div>
                   </button>
                </div>
@@ -95,7 +95,7 @@ const Support: React.FC = () => {
                   </div>
                   <div className="flex-1 text-left">
                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-900 leading-none">ติดต่อผ่านอีเมลทางการ</p>
-                     <p className="text-[9px] font-black text-slate-800 uppercase tracking-widest mt-1.5 leading-none">support@lotto-chokdee.com</p>
+                     <p className="text-[9px] font-black text-slate-900 uppercase tracking-widest mt-1.5 leading-none">support@lotto-chokdee.com</p>
                   </div>
                   <ChevronRight className="size-5 text-slate-100 group-hover:text-slate-900" />
                </button>
@@ -107,7 +107,7 @@ const Support: React.FC = () => {
                   <div className="w-2 h-8 bg-primary rounded-full shadow-2xl shadow-primary/40"></div>
                   <div className="space-y-1">
                      <h3 className="text-xl font-sans font-black uppercase tracking-tighter text-slate-900 leading-none">ศูนย์ข้อมูลความรู้</h3>
-                     <p className="text-[10px] font-black text-slate-800 uppercase tracking-widest leading-none">คำถามที่พบบ่อย</p>
+                     <p className="text-[10px] font-black text-slate-900 uppercase tracking-widest leading-none">คำถามที่พบบ่อย</p>
                   </div>
                </div>
 
@@ -120,7 +120,7 @@ const Support: React.FC = () => {
                            </div>
                            <div>
                               <h4 className="text-xs font-sans font-black text-slate-900 uppercase leading-relaxed tracking-tight">{faq.q}</h4>
-                              <p className="text-[10px] font-black text-slate-800 leading-relaxed mt-3 uppercase tracking-widest group-hover:text-slate-500 transition-colors">{faq.a}</p>
+                              <p className="text-[10px] font-black text-slate-900 leading-relaxed mt-3 uppercase tracking-widest group-hover:text-slate-900 transition-colors">{faq.a}</p>
                            </div>
                         </div>
                      </div>
@@ -163,4 +163,5 @@ const Support: React.FC = () => {
 };
 
 export default Support;
+
 
