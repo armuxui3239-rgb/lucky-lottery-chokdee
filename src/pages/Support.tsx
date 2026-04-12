@@ -91,7 +91,7 @@ const Support: React.FC = () => {
                 className="w-full h-18 bg-white border border-slate-100 rounded-[2.5rem] px-10 flex items-center gap-5 hover:bg-slate-50 transition-all active:scale-95 group shadow-xl shadow-black/5"
                >
                   <div className="size-10 rounded-xl bg-slate-50 flex items-center justify-center group-hover:bg-white transition-colors shadow-inner shrink-0">
-                    <Mail className="size-5 text-slate-300 group-hover:text-primary transition-colors" />
+                    <Mail className="size-5 text-slate-600 group-hover:text-primary transition-colors" />
                   </div>
                   <div className="flex-1 text-left">
                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-900 leading-none">ติดต่อผ่านอีเมลทางการ</p>
